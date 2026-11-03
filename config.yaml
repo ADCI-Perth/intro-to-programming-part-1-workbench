@@ -1,0 +1,135 @@
+#------------------------------------------------------------
+# Values for this lesson.
+#------------------------------------------------------------
+
+# Which carpentry is this (dc, hpcc, lc, swc, or cp)?
+# dc: Data Carpentry
+# hpcc: HPC Carpentry
+# lc: Library Carpentry
+# swc: Software Carpentry
+# cp: Carpentries (to use for instructor training for instance)
+# incubator: The Carpentries Incubator
+# Note that you can also use a custom carpentry type. For more info,
+# see the documentation: https://carpentries.github.io/sandpaper-docs/editing.html
+carpentry: 'adci'
+
+# Custom carpentry description
+# This will be used as the alt text for the logo
+carpentry_description: "ADCI"
+
+# Overall title for pages.
+title: 'Intro to Programming'
+
+# Short description used in the page metadata (sandpaper reads the key 'desc')
+desc: 'A six-week beginner Python micro-credential from ADCI, designed to support credit towards an introductory programming unit.'
+
+# Date the lesson was created (YYYY-MM-DD, this is empty by default)
+created: '2026-11-03'
+
+# Comma-separated list of keywords for the lesson
+keywords: 'python, programming, beginner, micro-credential, ADCI'
+
+# Life cycle stage of the lesson
+# refer to <https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html> for details
+# possible values: pre-alpha, alpha, beta, stable, retired
+life_cycle: 'alpha'
+
+# License of the lesson materials (recommended CC-BY 4.0)
+license: 'To be confirmed (see LICENSE)'
+
+# Link to the source repository for this lesson
+source: 'https://github.com/ADCI-Perth/intro-to-programming-workbench'
+
+# Default branch of your lesson
+branch: 'main'
+
+# Who to contact if there are any issues
+contact: 'FIXME-course-contact@adci.edu.au'
+
+# Navigation ------------------------------------------------
+#
+# Use the following menu items to specify the order of
+# individual pages in each dropdown section. Leave blank to
+# include all pages in the folder.
+#
+# Example -------------
+#
+# episodes:
+# - introduction.md
+# - first-steps.md
+#
+# learners:
+# - setup.md
+#
+# instructors:
+# - instructor-notes.md
+#
+# profiles:
+# - one-learner.md
+# - another-learner.md
+
+# Order of episodes in your lesson
+episodes:
+- week-1-overview.md
+- 1-1-introduction.md
+- 1-2-variables.md
+- 1-3-operators.md
+- week-1-bridge.md
+- week-1-practice.md
+- week-2-overview.md
+- 2-1-strings.md
+- 2-2-lists.md
+- 2-3-tuples.md
+- 2-4-sets.md
+- 2-5-dictionaries.md
+- week-2-bridge.md
+- week-2-practice.md
+- week-3-overview.md
+- 3-1-conditionals.md
+- 3-2-loops.md
+- 3-3-functions.md
+- week-3-bridge.md
+- week-3-practice.md
+- week-4-overview.md
+- 4-1-list-comprehension.md
+- 4-2-higher-order-functions.md
+- 4-3-error-types.md
+- 4-4-exception-handling.md
+- week-4-bridge.md
+- week-4-practice.md
+- week-5-overview.md
+- 5-1-classes-and-objects.md
+- 5-2-file-handling.md
+- week-5-bridge.md
+- week-5-practice.md
+- week-6-overview.md
+- 6-1-modules.md
+- 6-2-packages.md
+- week-6-bridge.md
+- week-6-practice.md
+
+# Information for Learners
+learners:
+- setup.md
+- reference.md
+- 5-3-date-time.md
+- 5-4-regular-expressions.md
+- 6-3-web-scraping.md
+- 6-4-virtual-environments.md
+- 6-5-statistics-numpy.md
+- 6-6-pandas.md
+
+# Information for Instructors
+instructors:
+- instructor-notes.md
+
+# Learner Profiles
+profiles:
+- learner-profiles.md
+
+# Customisation ---------------------------------------------
+#
+# This space below is where custom yaml items (e.g. pinning
+# sandpaper and varnish versions) should live
+
+
