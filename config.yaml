@@ -102,3 +102,6 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
+
+# ADCI fork of the theme, which holds the ADCI logo and favicons
+varnish: 'ADCI-Perth/varnish'
