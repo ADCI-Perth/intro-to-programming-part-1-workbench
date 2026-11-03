@@ -37,5 +37,5 @@ Each week is one episode. Inside it are the week overview, the core sections, a 
 ## Before publishing outside ADCI
 
 - The lesson sections were adapted from an open-source *30 Days of Python* repository that has **no licence file**, so reuse rights are unclear. Check this before publishing the site publicly or confirming the `license` in `config.yaml`.
-- The lesson uses The Carpentries Workbench for layout only; it is not a Carpentries lesson. The `carpentry: 'adci'` setting avoids Carpentries branding. To show an ADCI logo, use a fork of the `varnish` theme with ADCI logo files and pin it in `config.yaml`.
+- The lesson uses The Carpentries Workbench for layout only; it is not a Carpentries lesson. The `carpentry: 'adci'` setting avoids Carpentries branding, and the ADCI logo comes from ADCI's fork of the theme (`varnish: 'ADCI-Perth/varnish'` in `config.yaml`; see `branding/`).
 - Replace the placeholder `contact` email in `config.yaml`.
