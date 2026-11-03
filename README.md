@@ -41,4 +41,4 @@ sandpaper::validate_lesson()     # checks links, fenced divs and headings
 
 - Confirm the licence (see `LICENSE.md`).
 - Replace the placeholder `contact` in `config.yaml`, and add the code of conduct links in `CODE_OF_CONDUCT.md`.
-- For an ADCI logo, fork the `varnish` theme, add `adci-logo.svg` and `adci-logo-sm.svg` to its images, and pin the fork in `config.yaml` (for example `varnish: 'ADCI-Perth/varnish'`). Without it, the header shows the text "ADCI" where the logo would go.
+- The ADCI logo files are in `branding/` (made from `adci-logo-source.jpg` with `branding/make_logo.py`). The theme only loads logos from its own package, so they live in a fork of `varnish` (`ADCI-Perth/varnish`): `adci-logo.svg` and `adci-logo-sm.svg` go in `inst/pkgdown/assets/assets/images/`, and `favicons/adci/` goes in `inst/pkgdown/assets/favicons/`. `config.yaml` pins the fork with `varnish: 'ADCI-Perth/varnish'`. In dark mode the theme shows every logo in plain white.
