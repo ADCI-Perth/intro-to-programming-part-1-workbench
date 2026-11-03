@@ -8,7 +8,7 @@ The course content is maintained in the main course repository, `intro-to-progra
 
 | Folder | What is in it |
 |---|---|
-| `episodes/` | 37 episodes. Each week has an overview, its core sections (e.g. `3-2-loops.md`), a Concepts Bridge and a practice task. |
+| `episodes/` | One episode per week (`week-1.md` to `week-6.md`). Each holds the week overview, its sections (1.1, 1.2 ...), the Concepts Bridge and the practice task as level-2 headings, which the menu shows as sub-items. |
 | `episodes/files/` | Practice-task starter code, solutions and tests (`week-N/`), lesson code (`code/W.S/`) and the Section 5.2 example files |
 | `episodes/data/` | Data files used by the lessons, plus `course-data.zip` for learners |
 | `learners/` | Setup, glossary and the optional sections (5.3, 5.4, 6.3 to 6.6) |
@@ -24,7 +24,7 @@ With both repositories side by side in the same folder:
 python scripts/convert_from_course.py ../intro-to-programming-microcredential .
 ```
 
-This rewrites `episodes/` and the optional pages in `learners/`. Other pages (home, setup, glossary, instructor notes, profiles, `config.yaml`) are edited by hand. If you add, remove or rename a section, update `scripts/wb_meta.py` and the episode list in `config.yaml`.
+This rewrites the week episodes in `episodes/` and the optional pages in `learners/`. Other pages (home, setup, glossary, instructor notes, profiles, `config.yaml`) are edited by hand. If you add, remove or rename a section, update `scripts/wb_meta.py`.
 
 ## Building the site locally
 

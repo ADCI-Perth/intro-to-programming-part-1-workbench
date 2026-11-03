@@ -5,13 +5,13 @@ title: 'Instructor Notes'
 ## About this course
 
 - Six weeks, **hard cap of 6 hours per week** (36 hours in total). Weeks 4 to 6 come in under 6 hours on purpose; the spare time is a buffer.
-- Absolute beginners. Weeks 1 to 3 lean on video; Weeks 4 to 6 shift towards independent problem solving.
+- Complete beginners, mostly working adults: people in office jobs who want to change career or move into programming or computing. Assume no programming or technical background and no maths beyond everyday arithmetic. Weeks 1 to 3 lean on video; Weeks 4 to 6 shift towards independent problem solving.
 - Videos are third-party YouTube content: mainly the Telusko *Python for Beginners (Full Course)* playlist (labelled **T#n**), plus a few short videos from other channels (labelled **[Channel]**). Check every link before each intake.
 - Editor: **PyCharm** (free core). VS Code is the fallback if the PyCharm licence ever changes.
 
 ## Weekly structure
 
-Each week has an overview episode, the core sections, a 30-minute **Concepts Bridge** and a **practice task**. The overview's time plan is the source of truth for timings; the `teaching` and `exercises` minutes on each episode are estimates based on it.
+Each week is one episode. Inside it are the week overview, the core sections, a 30-minute **Concepts Bridge** and a **practice task**, each a level-2 heading so they show as sub-items in the menu. The overview's time plan is the source of truth for timings; the `teaching` and `exercises` minutes on each episode are estimates based on it.
 
 | Week | Watch | Read & practise | Bridge | Build | Total |
 |---|---|---|---|---|---|
