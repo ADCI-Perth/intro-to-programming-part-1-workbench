@@ -70,43 +70,12 @@ contact: 'FIXME-course-contact@adci.edu.au'
 
 # Order of episodes in your lesson
 episodes:
-- week-1-overview.md
-- 1-1-introduction.md
-- 1-2-variables.md
-- 1-3-operators.md
-- week-1-bridge.md
-- week-1-practice.md
-- week-2-overview.md
-- 2-1-strings.md
-- 2-2-lists.md
-- 2-3-tuples.md
-- 2-4-sets.md
-- 2-5-dictionaries.md
-- week-2-bridge.md
-- week-2-practice.md
-- week-3-overview.md
-- 3-1-conditionals.md
-- 3-2-loops.md
-- 3-3-functions.md
-- week-3-bridge.md
-- week-3-practice.md
-- week-4-overview.md
-- 4-1-list-comprehension.md
-- 4-2-higher-order-functions.md
-- 4-3-error-types.md
-- 4-4-exception-handling.md
-- week-4-bridge.md
-- week-4-practice.md
-- week-5-overview.md
-- 5-1-classes-and-objects.md
-- 5-2-file-handling.md
-- week-5-bridge.md
-- week-5-practice.md
-- week-6-overview.md
-- 6-1-modules.md
-- 6-2-packages.md
-- week-6-bridge.md
-- week-6-practice.md
+- week-1.md
+- week-2.md
+- week-3.md
+- week-4.md
+- week-5.md
+- week-6.md
 
 # Information for Learners
 learners:

@@ -85,7 +85,13 @@
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/aio.html</loc>
+  </url>
+  <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/citation.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/images.html</loc>
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/index.html</loc>
@@ -175,10 +181,22 @@
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/citation.html</loc>
   </url>
   <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/profiles.html</loc>
@@ -196,6 +214,9 @@
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-1-practice.html</loc>
   </url>
   <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-1.html</loc>
+  </url>
+  <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-2-bridge.html</loc>
   </url>
   <url>
@@ -203,6 +224,9 @@
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-2-practice.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-2.html</loc>
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-3-bridge.html</loc>
@@ -214,6 +238,9 @@
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-3-practice.html</loc>
   </url>
   <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-3.html</loc>
+  </url>
+  <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-4-bridge.html</loc>
   </url>
   <url>
@@ -221,6 +248,9 @@
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-4-practice.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-4.html</loc>
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-5-bridge.html</loc>
@@ -232,6 +262,9 @@
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-5-practice.html</loc>
   </url>
   <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-5.html</loc>
+  </url>
+  <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-6-bridge.html</loc>
   </url>
   <url>
@@ -239,6 +272,15 @@
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-6-practice.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-6.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/key-points.html</loc>
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/profiles.html</loc>
@@ -256,6 +298,9 @@
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-1-practice.html</loc>
   </url>
   <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-1.html</loc>
+  </url>
+  <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-2-bridge.html</loc>
   </url>
   <url>
@@ -263,6 +308,9 @@
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-2-practice.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-2.html</loc>
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-3-bridge.html</loc>
@@ -274,6 +322,9 @@
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-3-practice.html</loc>
   </url>
   <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-3.html</loc>
+  </url>
+  <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-4-bridge.html</loc>
   </url>
   <url>
@@ -281,6 +332,9 @@
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-4-practice.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-4.html</loc>
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-5-bridge.html</loc>
@@ -292,6 +346,9 @@
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-5-practice.html</loc>
   </url>
   <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-5.html</loc>
+  </url>
+  <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-6-bridge.html</loc>
   </url>
   <url>
@@ -299,5 +356,8 @@
   </url>
   <url>
     <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-6-practice.html</loc>
+  </url>
+  <url>
+    <loc>https://ADCI-Perth.github.io/intro-to-programming-workbench/week-6.html</loc>
   </url>
 </urlset>
