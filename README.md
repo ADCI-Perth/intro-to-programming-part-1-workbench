@@ -1,3 +1,44 @@
-## Intro to Programming
+# Intro to Programming (Workbench version)
 
-    This is the lesson repository for Intro to Programming
+The website version of ADCI's six-week, beginner Python micro-credential, built with [The Carpentries Workbench](https://carpentries.github.io/sandpaper-docs/). It is a staging step before the course goes into Canvas.
+
+The course content is maintained in the main course repository, `intro-to-programming-microcredential`. This repository holds the converted lesson.
+
+## Structure
+
+| Folder | What is in it |
+|---|---|
+| `episodes/` | 37 episodes. Each week has an overview, its core sections (e.g. `3-2-loops.md`), a Concepts Bridge and a practice task. |
+| `episodes/files/` | Practice-task starter code, solutions and tests (`week-N/`), lesson code (`code/W.S/`) and the Section 5.2 example files |
+| `episodes/data/` | Data files used by the lessons, plus `course-data.zip` for learners |
+| `learners/` | Setup, glossary and the optional sections (5.3, 5.4, 6.3 to 6.6) |
+| `instructors/` | Instructor notes |
+| `profiles/` | Learner profiles |
+| `scripts/` | `convert_from_course.py`, which rebuilds the episodes from the course repository |
+
+## Updating from the course repository
+
+With both repositories side by side in the same folder:
+
+```bash
+python scripts/convert_from_course.py ../intro-to-programming-microcredential .
+```
+
+This rewrites `episodes/` and the optional pages in `learners/`. Other pages (home, setup, glossary, instructor notes, profiles, `config.yaml`) are edited by hand. If you add, remove or rename a section, update `scripts/wb_meta.py` and the episode list in `config.yaml`.
+
+## Building the site locally
+
+You need R, the Workbench packages and pandoc:
+
+```r
+install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
+  repos = c("https://carpentries.r-universe.dev/", getOption("repos")))
+sandpaper::build_lesson()        # builds the site into site/docs and opens a preview
+sandpaper::validate_lesson()     # checks links, fenced divs and headings
+```
+
+## Before publishing
+
+- Confirm the licence (see `LICENSE.md`).
+- Replace the placeholder `contact` in `config.yaml`, and add the code of conduct links in `CODE_OF_CONDUCT.md`.
+- For an ADCI logo, fork the `varnish` theme, add `adci-logo.svg` and `adci-logo-sm.svg` to its images, and pin the fork in `config.yaml` (for example `varnish: 'ADCI-Perth/varnish'`). Without it, the header shows the text "ADCI" where the logo would go.

@@ -1,22 +1,18 @@
-# This template CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to replace its contents
-# with information about your lesson.
-# Remember to update this file periodically, 
-# ensuring that the author list and other fields remain accurate.
-
 cff-version: 1.2.0
-title: FIXME
+title: 'Intro to Programming: a six-week Python micro-credential'
 message: >-
   Please cite this lesson using the information in this file
-  when you refer to it in publications, and/or if you
-  re-use, adapt, or expand on the content in your own
-  training material.
+  when you refer to it in publications or adapt it.
 type: dataset
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - name: Australian Data and Cyber Institute (ADCI)
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
-license: CC-BY-4.0
+  A six-week, beginner Python micro-credential (6 hours per week
+  or less) built from short videos, lesson notes, weekly Concepts
+  Bridges and practice tasks. It is designed to support credit
+  towards an introductory programming unit.
+keywords:
+  - Python
+  - programming
+  - beginner
+  - micro-credential

@@ -1,13 +1,9 @@
 ---
-title: "Contributor Code of Conduct"
+title: "Code of Conduct"
 ---
 
-As contributors and maintainers of this project,
-we pledge to follow the [The Carpentries Code of Conduct][coc].
+Everyone who studies, teaches or contributes to this course is expected to treat others with respect, and to follow the Australian Data and Cyber Institute (ADCI) student and staff codes of conduct.
 
-Instances of abusive, harassing, or otherwise unacceptable behavior
-may be reported by following our [reporting guidelines][coc-reporting].
+Report unacceptable behaviour to the course team.
 
-
-[coc-reporting]: https://docs.carpentries.org/topic_folders/policies/incident-reporting.html
-[coc]: https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html
+<!-- FIXME: add links to the ADCI code of conduct and to how to report concerns. -->
