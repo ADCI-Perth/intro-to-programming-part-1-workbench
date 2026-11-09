@@ -336,7 +336,7 @@ The Python interactive shell is good to try and test small script codes but it w
 > Add your screenshot as `episodes/fig/1.1-pycharm-download.png` and replace this note with `![PyCharm download page (this course uses PyCharm instead of Visual Studio Code)](fig/1.1-pycharm-download.png)`.
 
 If you installed visual studio code, let us see how to use it.
-If you prefer a video, you can follow this Visual Studio Code for Python [Video tutorial](https://www.youtube.com/watch?v=bn7Cx4z-vSo)
+If you prefer a video, watch [T#16 Working with PyCharm: Run, Debug, Trace](https://www.youtube.com/watch?v=akcEaEH91gI&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) (10:26). It shows how to use PyCharm, which this course uses.
 
 ##### How to use visual studio code
 
