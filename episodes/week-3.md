@@ -1,7 +1,7 @@
 ---
 title: 'Week 3: Control flow and functions'
-teaching: 179
-exercises: 181
+teaching: 164
+exercises: 176
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -26,7 +26,7 @@ exercises: 181
 - Define functions with parameters and return values.
 - Use default, keyword and arbitrary arguments.
 - Use the understand, pseudocode, code, test process.
-- Write bubble sort from pseudocode and trace it in the debugger.
+- Complete a bubble sort template and trace it in the debugger.
 - Write pseudocode, then a grade calculator using functions and if/elif.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -42,21 +42,22 @@ By the end of this week you can:
 - make a program choose between actions with `if`, `elif` and `else`;
 - repeat steps with `while` and `for` loops, and stop or skip with `break` and `continue`;
 - write your own functions that take values and return a result;
-- plan a solution in pseudocode, write a simple sorting method yourself, and trace it in the PyCharm debugger.
+- plan a solution in pseudocode, and trace a simple sorting method step by step in the PyCharm debugger.
 
-### Time plan (6 hours)
+### Time plan (under 6 hours)
 
 | Block | Time | What you do |
 |---|---|---|
-| Watch | 1 h 22 m | 8 short videos |
-| Read & practise | 2 h 8 m | Sections 3.1, 3.2 and 3.3, with Level 1 exercises |
-| Concepts Bridge | 0.5 h | [Problem solving and sorting](#week-3-bridge) |
-| Build | 2 h | [Grade calculator](#week-3-practice) |
-| **Total** | **6 h** | |
+| Watch | 1 h 15 m | 7 short videos |
+| Read & practise | 1 h 55 m | Sections 3.1, 3.2 and 3.3, with Level 1 exercises |
+| Concepts Bridge | 0.5 h | [Problem solving and sorting](#week-3-bridge), including one short video |
+| Build | 2 h | [Grade calculator](#week-3-practice), your portfolio item for this week |
+| Quiz | 0.25 h | Canvas quiz, 6 questions |
+| **Total** | **5 h 55 m** | |
 
-Read & practise includes an optional 1 h online drop-in or Q&A session. Do the Watch block first, then read, then bridge, then build. You can mix videos and reading by day: for example, watch T#19 and then read Section 3.1.
+Do the Watch block first, then read, then bridge, then build, then the quiz. You can mix videos and reading by topic: for example, watch T#19 and then read Section 3.1.
 
-### Watch (1 h 22 m)
+### Watch (1 h 15 m)
 
 All links open in the Telusko *Python for Beginners (Full Course)* playlist.
 
@@ -69,31 +70,45 @@ All links open in the Telusko *Python for Beginners (Full Course)* playlist.
 | T#32 | [Functions in Python](https://www.youtube.com/watch?v=BVfCWuca9nw&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 11:13 | How to define a function with `def` and call it |
 | T#33 | [Function Arguments](https://www.youtube.com/watch?v=ijXMGpoMkhQ&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 7:52 | Passing values in, and getting a value back with `return` |
 | T#34 | [Types of Arguments](https://www.youtube.com/watch?v=eci9iU_s6Ag&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 9:55 | Positional, keyword and default arguments |
-| T#70 | [Bubble Sort](https://www.youtube.com/watch?v=Vca808JTbI8&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 7:21 | How neighbouring values are compared and swapped. You will trace this in the Bridge. |
 
-### Read & practise (2 h 8 m)
+The bubble sort video (T#70) is in the Concepts Bridge, not here.
+
+### Read & practise (1 h 55 m)
 
 Read each lesson, type and run every example in PyCharm, then do the Level 1 exercises. Create one `.py` file per section, such as `section_3_1.py`. Where a lesson says to use VS Code, use PyCharm instead: **File > New > Python File**, then click the green arrow to run.
 
-| Lesson | Read | Level 1 exercises |
-|---|---|---|
-| [Conditionals](#section-3-1) | All sections. Short Hand and Nested Conditions can be a quick skim. | 1 to 3 |
-| [Loops](#section-3-2) | While Loop, Break and Continue, For Loop, The Range Function, Nested For Loop. Skim For Else and Pass. | 1 to 8 |
-| [Functions](#section-3-3) | Everything down to "Function with Default Parameters". Skim the arbitrary-arguments and dictionary-unpacking sections. | 1, 2, 4, 5, 8, 9, 11, 13 |
+| Order | Lesson | About | Read | Level 1 exercises |
+|---|---|---|---|---|
+| 1 | [Conditionals](#section-3-1) | 35 min | All sections. Short Hand and Nested Conditions can be a quick skim. | 1 to 3 |
+| 2 | [Loops](#section-3-2) | 45 min | While Loop, Break and Continue, For Loop, The Range Function, Nested For Loop. Skim For Else and Pass. | 1 to 8 |
+| 3 | [Functions](#section-3-3) | 35 min | Everything down to "Function with Default Parameters". Skim the arbitrary-arguments and dictionary-unpacking sections. | 1, 2, 4, 5, 8, 9, 11, 13 |
 
 Notes:
 
 - Section 3.3 exercise 3 asks you to check types. Skip that part; just add up the numbers.
 - Section 3.2 Level 2 and 3 use files from the `data` folder (`countries.py`, `countries-data.py`). In this course they are in [assets/data](data/course-data.zip). They are optional extras.
-- Section 6.1 (modules) is taught in Week 6.
+- Modules (Section 6.1) are taught in Week 6.
 
 ### Concepts Bridge (0.5 h)
 
-[Bridge: solving problems and sorting](#week-3-bridge). Learn the understand, pseudocode, code, test process. Then write bubble sort yourself from pseudocode, trace it in the PyCharm debugger, and compare it with Python's `sorted()`.
+[Bridge: solving problems and sorting](#week-3-bridge). Learn the understand, pseudocode, code, test process. Then watch the bubble sort video, fill in a bubble sort template, and trace it in the PyCharm debugger.
 
 ### Build (2 h)
 
-[Practice task: grade calculator](#week-3-practice). Enter marks, store them, and report the average and a grade, using functions and `if`/`elif`. Write short pseudocode first. This task is for practice and is not marked.
+[Practice task: grade calculator](#week-3-practice). Enter marks, store them, and report the average and a grade, using functions and `if`/`elif`. Write short pseudocode first. This is your portfolio item for this week.
+
+### Quiz (0.25 h)
+
+Take the Canvas quiz for Week 3 after you finish the Build. It has 6 questions, drawn from a pool. It is marked automatically.
+
+### Portfolio this week
+
+Submit at the end of the week, in your portfolio folder:
+
+- `starter.py` (your grade calculator, with your pseudocode at the top)
+- `bubble_sort_template.py` (the template from the Concepts Bridge, with the blanks filled in)
+
+Your tutor marks the portfolio. The quiz is marked automatically.
 
 ### Optional
 
@@ -115,10 +130,6 @@ Only if you have time. Nothing here is needed to finish the week.
 - T#71 Selection sort
 
 Find these in the [playlist](https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3).
-
-**Lessons**
-
-- [Section 6.1: Modules](week-6.md#section-6-1) (taught in Week 6)
 
 **Reading**
 
@@ -1312,20 +1323,26 @@ print(sum_of_numbers(100)) # 5050
 
 ## Concepts Bridge: Solving Problems and Sorting {#week-3-bridge}
 
-**Time: 30 minutes.** There is no extra video. You already watched T#70 Bubble Sort in the Watch block.
+**Time: 30 minutes.**
 
 | Part | Minutes |
 |---|---|
+| Watch: T#70 Bubble Sort | 7 |
 | Read: the problem-solving process | 5 |
 | Read: bubble sort pseudocode | 3 |
-| Activity 1: write `bubble_sort` yourself | 12 |
-| Activity 2: trace it in the PyCharm debugger | 7 |
-| Activity 3: compare with `sorted()` and check the model answer | 3 |
+| Activity 1: fill in the bubble sort template | 10 |
+| Activity 2: trace it in the PyCharm debugger and compare with `sorted()` | 5 |
 | **Total** | **30** |
 
 ### Why this matters
 
-Learning outcome 1 of this course asks you to *analyse and solve a problem and then implement the solution in a programming language*. The order matters: think first, type second. Writing a sorting algorithm from scratch is also a classic exercise for logical and control structures. This bridge covers both: you will write bubble sort yourself.
+Learning outcome 1 of this course asks you to *analyse and solve a problem and then implement the solution in a programming language*. The order matters: think first, type second. Sorting is a classic problem for control structures, so this bridge uses bubble sort as the worked example.
+
+### Watch: T#70 Bubble Sort (7:21)
+
+Watch the video once, then read the pseudocode below.
+
+- **T#70** [Bubble Sort](https://www.youtube.com/watch?v=Vca808JTbI8&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) (7:21): how neighbouring values are compared and swapped.
 
 ### The problem-solving process
 
@@ -1381,38 +1398,41 @@ After the first pass the biggest value has reached the end. Each pass fixes one 
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Activity (about 22 minutes)
+### Activity 1: fill in the template (10 minutes)
 
-Use the list `[6, 2, 5, 3]`.
+Copy this template into a new PyCharm file called `bubble_sort_template.py`. Replace each `___` with the right code. The comments tell you what each line does.
 
-#### 1. Write it yourself (12 minutes)
+```python
+def bubble_sort(numbers):
+    items = list(numbers)                                    # 1. make a copy
+    for end in range(___, 0, -1):                            # 2. each pass stops one place earlier
+        for i in range(end):                                 # 3. each neighbouring pair up to end
+            if items[i] ___ items[i + 1]:                    # 4. is the pair in the wrong order?
+                items[i], items[i + 1] = items[i + 1], items[i]   # 5. swap them
+    return items
+```
 
-1. Understand: what should the sorted list look like?
-2. In a new PyCharm file, write `def bubble_sort(numbers):` from the pseudocode. Do not look at the model answer yet. Hints:
-   - `list(numbers)` makes a copy, so the original list is not changed.
-   - `range(len(items) - 1, 0, -1)` counts down for the passes.
-   - `range(end)` gives each neighbouring pair `i` and `i + 1` in a pass.
-   - `items[i], items[i + 1] = items[i + 1], items[i]` swaps two values in one line.
-3. Add `print(bubble_sort([6, 2, 5, 3]))` at the bottom and run it.
-4. Test it: also try `[]`, `[1]` and `[3, 3, 1]`.
+There are three blanks:
 
-If you are stuck after 8 minutes, peek at the model answer at the end, then close it and type your own version.
+- The first `___` is the starting position for the first pass. It is the last index of the list: `len(items) - 1`.
+- The second `___` is the number of pairs to check in a pass. Use `end`.
+- The third `___` is the comparison that means "wrong order": `>`.
 
-#### 2. Trace it in the PyCharm debugger (7 minutes)
+Then add `print(bubble_sort([6, 2, 5, 3]))` at the bottom and run it. You should see `[2, 3, 5, 6]`.
+
+Writing bubble sort from a blank page is an optional stretch, after the template works.
+
+### Activity 2: trace and compare (5 minutes)
 
 A *trace* means following a program one step at a time and watching the variables. In T#16 you saw how PyCharm's debugger does this.
 
-1. Click in the grey gutter beside your `if` line that compares two items. A red dot (a *breakpoint*) appears.
+1. Click in the grey gutter beside the `if` line. A red dot (a *breakpoint*) appears.
 2. Right-click the file and choose **Debug**. The program pauses at the breakpoint.
 3. Look at the **Threads & Variables** panel. Watch `items`, `i` and `end`.
-4. Press **Resume Program** (green arrow) to move to the next time the line runs, or **Step Over** (F8) to go one line at a time.
-5. On paper, write the list after every swap and count the swaps. Find the values of `i` and `end` when the second pass starts.
+4. Press **Resume Program** (green arrow) to move to the next time the line runs.
+5. On paper, write the list after each swap. Note the values of `end` when the second pass starts.
 
-#### 3. Compare with `sorted()` (3 minutes)
-
-Python already has a sorting function. It is fast and well tested, so in real programs you use it. Writing your own bubble sort is for learning how sorting works.
-
-Add these lines to your file and run it:
+Then add these lines and run the file:
 
 ```output
 data = [6, 2, 5, 3]
@@ -1422,59 +1442,35 @@ print(bubble_sort(data) == sorted(data))
 print(data)
 ```
 
-Both should give the same answer, and neither should change `data`. Bubble sort is slow on long lists because it compares so many pairs. Python's `sorted()` is much faster.
+Both sorted results should match, and `data` should not change. Python's `sorted()` is fast and well tested, so real programs use it. Bubble sort is for learning how sorting works, and it is slow on long lists.
 
 :::::::::::::::: solution
 
 ### Model answer
 
-Check your work after you have tried it yourself.
-
-1. Sorted list: `[2, 3, 5, 6]`.
-2. A complete `bubble_sort`. The `print` line shows every swap; you can leave it out.
+Check your work after you have tried the template yourself.
 
 ```python
 def bubble_sort(numbers):
-    items = list(numbers)          # work on a copy
-    for end in range(len(items) - 1, 0, -1):
-        for i in range(end):
-            if items[i] > items[i + 1]:
-                items[i], items[i + 1] = items[i + 1], items[i]
-                print("swap:", items)
+    items = list(numbers)                                    # 1. make a copy
+    for end in range(len(items) - 1, 0, -1):                 # 2. each pass stops one place earlier
+        for i in range(end):                                 # 3. each neighbouring pair up to end
+            if items[i] > items[i + 1]:                      # 4. is the pair in the wrong order?
+                items[i], items[i + 1] = items[i + 1], items[i]   # 5. swap them
     return items
 
 
-data = [6, 2, 5, 3]
-print(bubble_sort(data))
-print(sorted(data))
-print(bubble_sort(data) == sorted(data))
-print(data)
-print(bubble_sort([]), bubble_sort([1]), bubble_sort([3, 3, 1]))
+print(bubble_sort([6, 2, 5, 3]))           # [2, 3, 5, 6]
+print(bubble_sort([]), bubble_sort([1]))   # [] [1]
 ```
 
-Output:
+For the list `[6, 2, 5, 3]`, the swaps happen like this:
 
-```output
-swap: [2, 6, 5, 3]
-swap: [2, 5, 6, 3]
-swap: [2, 5, 3, 6]
-swap: [2, 3, 5, 6]
-[2, 3, 5, 6]
-[2, 3, 5, 6]
-swap: [2, 6, 5, 3]
-swap: [2, 5, 6, 3]
-swap: [2, 5, 3, 6]
-swap: [2, 3, 5, 6]
-True
-[6, 2, 5, 3]
-swap: [3, 1, 3]
-swap: [1, 3, 3]
-[] [1] [1, 3, 3]
-```
+1. Pass 1 (end = 3): `[6, 2, 5, 3]` → `[2, 6, 5, 3]` → `[2, 5, 6, 3]` → `[2, 5, 3, 6]`
+2. Pass 2 (end = 2): `[2, 5, 3, 6]` → `[2, 3, 5, 6]`
+3. Pass 3 (end = 1): no swaps are needed.
 
-3. The list after each swap is the four `swap:` lines above: 4 swaps in total. Pass 1 ends at `[2, 5, 3, 6]`. Pass 2 makes the last swap. Pass 3 finds nothing to swap.
-4. Pass 2 starts with `end` equal to 2 and `i` equal to 0. `items` is `[2, 5, 3, 6]`.
-5. `sorted()` gives `[2, 3, 5, 6]`, the same as your trace, and `data` is unchanged.
+Four swaps in total. The second pass starts with `end` equal to 2 and `i` equal to 0.
 
 :::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -1498,7 +1494,7 @@ Download these files into a folder for this task and open the folder in PyCharm.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**Time: about 2 hours.** This is a practice task. It is not marked.
+**Time: about 2 hours.** This is your portfolio item for Week 3. Your tutor marks it at the end of the week.
 
 ### Goal
 
@@ -1561,6 +1557,13 @@ Highest: 90
 ```
 
 The `Highest` line is part of the optional stretch.
+
+### Portfolio checklist
+
+Your portfolio for this week has two files:
+
+- `starter.py`, your grade calculator, with your pseudocode at the top as comments.
+- `bubble_sort_template.py`, the Concepts Bridge template with the three blanks filled in.
 
 ### Hints
 

@@ -1,11 +1,10 @@
-"""Tests for the library loan manager, Part 1.
+"""Tests for the library loan manager, Part 1 (in memory).
 
 While you work, change MODULE_NAME to "library_starter" to test your own
 code. Change it back to "library" to test the model solution.
 """
 
 import importlib
-import json
 
 import pytest
 
@@ -31,23 +30,6 @@ def test_book_attributes():
     assert book.author == "Frank Herbert"
     assert book.isbn == "111"
     assert book.on_loan is False
-
-
-def test_book_to_dict():
-    assert Book("Dune", "Frank Herbert", "111").to_dict() == {
-        "title": "Dune",
-        "author": "Frank Herbert",
-        "isbn": "111",
-        "on_loan": False,
-    }
-
-
-def test_book_from_dict_round_trip():
-    book = Book("Dune", "Frank Herbert", "111")
-    book.on_loan = True
-    copy = Book.from_dict(book.to_dict())
-    assert isinstance(copy, Book)
-    assert copy.to_dict() == book.to_dict()
 
 
 def test_book_str():
@@ -111,45 +93,3 @@ def test_available_books():
     available = library.available_books()
     assert isinstance(available, list)
     assert [book.isbn for book in available] == ["222"]
-
-
-# ---- Saving and loading -------------------------------------------------
-
-def test_save_writes_json(tmp_path):
-    library = make_library()
-    library.lend("111")
-    path = tmp_path / "library.json"
-    library.save(path)
-    data = json.loads(path.read_text(encoding="utf-8"))
-    assert len(data) == 2
-
-
-def test_save_then_load_round_trip(tmp_path):
-    library = make_library()
-    library.lend("111")
-    path = tmp_path / "library.json"
-    library.save(path)
-
-    other = Library()
-    other.load(path)
-    assert set(other.books) == {"111", "222"}
-    assert other.books["111"].on_loan is True
-    assert other.books["222"].on_loan is False
-    assert isinstance(other.books["111"], Book)
-
-
-def test_load_replaces_existing_books(tmp_path):
-    path = tmp_path / "library.json"
-    make_library().save(path)
-    other = Library()
-    other.add_book(Book("Old", "Someone", "000"))
-    other.load(path)
-    assert "000" not in other.books
-    assert set(other.books) == {"111", "222"}
-
-
-def test_load_missing_file_leaves_library_empty(tmp_path):
-    library = Library()
-    library.add_book(Book("Old", "Someone", "000"))
-    library.load(tmp_path / "does_not_exist.json")
-    assert library.books == {}

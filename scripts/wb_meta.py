@@ -1,17 +1,18 @@
 # Episode metadata for the Workbench conversion: questions, objectives, keypoints, timings (minutes).
+# Part 1 of the course (weeks 1 to 6). Part 2 is a separate project and is not in this site.
 
 WEEKS = {
     1: 'Getting started: how programs run, values and operators',
-    2: 'Input, strings and data structures',
+    2: 'Input and data structures',
     3: 'Control flow and functions',
     4: 'Recursion, functional programming and errors',
-    5: 'Object-oriented programming and files',
-    6: 'Modules, libraries and choosing a paradigm',
+    5: 'Object-oriented programming',
+    6: 'Modules and choosing a paradigm',
 }
 
-# minutes per week: watch, read & practise, bridge, build
-TIME = {1: (82, 124, 30, 120), 2: (59, 151, 30, 120), 3: (82, 128, 30, 120),
-        4: (53, 120, 30, 120), 5: (84, 100, 30, 120), 6: (49, 60, 30, 180)}
+# minutes per week: watch, read & practise, bridge, build (quiz is 15 minutes in every week)
+TIME = {1: (75, 115, 30, 120), 2: (42, 118, 30, 120), 3: (75, 115, 30, 120),
+        4: (53, 120, 30, 120), 5: (45, 90, 30, 120), 6: (24, 60, 30, 180)}
 
 SECTIONS = {
     '1.1': dict(src='week-1/lessons/1.1_introduction.md', slug='introduction', title='Introduction to Python',
@@ -26,10 +27,6 @@ SECTIONS = {
         q=['How does Python do arithmetic?', 'How do I compare values and combine conditions?'],
         o=['Use arithmetic, assignment, comparison and logical operators.', 'Predict the result of an expression before running it.'],
         k=['/ always gives a float; // drops the remainder; % gives the remainder.', 'Comparison operators give True or False.', 'and, or and not combine conditions.', '== checks equal values; is checks the same object.']),
-    '2.1': dict(src='week-2/lessons/2.1_strings.md', slug='strings', title='Strings',
-        q=['How do I work with text in Python?'],
-        o=['Create, join and format strings.', 'Use indexing and slicing to get parts of a string.', 'Use common string methods.'],
-        k=['Strings are sequences of characters, counted from index 0.', 'f-strings are the clearest way to put values into text.', 'String methods return a new string; the original does not change.']),
     '2.2': dict(src='week-2/lessons/2.2_lists.md', slug='lists', title='Lists',
         q=['How do I store many values in order and change them?'],
         o=['Create lists and access items by index and slice.', 'Add, remove, sort and copy list items.'],
@@ -64,62 +61,48 @@ SECTIONS = {
         k=['[expression for item in iterable if condition] builds a new list.', 'A lambda is a small function written in one expression.']),
     '4.2': dict(src='week-4/lessons/4.2_higher_order_functions.md', slug='higher-order-functions', title='Higher-Order Functions',
         q=['How can functions work with other functions?'],
-        o=['Pass functions as arguments and return them from functions.', 'Use map(), filter() and reduce().'],
-        k=['Functions are values: you can pass them around.', 'map() changes every item, filter() keeps some items, reduce() combines items into one value.']),
+        o=['Pass functions as arguments and return them from functions.', 'Use map() and filter().'],
+        k=['Functions are values: you can pass them around.', 'map() changes every item; filter() keeps the items that pass a test.']),
     '4.3': dict(src='week-4/lessons/4.3_error_types.md', slug='error-types', title='Python Error Types',
         q=['What do Python error messages mean?'],
         o=['Read a traceback and find the line that failed.', 'Recognise common error types and fix them.'],
         k=['The last line of a traceback names the error type.', 'Read error messages carefully: Python often suggests the fix.']),
     '4.4': dict(src='week-4/lessons/4.4_exception_handling.md', slug='exception-handling', title='Exception Handling',
         q=['How can my program keep going when something goes wrong?'],
-        o=['Use try, except, else and finally.', 'Catch specific error types.', 'Pack and unpack arguments with * and **.'],
-        k=['try runs risky code; except handles the error.', 'Catch the specific error you expect, not every error.', '* unpacks lists and ** unpacks dictionaries.']),
+        o=['Use try and except.', 'Catch the specific error type you expect.'],
+        k=['try runs risky code; except handles the error.', 'Catch the specific error you expect, not every error.']),
     '5.1': dict(src='week-5/lessons/5.1_classes_and_objects.md', slug='classes-and-objects', title='Classes and Objects',
         q=['How do I create my own data types?'],
         o=['Define a class with __init__ and methods.', 'Create objects and use inheritance and method overriding.'],
         k=['A class is a blueprint; an object is one thing made from it.', 'self refers to the current object.', 'A child class inherits from its parent and can override its methods.']),
-    '5.2': dict(src='week-5/lessons/5.2_file_handling.md', slug='file-handling', title='File Handling',
-        q=['How do I save data and read it back later?'],
-        o=['Read and write text files with open() and with.', 'Read and write JSON and CSV files.'],
-        k=['Use with open(...) so the file closes itself.', 'Mode "w" overwrites, "a" appends, "r" reads.', 'json.dump() and json.load() save and load Python data.']),
     '6.1': dict(src='week-6/lessons/6.1_modules.md', slug='modules', title='Modules',
         q=['How do I split code into files and use code others have written?'],
-        o=['Create and import your own module.', 'Use built-in modules such as math, random, os and statistics.'],
+        o=['Create and import your own module.', 'Use built-in modules such as math and random.'],
         k=['A module is a .py file you can import.', 'from module import name imports just what you need.', 'Python ships with many useful built-in modules.']),
-    '6.2': dict(src='week-6/lessons/6.2_package_manager.md', slug='packages', title='pip and Packages',
-        q=['How do I install and use third-party packages?'],
-        o=['Install, list and remove packages with pip.', 'Fetch data from the web with requests.', 'Create a simple package of your own.'],
-        k=['Use python -m pip so packages install for the Python you run.', 'pip freeze lists installed packages for a requirements.txt file.', 'A folder with an __init__.py file is a package.']),
 }
 
-OPTIONAL = {
-    '5.3': dict(src='week-5/lessons/5.3_date_time.md', slug='date-time', title='Date and Time'),
-    '5.4': dict(src='week-5/lessons/5.4_regular_expressions.md', slug='regular-expressions', title='Regular Expressions'),
-    '6.3': dict(src='week-6/lessons/6.3_web_scraping.md', slug='web-scraping', title='Web Scraping'),
-    '6.4': dict(src='week-6/lessons/6.4_virtual_environment.md', slug='virtual-environments', title='Virtual Environments'),
-    '6.5': dict(src='week-6/lessons/6.5_statistics_numpy.md', slug='statistics-numpy', title='Statistics and NumPy'),
-    '6.6': dict(src='week-6/lessons/6.6_pandas.md', slug='pandas', title='Pandas'),
-}
+# Lesson sections that now belong to Part 2 (not in this site): 2.1 strings, 5.2 files, 6.2 pip, 5.3, 5.4, 6.3 to 6.6.
+OPTIONAL = {}
 
 BRIDGES = {
-    1: dict(title='How Code Runs', q=['How does the code I type become something a computer can run?'],
-            o=['Explain the difference between machine code, assembly, compilers and interpreters.', 'Compare Hello World in Python with other languages.'],
-            k=['Computers only run machine code.', 'Compilers translate a whole program first; interpreters run it step by step.', 'Python compiles to bytecode, then the interpreter runs it.']),
+    1: dict(title='Input, Process, Output', q=['How does a program take in information, work on it and give a result?'],
+            o=['Describe a task as input, process and output.', 'Write a short program that follows those three steps.'],
+            k=['Every program takes in information, works on it and gives a result.', 'input() waits for the user; print() shows the result.', 'Python reads a file from top to bottom and carries out each line.']),
     2: dict(title='Choosing the Right Structure', q=['Which data structure should I use for a job?'],
             o=['Choose between a list, tuple, set and dictionary for a given task.'],
             k=['Ask: does order matter, can it change, must items be unique, do I look up by name?']),
     3: dict(title='Solving Problems and Sorting', q=['How do I plan a solution before I code it?'],
-            o=['Use the understand, pseudocode, code, test process.', 'Write bubble sort from pseudocode and trace it in the debugger.'],
+            o=['Use the understand, pseudocode, code, test process.', 'Complete a bubble sort template and trace it in the debugger.'],
             k=['Think first, type second.', 'Pseudocode is a plan in plain English.', 'The debugger lets you watch a program run line by line.']),
     4: dict(title='Functional and Logic Programming', q=['What are programming paradigms?', 'How do functional and logic programming differ from what I have done so far?'],
-            o=['Explain pure functions, side effects and recursion.', 'Run a small logic program and write the same rules in Python.'],
+            o=['Explain pure functions, side effects and recursion.', 'Run a small logic program and predict the answers of a Python version.'],
             k=['A pure function has no side effects.', 'Recursion solves a problem by calling the function on a smaller problem.', 'Logic programming states facts and rules, then asks questions.']),
-    5: dict(title='Everything Is an Object, and Floating-Point Risk', q=['What does "everything is an object" mean?', 'Why is 0.1 + 0.2 not exactly 0.3?'],
-            o=['Use type(), id() and dunder methods to inspect objects.', 'Explain floating-point error and use Decimal for money.'],
-            k=['Every value in Python is an object with a type and methods.', 'Floats are approximations; use Decimal when exact values matter.']),
-    6: dict(title='Type Safety, Library Risk and Choosing a Paradigm', q=['How do I use packages safely?', 'How do I choose a paradigm for a problem?'],
-            o=['Add type hints to a function.', 'Describe the risks of third-party libraries.', 'Compare paradigms using a set of criteria.'],
-            k=['Type hints document intent and let tools find mistakes.', 'Pin versions and check package names before installing.', 'No paradigm is best everywhere: judge each problem against the same criteria.']),
+    5: dict(title='Everything Is an Object', q=['What does "everything is an object" mean?', 'What is a dunder method?'],
+            o=['Use type(), id() and dunder methods to inspect objects.', 'Explain duck typing.'],
+            k=['Every value in Python is an object with a type and methods.', 'Dunder methods such as __len__ and __add__ let Python call your objects with len() and +.']),
+    6: dict(title='Choosing a Paradigm', q=['How do I choose a paradigm for a problem?'],
+            o=['Compare paradigms using a set of criteria.', 'Write a short note that justifies a choice.'],
+            k=['No paradigm is best everywhere: judge each problem against the same criteria.']),
 }
 
 PRACTICE = {
@@ -127,16 +110,16 @@ PRACTICE = {
     2: dict(title='Practice: Phone Book', files=['starter.py', 'solution.py', 'test_solution.py']),
     3: dict(title='Practice: Grade Calculator', files=['starter.py', 'solution.py', 'test_solution.py']),
     4: dict(title='Practice: Functional Grade Calculator', files=['starter.py', 'solution.py', 'test_solution.py']),
-    5: dict(title='Practice: Animal Class and Mini Project (Part 1)',
+    5: dict(title='Practice: Animal Class and Library Mini Project (Part 1)',
             files=['animal_starter.py', 'animal_solution.py', 'test_animal.py', 'mini_project/library_starter.py', 'mini_project/library.py', 'mini_project/test_library.py'],
             extra_readme='mini_project/README.md'),
-    6: dict(title='Practice: Mini Project (Part 2)', files=['solution/library.py', 'solution/main.py', 'test_library.py']),
+    6: dict(title='Practice: Library Menu Program (Part 2 of the mini project)', files=['solution/library.py', 'solution/main.py', 'test_library.py']),
 }
 PRACTICE_Q = {
     1: (['Can I combine input, variables and operators in a small program?'], ['Write a unit converter or calculator that runs in PyCharm.'], ['Small programs are built from variables, input, operators and print.']),
     2: (['Can I use a dictionary of lists to manage real data?'], ['Build a phone-book program that stores and looks up contacts.'], ['A dictionary of lists stores several values for each key.']),
     3: (['Can I plan and build a program with functions and decisions?'], ['Write pseudocode, then a grade calculator using functions and if/elif.'], ['Keep input() and print() in main(); other functions take values and return values.']),
     4: (['How does a functional version of a program compare with an imperative one?'], ['Rewrite a grade calculator with comprehensions, map/filter and try/except.'], ['The same problem can be solved in more than one style.']),
-    5: (['Can I model real things with classes and save them to a file?'], ['Write an Animal class, then start a library-loan manager that saves to JSON.'], ['Classes keep data and behaviour together.', 'JSON files let a program remember data between runs.']),
-    6: (['Can I finish a complete program and justify its design?'], ['Finish the library-loan manager across modules, and compare two paradigms in it.'], ['Splitting code into modules keeps programs manageable.', 'Explain design choices using clear criteria.']),
+    5: (['Can I model real things with classes?'], ['Write an Animal class, then start a library-loan manager with Book and Library classes.'], ['Classes keep data and behaviour together.']),
+    6: (['Can I finish a complete program and justify its design?'], ['Finish the library-loan manager with a menu and search, and compare two paradigms in it.'], ['Splitting code into modules keeps programs manageable.', 'Explain design choices using clear criteria.']),
 }

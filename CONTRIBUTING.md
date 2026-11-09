@@ -1,6 +1,6 @@
 ## Contributing
 
-This is the Workbench (website) version of ADCI's *Intro to Programming* micro-credential. The course content is maintained in the main course repository, `ADCI-Perth/intro-to-programming-microcredential`, and converted into this lesson with `scripts/convert_from_course.py`.
+This is the Workbench (website) version of ADCI's *Intro to Programming* micro-credential. The course content is maintained in the main course repository, `ADCI-Perth/intro-to-programming-part-1`, and converted into this lesson with `scripts/convert_from_course.py`.
 
 ### Making changes
 

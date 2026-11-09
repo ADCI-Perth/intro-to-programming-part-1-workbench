@@ -1,13 +1,12 @@
 ---
-title: 'Week 2: Input, strings and data structures'
-teaching: 170
-exercises: 190
+title: 'Week 2: Input and data structures'
+teaching: 133
+exercises: 177
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What will I learn in Week 2, and how should I spend my 6 hours?
-- How do I work with text in Python?
 - How do I store many values in order and change them?
 - When should I use a tuple instead of a list?
 - How do I keep only unique values and compare groups?
@@ -20,9 +19,6 @@ exercises: 190
 :::::::::::::::::::::::::::::::::::::: objectives
 
 - Plan your study time for the week using the time plan.
-- Create, join and format strings.
-- Use indexing and slicing to get parts of a string.
-- Use common string methods.
 - Create lists and access items by index and slice.
 - Add, remove, sort and copy list items.
 - Create tuples and access their items.
@@ -38,61 +34,60 @@ exercises: 190
 
 ## Week 2 overview {#week-2-overview}
 
-**Theme:** getting text and numbers into a program, and storing groups of values.
+**Theme:** getting information from the user, and storing groups of values in lists, tuples, sets and dictionaries.
 
 
 ### What you will be able to do
 
 By the end of this week you can:
 
-- Ask the user for input with `input()` and tidy the text with string methods.
-- Create, change and slice lists, tuples, sets and dictionaries.
-- Explain how lists, tuples, sets and dictionaries differ, and pick the right one.
-- Build a small phone-book program using a dictionary of lists.
+- Ask the user for input with `input()`, and explain why it always gives you text.
+- Create, change and look up items in lists, tuples, sets and dictionaries.
+- Explain how these four structures differ, and pick the right one for a job.
+- Build a small phone-book program that stores a dictionary of lists.
 
-### Time plan (6 hours)
+### Time plan (under 6 hours)
 
-| Block | Time | What you do |
+| Block | What you do | Time |
 |---|---|---|
-| Watch | 59 min | Five core videos |
-| Read & practise | 2 h 31 min | Sections 2.1 to 2.5, with exercises |
-| Concepts Bridge | 30 min | Choosing the right structure |
-| Build | 2 h | Phone-book practice task |
-| **Total** | **6 h** | |
+| Watch | 4 short videos | 0 h 42 m |
+| Read & practise | Sections 2.2 to 2.5, with the assigned exercises | 1 h 58 m |
+| Concepts Bridge | [Choosing the right structure](#week-2-bridge) | 0.5 h |
+| Build | [Phone-book practice task](#week-2-practice), your portfolio item for this week | 2 h |
+| Quiz | Canvas quiz, 6 questions | 0.25 h |
+| **Total** | | **5 h 25 m** |
 
-Aim to finish the week in order: Watch, Read & practise, Bridge, Build. You can mix Watch and Read & practise by topic if you prefer. Watch the strings video, then read Section 2.1, and so on.
+Aim to finish the week in order: Watch, Read & practise, Bridge, Build, then the Quiz. You can mix Watch and Read & practise by topic if you prefer.
 
-### Watch (59 minutes)
+### Watch (42 minutes)
 
 Pause often and type along in PyCharm.
 
 | # | Video | Length | Look for |
 |---|---|---|---|
 | 1 | **T#18** [User Input in Python](https://www.youtube.com/watch?v=4OX49nLNPEE&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 11:59 | `input()` always gives you text (a string), even when you type a number. |
-| 2 | **[Programming with Mosh]** [How to Use Strings in Python](https://www.youtube.com/watch?v=Ctqi5Y4X-jA) | 16:46 | Indexing, slicing, and methods such as `upper()` and `replace()`. |
-| 3 | **T#5** [List in Python](https://www.youtube.com/watch?v=Eaz5e6M8tL4&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 10:42 | How to add, remove and change list items. |
-| 4 | **T#6** [Tuple, Set in Python](https://www.youtube.com/watch?v=Mf7eFtbVxFM&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 6:41 | A tuple cannot change. A set has no repeats. |
-| 5 | **Telusko** [Dictionary in Python](https://www.youtube.com/watch?v=2IsF7DEtVjg&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 12:24 | Keys and values, and how to look a value up by its key. |
+| 2 | **T#5** [List in Python](https://www.youtube.com/watch?v=Eaz5e6M8tL4&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 10:42 | How to add, remove and change list items. |
+| 3 | **T#6** [Tuple, Set in Python](https://www.youtube.com/watch?v=Mf7eFtbVxFM&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 6:41 | A tuple cannot change. A set has no repeats. |
+| 4 | **Telusko** [Dictionary in Python](https://www.youtube.com/watch?v=2IsF7DEtVjg&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 12:24 | Keys and values, and how to look a value up by its key. |
 
-The five videos add up to 58 min 32 s, shown as 59 min.
+The four videos add up to 41 min 46 s, shown as 42 min.
 
-### Read & practise (2 h 31 min)
+### Read & practise (1 h 58 min)
 
 Read each lesson and run the examples in PyCharm. Then do the exercises. The lessons were written for VS Code. In PyCharm, create a new Python file, paste the example and click **Run**.
 
 | Lesson | Time | Read | Exercises |
 |---|---|---|---|
-| [Section 2.1: Strings](#section-2-1) | 33 min | About 21 min. Read down to "Skipping Characters While Slicing", then skim "String Methods" as a reference. The Mosh video already covers it. | Exercises 1 to 4 (12 min). |
-| [Section 2.2: Lists](#section-2-2) | 47 min | About 32 min. Whole lesson. | Level 1, exercises 1 to 5 (15 min). |
-| [Section 2.3: Tuples](#section-2-3) | 18 min | About 12 min. Whole lesson. | Level 1, exercises 1 and 2 (6 min). |
-| [Section 2.4: Sets](#section-2-4) | 25 min | About 19 min. Whole lesson. | Level 1, exercises 1 and 2 (6 min). |
-| [Section 2.5: Dictionaries](#section-2-5) | 28 min | About 19 min. Whole lesson. | Exercises 1 to 3 (9 min). |
-| **Total** | **2 h 31 min** | | |
+| [Section 2.2: Lists](#section-2-2) | 47 min | Whole lesson. | Level 1, exercises 1 to 5 (15 min). |
+| [Section 2.3: Tuples](#section-2-3) | 18 min | Whole lesson. | Level 1, exercises 1 and 2 (6 min). |
+| [Section 2.4: Sets](#section-2-4) | 25 min | Whole lesson. | Level 1, exercises 1 and 2 (6 min). |
+| [Section 2.5: Dictionaries](#section-2-5) | 28 min | Whole lesson. | Exercises 1 to 3 (9 min). |
+| **Total** | **1 h 58 min** | | |
 
 Notes:
 
-- The exercise times assume about 3 minutes per exercise. The Section 2.1 to 2.5 exercises not listed above are Optional (see the end of this page).
-- Section 2.1 has no input examples. `input()` is taught in the T#18 video. Try it yourself: `name = input("Your name: ")`, then `print("Hello, " + name)`.
+- The exercise times assume about 3 minutes per exercise. The other exercises are Optional (see the end of this page).
+- The practice task uses two string methods, `.strip()` and `.title()`, to tidy what the user types. They are explained in the practice task, along with `", ".join(...)` and f-strings (text in `f"..."`, with values inside `{}`). Strings are covered properly in Week 7.
 - Section 2.2 mentions a long list of countries in `data/countries.py`. You only need it for Level 2, which is Optional. The file is in `assets/data/` at the top of this repository ([countries.py](data/countries.py)).
 - The lessons link to `data/` and `files/` folders. In this course these are `assets/data/` and `assets/files/`.
 - Stuck? Join the optional one-hour online drop-in session. If you go, count it inside your Read & practise time.
@@ -103,7 +98,20 @@ Notes:
 
 ### Build (2 h)
 
-[Practice task: phone book](#week-2-practice). You write a contacts program with a dictionary of lists and user input. It is practice only and has no marks. The folder has a starter file, a model solution and a test file.
+[Practice task: phone book](#week-2-practice). You write a contacts program with a dictionary of lists and user input. It is your portfolio item for this week. The folder has a starter file, a model solution and a test file.
+
+### Quiz (0.25 h)
+
+Take the Canvas quiz for Week 2 after you finish the Build. It has 6 questions, drawn from a pool. It is marked automatically.
+
+### Portfolio this week
+
+Submit at the end of the week, in your portfolio folder:
+
+- `starter.py` (your phone book)
+- `structure_note.txt` (three sentences, see the practice task)
+
+Your tutor marks the portfolio. The quiz is marked automatically.
 
 ### Optional
 
@@ -111,595 +119,18 @@ Not required. Do these only if you have time left over.
 
 **Videos**
 
-- **[Bro Code]** [String Methods in Python](https://www.youtube.com/watch?v=tb6EYiHtcXU) (12:06)
-- **[Corey Schafer]** [Slicing Lists and Strings](https://www.youtube.com/watch?v=ajrtAuDg3yw) (10:44)
 - **T#26** Arrays and **T#27** Array values from user, in the [Telusko playlist](https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3)
 
 **Reading**
 
 - Driscoll, M. (2017) *Python 101*, Chapters 2 and 3. Available at: https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/ (Accessed: 2 November 2026).
 
-**More practice** (nothing is lost; these are the exercises moved out of the core list):
+**More practice** (these are the exercises moved out of the core list):
 
-- Section 2.1 Strings: exercises 5 to 35.
 - Section 2.2 Lists: Level 1 exercises 6 to 27, and all of Level 2.
 - Section 2.3 Tuples: Level 1 exercises 3 to 5, and all of Level 2.
 - Section 2.4 Sets: Level 1 exercises 3 to 5, and all of Levels 2 and 3.
 - Section 2.5 Dictionaries: exercises 4 to 11.
-- Section 2.1 "String Methods": read it in full, or watch the Bro Code video above.
-
-## 2.1 Strings {#section-2-1}
-
-### Strings
-
-Text is a string data type. Any data type written as text is a string. Any data under single, double or triple quote are strings. There are different string methods and built-in functions to deal with string data types. To check the length of a string use the len() method.
-
-#### Creating a String
-
-```python
-letter = 'P'                # A string could be a single character or a bunch of texts
-print(letter)               # P
-print(len(letter))          # 1
-greeting = 'Hello, World!'  # String could be made using a single or double quote,"Hello, World!"
-print(greeting)             # Hello, World!
-print(len(greeting))        # 13
-sentence = "I hope you are enjoying the Intro to Programming course"
-print(sentence)
-```
-
-Multiline string is created by using triple single (''') or triple double quotes ("""). See the example below.
-
-```python
-multiline_string = '''I am learning to code.
-Python is my first programming language.
-That is why I am taking this course.'''
-print(multiline_string)
-
-# Another way of doing the same thing
-multiline_string = """I am learning to code.
-Python is my first programming language.
-That is why I am taking this course."""
-print(multiline_string)
-```
-
-#### String Concatenation
-
-We can connect strings together. Merging or connecting strings is called concatenation. See the example below:
-
-```python
-first_name = 'Jack'
-last_name = 'Wilson'
-space = ' '
-full_name = first_name + space + last_name
-print(full_name) # Jack Wilson
-# Checking the length of a string using len() built-in function
-print(len(first_name))  # 4
-print(len(last_name))   # 6
-print(len(first_name) > len(last_name)) # False
-print(len(full_name)) # 11
-```
-
-#### Escape Sequences in Strings
-
-In Python and other programming languages \ followed by a character is an escape sequence. Let us see the most common escape characters:
-
-- \n: new line
-- \t: Tab means(8 spaces) 
-- \\\\: Back slash
-- \\': Single quote (')
-- \\": Double quote (")
-
-Now, let us see the use of the above escape sequences with examples.
-
-```python
-print('I hope everyone is enjoying the course.\nAre you?') # line break
-print('Weeks\tTopics\tExercises') # adding a tab (moves to the next 8-character column)
-print('Week 1\t5\t5')
-print('Week 2\t6\t20')
-print('Week 3\t5\t23')
-print('Week 4\t1\t35')
-print('This is a backslash  symbol (\\)') # To write a backslash
-print('In every programming language it starts with \"Hello, World!\"') # to write a double quote inside a single quote
-```
-
-Output:
-
-```output
-I hope everyone is enjoying the course.
-Are you?
-Weeks   Topics  Exercises
-Week 1  5       5
-Week 2  6       20
-Week 3  5       23
-Week 4  1       35
-This is a backslash  symbol (\)
-In every programming language it starts with "Hello, World!"
-```
-
-#### String formatting
-
-##### Old Style String Formatting (% Operator)
-
-In Python there are many ways of formatting strings. In this section, we will cover some of them.
-The "%" operator is used to format a set of variables enclosed in a "tuple" (a fixed size list), together with a format string, which contains normal text together with "argument specifiers", special symbols like "%s", "%d", "%f", "%.<small>number of digits</small>f".
-
-- %s - String (or any object with a string representation, like numbers)
-- %d - Integers
-- %f - Floating point numbers
-- "%.<small>number of digits</small>f" - Floating point numbers with fixed precision
-
-```python
-# Strings only
-first_name = 'Jack'
-last_name = 'Wilson'
-language = 'Python'
-formated_string = 'I am %s %s. I am learning %s.' %(first_name, last_name, language)
-print(formated_string) # I am Jack Wilson. I am learning Python.
-
-# Strings  and numbers
-radius = 10
-pi = 3.14
-area = pi * radius ** 2
-formated_string = 'The area of circle with a radius %d is %.2f.' %(radius, area) # 2 means 2 digits after the decimal point
-print(formated_string) # The area of circle with a radius 10 is 314.00.
-
-python_libraries = ['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']
-formated_string = 'The following are python libraries:%s' % (python_libraries)
-print(formated_string) # The following are python libraries:['Django', 'Flask', 'NumPy', 'Matplotlib', 'Pandas']
-```
-
-##### New Style String Formatting (str.format)
-
-This format was introduced in Python version 3.
-
-```python
-first_name = 'Jack'
-last_name = 'Wilson'
-language = 'Python'
-formated_string = 'I am {} {}. I am learning {}.'.format(first_name, last_name, language)
-print(formated_string) # I am Jack Wilson. I am learning Python.
-a = 4
-b = 3
-
-print('{} + {} = {}'.format(a, b, a + b))
-print('{} - {} = {}'.format(a, b, a - b))
-print('{} * {} = {}'.format(a, b, a * b))
-print('{} / {} = {:.2f}'.format(a, b, a / b)) # limits it to two digits after decimal
-print('{} % {} = {}'.format(a, b, a % b))
-print('{} // {} = {}'.format(a, b, a // b))
-print('{} ** {} = {}'.format(a, b, a ** b))
-
-# Strings and numbers
-radius = 10
-pi = 3.14
-area = pi * radius ** 2
-formated_string = 'The area of a circle with a radius {} is {:.2f}.'.format(radius, area) # 2 digits after decimal
-print(formated_string)
-```
-
-Output:
-
-```output
-I am Jack Wilson. I am learning Python.
-4 + 3 = 7
-4 - 3 = 1
-4 * 3 = 12
-4 / 3 = 1.33
-4 % 3 = 1
-4 // 3 = 1
-4 ** 3 = 64
-The area of a circle with a radius 10 is 314.00.
-```
-
-##### String Interpolation / f-Strings (Python 3.6+)
-
-Another new string formatting is string interpolation, f-strings. Strings start with f and we can inject the data in their corresponding positions.
-
-```python
-a = 4
-b = 3
-print(f'{a} + {b} = {a + b}')
-print(f'{a} - {b} = {a - b}')
-print(f'{a} * {b} = {a * b}')
-print(f'{a} / {b} = {a / b:.2f}')
-print(f'{a} % {b} = {a % b}')
-print(f'{a} // {b} = {a // b}')
-print(f'{a} ** {b} = {a ** b}')
-```
-
-#### Python Strings as Sequences of Characters
-
-Python strings are sequences of characters, and share their basic methods of access with other Python ordered sequences of objects – lists and tuples. The simplest way of extracting single characters from strings (and individual members from any sequence) is to unpack them into corresponding variables.
-
-##### Unpacking Characters
-
-```python
-language = 'Python'
-a,b,c,d,e,f = language # unpacking sequence characters into variables
-print(a) # P
-print(b) # y
-print(c) # t
-print(d) # h
-print(e) # o
-print(f) # n
-```
-
-##### Accessing Characters in Strings by Index
-
-In programming counting starts from zero. Therefore the first letter of a string is at zero index and the last letter of a string is the length of a string minus one.
-
-| Character | `P` | `y` | `t` | `h` | `o` | `n` |
-|---|---|---|---|---|---|---|
-| Index | 0 | 1 | 2 | 3 | 4 | 5 |
-
-```python
-language = 'Python'
-first_letter = language[0]
-print(first_letter) # P
-second_letter = language[1]
-print(second_letter) # y
-last_index = len(language) - 1
-last_letter = language[last_index]
-print(last_letter) # n
-```
-
-If we want to start from right end we can use negative indexing. -1 is the last index.
-
-```python
-language = 'Python'
-last_letter = language[-1]
-print(last_letter) # n
-second_last = language[-2]
-print(second_last) # o
-```
-
-##### Slicing Python Strings
-
-In python we can slice strings into substrings.
-
-```python
-language = 'Python'
-first_three = language[0:3] # starts at zero index and up to 3 but not include 3
-print(first_three) #Pyt
-last_three = language[3:6]
-print(last_three) # hon
-# Another way
-last_three = language[-3:]
-print(last_three)   # hon
-last_three = language[3:]
-print(last_three)   # hon
-```
-
-##### Reversing a String
-
-We can easily reverse strings in python.
-
-```python
-greeting = 'Hello, World!'
-print(greeting[::-1]) # !dlroW ,olleH
-```
-
-##### Skipping Characters While Slicing
-
-It is possible to skip characters while slicing by passing step argument to slice method.
-
-```python
-language = 'Python'
-pto = language[0:6:2] #
-print(pto) # Pto
-```
-
-#### String Methods
-
-There are many string methods which allow us to format strings. See some of the string methods in the following example:
-
-- capitalize(): Converts the first character of the string to capital letter
-
-```python
-challenge = 'six weeks of python'
-print(challenge.capitalize()) # 'Six weeks of python'
-```
-
-- count(): returns occurrences of substring in string, count(substring, start=.., end=..). The start is a starting indexing for counting and end is the last index to count.
-
-```python
-challenge = 'six weeks of python'
-print(challenge.count('o')) # 2
-print(challenge.count('o', 7, 14)) # 1
-print(challenge.count('th')) # 1
-```
-
-- endswith(): Checks if a string ends with a specified ending
-
-```python
-challenge = 'six weeks of python'
-print(challenge.endswith('on'))   # True
-print(challenge.endswith('tion')) # False
-```
-
-- expandtabs(): Replaces tab character with spaces, default tab size is 8. It takes tab size argument
-
-```python
-challenge = 'six\tweeks\tof\tpython'
-print(challenge.expandtabs())   # 'six     weeks   of      python'
-print(challenge.expandtabs(10)) # 'six       weeks     of        python'
-```
-
-- find(): Returns the index of the first occurrence of a substring, if not found returns -1
-
-```python
-challenge = 'six weeks of python'
-print(challenge.find('e'))  # 5
-print(challenge.find('th')) # 15
-```
-
-- rfind(): Returns the index of the last occurrence of a substring, if not found returns -1
-
-```python
-challenge = 'six weeks of python'
-print(challenge.rfind('e'))  # 6
-print(challenge.rfind('o')) # 17
-```
-
-- format(): formats string into a nicer output  
-   More about string formatting check this [the Programiz guide to format()](https://www.programiz.com/python-programming/methods/string/format)
-
-```python
-first_name = 'Jack'
-last_name = 'Wilson'
-age = 25
-job = 'student'
-country = 'Australia'
-sentence = 'I am {} {}. I am a {}. I am {} years old. I live in {}.'.format(first_name, last_name, job, age, country)
-print(sentence) # I am Jack Wilson. I am a student. I am 25 years old. I live in Australia.
-
-radius = 10
-pi = 3.14
-area = pi * radius ** 2
-result = 'The area of a circle with radius {} is {}'.format(str(radius), str(area))
-print(result) # The area of a circle with radius 10 is 314.0
-```
-
-- index(): Returns the lowest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1). If the substring is not found it raises a valueError. 
-
-```python
-challenge = 'six weeks of python'
-sub_string = 'we'
-print(challenge.index(sub_string))  # 4
-# print(challenge.index(sub_string, 9))  # ValueError: substring not found
-```
-
-- rindex(): Returns the highest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1)
-
-```python
-challenge = 'six weeks of python'
-sub_string = 'we'
-print(challenge.rindex(sub_string))  # 4
-# print(challenge.rindex(sub_string, 9))  # ValueError: substring not found
-print(challenge.rindex('on', 8)) # 17
-```
-
-- isalnum(): Checks alphanumeric character
-
-```python
-challenge = 'SixWeeksPython'
-print(challenge.isalnum()) # True
-
-challenge = '6WeeksPython'
-print(challenge.isalnum()) # True
-
-challenge = 'six weeks of python'
-print(challenge.isalnum()) # False, space is not an alphanumeric character
-
-challenge = 'six weeks of python 2026'
-print(challenge.isalnum()) # False
-```
-
-- isalpha(): Checks if all string elements are alphabet characters (a-z and A-Z)
-
-```python
-challenge = 'six weeks of python'
-print(challenge.isalpha()) # False, space is once again excluded
-challenge = 'SixWeeksPython'
-print(challenge.isalpha()) # True
-num = '123'
-print(num.isalpha())      # False
-```
-
-- isdecimal(): Checks if all characters in a string are decimal (0-9)
-
-```python
-challenge = 'six weeks of python'
-print(challenge.isdecimal())  # False
-challenge = '123'
-print(challenge.isdecimal())  # True
-challenge = '\u00B2'
-print(challenge.isdigit())   # True 
-challenge = '12 3'
-print(challenge.isdecimal())  # False, space not allowed
-```
-
-- isdigit(): Checks if all characters in a string are numbers (0-9 and some other unicode characters for numbers)
-
-```python
-challenge = 'Six'
-print(challenge.isdigit()) # False
-challenge = '6'
-print(challenge.isdigit())   # True
-challenge = '\u00B2'
-print(challenge.isdigit())   # True
-```
-
-- isnumeric(): Checks if all characters in a string are numbers or number related (just like isdigit(), just accepts more symbols, like ½)
-
-```python
-num = '10'
-print(num.isnumeric()) # True
-num = '\u00BD' # ½
-print(num.isnumeric()) # True
-num = '10.5'
-print(num.isnumeric()) # False
-```
-
-- isidentifier(): Checks for a valid identifier - it checks if a string is a valid variable name
-
-```python
-challenge = '6WeeksOfPython'
-print(challenge.isidentifier()) # False, because it starts with a number
-challenge = 'six_weeks_of_python'
-print(challenge.isidentifier()) # True
-```
-
-- islower(): Checks if all alphabet characters in the string are lowercase
-
-```python
-challenge = 'six weeks of python'
-print(challenge.islower()) # True
-challenge = 'Six weeks of python'
-print(challenge.islower()) # False
-```
-
-- isupper(): Checks if all alphabet characters in the string are uppercase
-
-```python
-challenge = 'six weeks of python'
-print(challenge.isupper()) #  False
-challenge = 'SIX WEEKS OF PYTHON'
-print(challenge.isupper()) # True
-```
-
-- join(): Returns a concatenated string
-
-```python
-web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
-result = ' '.join(web_tech)
-print(result) # 'HTML CSS JavaScript React'
-```
-
-```python
-web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
-result = '# '.join(web_tech)
-print(result) # 'HTML# CSS# JavaScript# React'
-```
-
-- strip(): Removes all given characters starting from the beginning and end of the string
-
-```python
-challenge = 'six weeks of pythoonnn'
-print(challenge.strip('nos')) # 'ix weeks of pyth'
-```
-
-- replace(): Replaces substring with a given string
-
-```python
-challenge = 'six weeks of python'
-print(challenge.replace('python', 'coding')) # 'six weeks of coding'
-```
-
-- split(): Splits the string, using given string or space as a separator
-
-```python
-challenge = 'six weeks of python'
-print(challenge.split()) # ['six', 'weeks', 'of', 'python']
-challenge = 'six, weeks, of, python'
-print(challenge.split(', ')) # ['six', 'weeks', 'of', 'python']
-```
-
-- title(): Returns a title cased string
-
-```python
-challenge = 'six weeks of python'
-print(challenge.title()) # Six Weeks Of Python
-```
-
-- swapcase(): Converts all uppercase characters to lowercase and all lowercase characters to uppercase characters
-
-```python
-challenge = 'six weeks of python'
-print(challenge.swapcase())   # SIX WEEKS OF PYTHON
-challenge = 'Six Weeks Of Python'
-print(challenge.swapcase())  # sIX wEEKS oF pYTHON
-```
-
-- startswith(): Checks if String Starts with the Specified String
-
-```python
-challenge = 'six weeks of python'
-print(challenge.startswith('six')) # True
-
-challenge = '6 weeks of python'
-print(challenge.startswith('six')) # False
-```
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-### Exercises
-
-1. Concatenate the string 'Six', 'Weeks', 'Of', 'Python' to a single string, 'Six Weeks Of Python'.
-2. Concatenate the string 'Coding', 'For' , 'All' to a single string, 'Coding For All'.
-3. Declare a variable named company and assign it to an initial value "Coding For All".
-4. Print the variable company using _print()_.
-5. Print the length of the company string using _len()_ method and _print()_.
-6. Change all the characters to uppercase letters using _upper()_ method.
-7. Change all the characters to lowercase letters using _lower()_ method.
-8. Use capitalize(), title(), swapcase() methods to format the value of the string _Coding For All_.
-9. Cut(slice) out the first word of _Coding For All_ string.
-10. Check if _Coding For All_ string contains a word Coding using the method index, find or other methods.
-11. Replace the word coding in the string 'Coding For All' to Python.
-12. Change "Python for Everyone" to "Python for All" using the replace method or other methods. 
-13. Split the string 'Coding For All' using space as the separator (split()) .
-14. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
-15. What is the character at index 0 in the string _Coding For All_.
-16. What is the last index of the string _Coding For All_.
-17. What character is at index 10 in "Coding For All" string.
-18. Create an acronym or an abbreviation for the name 'Python For Everyone'.
-19. Create an acronym or an abbreviation for the name 'Coding For All'.
-20. Use index to determine the position of the first occurrence of C in Coding For All.
-21. Use index to determine the position of the first occurrence of F in Coding For All.
-22. Use rfind to determine the position of the last occurrence of l in Coding For All People.
-23. Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-24. Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-25. Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-26. Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-27. Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-28. Does 'Coding For All' start with a substring _Coding_?
-29. Does 'Coding For All' end with a substring _coding_?
-30. '&nbsp;&nbsp; Coding For All &nbsp;&nbsp;&nbsp; &nbsp;' &nbsp;, remove the left and right trailing spaces in the given string.
-31. Which one of the following variables return True when we use the method isidentifier():
-    - 6WeeksOfPython
-    - six_weeks_of_python
-32. The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
-33. Use the new line escape sequence to separate the following sentences.
-    ```output
-    I am enjoying this course.
-    I just wonder what is next.
-    ```
-34. Use a tab escape sequence to write the following lines.
-    ```output
-    Name    Age     Country         City
-    Jack    25      Australia       Perth
-    ```
-35. Use the string formatting method to display the following:
-
-```bash
-radius = 10
-area = 3.14 * radius ** 2
-The area of a circle with radius 10 is 314.0 square metres.
-```
-
-36. Make the following using string formatting methods:
-
-```bash
-8 + 6 = 14
-8 - 6 = 2
-8 * 6 = 48
-8 / 6 = 1.33
-8 % 6 = 2
-8 // 6 = 1
-8 ** 6 = 262144
-```
-
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## 2.2 Lists {#section-2-2}
 
@@ -2360,7 +1791,7 @@ Download these files into a folder for this task and open the folder in PyCharm.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**Time:** about 2 hours. This is practice, not an assessment. There are no marks.
+**Time:** about 2 hours. This is your portfolio item for Week 2. Your tutor marks it at the end of the week.
 
 
 ### Goal
@@ -2425,11 +1856,22 @@ The "Different numbers" line is the stretch step. Your prompts can be worded dif
 ### Check your work
 
 - [ ] The program runs from top to bottom without errors.
+- [ ] `structure_note.txt` has exactly three sentences.
 - [ ] A name typed as `  cara jones ` is stored as `Cara Jones`.
 - [ ] Looking up a name that does not exist prints `not found`, not an error.
 - [ ] Removing a name that does not exist changes nothing.
 - [ ] The names in the last line are in alphabetical order.
 - [ ] You did not use `if`, `for`, `while` or `def`.
+
+### Part 2: structure note (about 20 min)
+
+Create a plain text file called `structure_note.txt` (in PyCharm: **New > File**). Write **exactly three sentences**:
+
+1. Which structure you used to store the contacts, and why.
+2. Why a list would be slower for finding a contact by name.
+3. One thing the set in the stretch step does that a list does not.
+
+Use the [Concepts Bridge](#week-2-bridge) to help you choose your words.
 
 ### Test your program (optional)
 
@@ -2453,9 +1895,6 @@ If a test fails, read the message. It shows the line the test expected. Try not 
 :::::::::::::::::::::::::::::::::::::: keypoints
 
 - Each week has four blocks: Watch, Read & practise, Concepts Bridge and Build.
-- Strings are sequences of characters, counted from index 0.
-- f-strings are the clearest way to put values into text.
-- String methods return a new string; the original does not change.
 - A list is an ordered, changeable collection.
 - Methods like append(), insert(), remove() and pop() change the list itself.
 - Use copy() when you need an independent copy.

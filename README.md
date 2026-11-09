@@ -2,16 +2,16 @@
 
 The website version of ADCI's six-week, beginner Python micro-credential, built with [The Carpentries Workbench](https://carpentries.github.io/sandpaper-docs/). It is a staging step before the course goes into Canvas.
 
-The course content is maintained in the main course repository, `intro-to-programming-microcredential`. This repository holds the converted lesson.
+The course content is maintained in the main course repository, `intro-to-programming-part-1`. This repository holds the converted lesson.
 
 ## Structure
 
 | Folder | What is in it |
 |---|---|
 | `episodes/` | One episode per week (`week-1.md` to `week-6.md`). Each holds the week overview, its sections (1.1, 1.2 ...), the Concepts Bridge and the practice task as level-2 headings, which the menu shows as sub-items. |
-| `episodes/files/` | Practice-task starter code, solutions and tests (`week-N/`), lesson code (`code/W.S/`) and the Section 5.2 example files |
+| `episodes/files/` | Practice-task starter code, solutions and tests (`week-N/`) and lesson code (`code/W.S/`) |
 | `episodes/data/` | Data files used by the lessons, plus `course-data.zip` for learners |
-| `learners/` | Setup, glossary and the optional sections (5.3, 5.4, 6.3 to 6.6) |
+| `learners/` | Setup and reference pages. Sections that belong to Part 2 are not on this site. |
 | `instructors/` | Instructor notes |
 | `profiles/` | Learner profiles |
 | `scripts/` | `convert_from_course.py`, which rebuilds the episodes from the course repository |
@@ -21,7 +21,7 @@ The course content is maintained in the main course repository, `intro-to-progra
 With both repositories side by side in the same folder:
 
 ```bash
-python scripts/convert_from_course.py ../intro-to-programming-microcredential .
+python scripts/convert_from_course.py ../intro-to-programming-part-1 .
 ```
 
 This rewrites the week episodes in `episodes/` and the optional pages in `learners/`. Other pages (home, setup, glossary, instructor notes, profiles, `config.yaml`) are edited by hand. If you add, remove or rename a section, update `scripts/wb_meta.py`.
