@@ -24,14 +24,13 @@ exercises: 178
 - Write list comprehensions with and without a condition.
 - Write small lambda functions.
 - Pass functions as arguments and return them from functions.
-- Use map(), filter() and reduce().
+- Use map() and filter().
 - Read a traceback and find the line that failed.
 - Recognise common error types and fix them.
-- Use try, except, else and finally.
-- Catch specific error types.
-- Pack and unpack arguments with * and **.
+- Use try and except.
+- Catch the specific error type you expect.
 - Explain pure functions, side effects and recursion.
-- Run a small logic program and write the same rules in Python.
+- Run a small logic program and predict the answers of a Python version.
 - Rewrite a grade calculator with comprehensions, map/filter and try/except.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -42,20 +41,21 @@ exercises: 178
 
 ### What you will be able to do by the end of this week
 
-- Explain recursion (a function that calls itself) and write a simple recursive function.
+- Explain recursion (a function that calls itself) and read a simple recursive function.
 - Use list comprehensions, `lambda`, `map()` and `filter()` to transform and select data.
 - Read a Python error message and name the type of error.
 - Use `try` / `except` to handle bad input without crashing.
 
-### Time plan (about 5 h 25 min)
+### Time plan (under 6 hours)
 
 | Block | What you do | Time |
 |---|---|---|
-| Watch | 6 core videos | 53 min |
-| Read & practise | Sections 4.1, 4.2, 4.3 and 4.4, plus exercises | 2 h |
-| Concepts Bridge | Pure functions, side effects, recursion and logic programming | 30 min |
-| Build | Practice task: functional rewrite of a grade calculator | 2 h |
-| **Total** | | **5 h 23 min** |
+| Watch | 6 short videos | 53 min |
+| Read & practise | Sections 4.1, 4.2, 4.3 and 4.4, plus exercises | 2 h 0 m |
+| Concepts Bridge | Pure functions, recursion and logic programming (Prolog run in SWISH) | 30 min |
+| Build | Practice task: error handling and a functional rewrite of a grade calculator | 2 h |
+| Quiz | Canvas quiz, 6 questions | 15 min |
+| **Total** | | **5 h 38 min** |
 
 Suggested split for Read & practise: Section 4.1 (35 min), Section 4.2 (40 min), Section 4.3 (30 min), Section 4.4 (15 min).
 
@@ -82,7 +82,7 @@ Watch these in order. Pause and try the code yourself in PyCharm. "T#" videos co
 
 ---
 
-### 2. Read & practise (2 h)
+### 2. Read & practise (2 h 0 m)
 
 Open each lesson, read it, type the examples into PyCharm and run them. Then do the exercises.
 
@@ -95,9 +95,8 @@ Open each lesson, read it, type the examples into PyCharm and run them. Then do 
 #### Section 4.2: Higher-order functions (about 40 min)
 
 - Lesson: [Section 4.2](#section-4-2)
-- Read "Higher Order Functions" (functions as parameters and return values), "Python Closures" (a function that remembers values from the function around it), and "Built-in Higher Order Functions" (map, filter, reduce).
-- **Skip** "Python Decorators". They are optional (see below).
-- Type the closure example into PyCharm and run it. Then change `ten` to another number and predict the output before you run it again.
+- Read "Higher Order Functions" (functions as parameters and return values) and "Built-in Higher Order Functions" (map, filter, reduce).
+- **Skip** "Python Closures" and "Python Decorators". They are optional (see below).
 - Do the Level 1 exercises.
 - Some Level 2 and 3 exercises use country data. The data files are in [assets/data](data/course-data.zip) (see `countries.py` and `countries-data.py`). The lesson's `data/...` paths mean this folder.
 
@@ -120,7 +119,7 @@ Open each lesson, read it, type the examples into PyCharm and run them. Then do 
 
 ### 3. Concepts Bridge (30 min)
 
-Pure functions, side effects, recursion, and a first look at logic programming with a short Prolog video.
+Pure functions, recursion, and a first look at logic programming with a short Prolog video. You run one Prolog program and predict some Python outputs. You do not need to write Prolog.
 
 - [Open the Week 4 Bridge](#week-4-bridge)
 
@@ -128,9 +127,24 @@ Pure functions, side effects, recursion, and a first look at logic programming w
 
 ### 4. Build (2 h)
 
-Rewrite part of a grade calculator in a functional style, and add `try` / `except` checks for bad input.
+Rewrite part of a grade calculator in a functional style, and add `try` / `except` checks for bad input. This is your portfolio item for this week.
 
 - [Open the Week 4 practice task](#week-4-practice)
+
+---
+
+### 5. Quiz (15 min)
+
+Take the Canvas quiz for Week 4 after you finish the Build. It has 6 questions, drawn from a pool. It is marked automatically.
+
+### Portfolio this week
+
+Submit at the end of the week, in your portfolio folder:
+
+- `starter.py` (your completed Part B functions and `main()`)
+- `comparison_note.txt` (five sentences comparing the loop version with your functional version)
+
+Your tutor marks the portfolio. The quiz is marked automatically.
 
 ---
 
@@ -145,7 +159,7 @@ Only do these if you have time left after the core work.
 - T#62 Generators (Telusko)
 
 **Lesson sections**
-- Section 4.2: decorators.
+- Section 4.2: Python closures and decorators.
 - Section 4.4: packing and unpacking, spreading, enumerate and zip.
 
 **Reading**
@@ -1230,13 +1244,13 @@ print(fruits_and_veges)
 
 ## Concepts Bridge: Functional and Logic Programming {#week-4-bridge}
 
-**Time: 30 minutes** (2 min functional ideas, 8 min video, 4 min SWISH, 1 min Python version, 15 min activity)
+**Time: 30 minutes** (5 min functional ideas, 8 min video, 4 min SWISH, 3 min Python version, 10 min activity)
 
 ### Why this matters
 
 Python can be used in a functional way, even though it is also object-oriented. This supports LO 2 (apply object-oriented, imperative, functional and logic programming techniques). Today you meet two **paradigms** (styles of programming): functional and logic.
 
-### Functional ideas (2 min)
+### Functional ideas (5 min)
 
 A **side effect** is anything a function does besides returning a value, such as printing or changing a list outside the function. A **pure function** has no side effects: the same input always gives the same answer.
 
@@ -1272,7 +1286,7 @@ def add_up(items):
 print(add_up([4, 5, 6]))  # 15
 ```
 
-There is no changing variable. This is why functional languages like recursion.
+Each call works on a shorter list, until the base case is reached. Then the answers are added back up.
 
 ### Logic programming (LO 2)
 
@@ -1307,9 +1321,9 @@ ancestor(X, Z) :- parent(X, Y), ancestor(Y, Z).
 3. In the query box at the bottom right, type `grandparent(tom, Who).` and click **Run!**. You should see `Who = ann`, then use **Next** to see `Who = pat`.
 4. Now run `ancestor(tom, Who).` and click **Next** to see every answer. Notice you did not write any search steps. Prolog found the answers itself.
 
-#### The same idea in Python (1 min)
+#### The same idea in Python (3 min)
 
-Facts are a set of tuples. Rules are functions. Queries are function calls. Run this with `python -I` or in PyCharm.
+Facts are a set of tuples. Rules are functions. Queries are function calls. Run this in PyCharm. Before you run it, predict each printed answer.
 
 ```python
 # Facts: (parent, child)
@@ -1350,34 +1364,14 @@ In Prolog you write the rule once and the system does the searching. In Python y
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Activity (15 min)
+### Activity (10 min)
 
 Use the Python code above as your starting point.
 
-1. Add the fact that `liz` is the parent of `joe`.
-2. Write a rule `is_grandparent(x, z)` that returns `True` or `False`. Loop over `parent_facts`, use `is_parent`, and keep it **pure** (no printing, no changing `parent_facts`).
-3. Write a **recursive** rule `is_ancestor(x, z)`. An ancestor is a parent, or a parent of an ancestor. Hint: return `True` straight away if `x` is a parent of `z`. Otherwise use a `for` loop over the facts, and for each child `y` of `x`, ask `is_ancestor(y, z)`. If nothing works, return `False`.
-4. Test: is `tom` an ancestor of `ann`? Of `joe`? Is `ann` an ancestor of `tom`?
-5. In one or two sentences: which parts of your answer are functional, and which are logic-style?
-
-:::::::::::::::: solution
-
-### Model answer
+1. Add the fact that `liz` is the parent of `joe`: add `("liz", "joe")` to `parent_facts`.
+2. Add this rule below the others, then run the query:
 
 ```python
-parent_facts = {
-    ("tom", "bob"),
-    ("tom", "liz"),
-    ("bob", "ann"),
-    ("bob", "pat"),
-    ("liz", "joe"),   # new fact
-}
-
-
-def is_parent(x, y):
-    return (x, y) in parent_facts
-
-
 def is_grandparent(x, z):
     for (p, y) in parent_facts:
         if p == x and is_parent(y, z):
@@ -1385,22 +1379,21 @@ def is_grandparent(x, z):
     return False
 
 
-def is_ancestor(x, z):
-    if is_parent(x, z):                      # base case
-        return True
-    for (p, y) in parent_facts:              # recursive case
-        if p == x and is_ancestor(y, z):
-            return True
-    return False
-
-
-print(is_grandparent("tom", "joe"))  # True
-print(is_ancestor("tom", "ann"))     # True
-print(is_ancestor("tom", "joe"))     # True
-print(is_ancestor("ann", "tom"))     # False
+print(is_grandparent("tom", "joe"))   # True
 ```
 
-Note: the rules are pure functions that only read the facts, and `is_ancestor` uses recursion, so they are functional. The facts-rules-queries layout is logic-style, but Python needs us to write the search ourselves, whereas Prolog does it for us.
+3. Change one value in the last query so you can predict a different answer. Run it, then check your prediction.
+4. In one or two sentences: which parts of this code are pure, and which part is logic-style? Keep your answer. You will use it in the portfolio note.
+
+> **Stretch (optional, after the core work):** write a recursive `is_ancestor(x, z)`. It returns `True` if `x` is a parent of `z`. Otherwise, for each child `y` of `x`, it asks `is_ancestor(y, z)`. Test it with `tom` and `joe`, and with `ann` and `tom`.
+
+:::::::::::::::: solution
+
+### Model answer
+
+Step 1 adds `("liz", "joe")` to the set. Step 2 prints `True`. Step 3 depends on the value you change. For example, `is_grandparent("bob", "joe")` prints `False`, because bob's children are ann and pat.
+
+For step 4, a good answer says that `is_parent` and `is_grandparent` are pure, because they only read `parent_facts` and return a value. The facts and rules layout is logic-style, but Python makes you write the search loop yourself. Prolog does the searching for you.
 
 :::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -1424,7 +1417,7 @@ Download these files into a folder for this task and open the folder in PyCharm.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**Time: about 2 hours.** This is a practice task. It is not marked.
+**Time: about 2 hours.** This is your portfolio item for Week 4. Your tutor marks it at the end of the week.
 
 ### Goal
 
@@ -1452,7 +1445,7 @@ You do not need your Week 3 files. The Week 3 version is already inside `starter
 7. Write `passing_marks(marks)` with `filter()` and a `lambda`.
 8. Write `grade_counts(marks)` with a **dictionary comprehension** over `GRADE_ORDER`.
 9. Write `main()`. Ask for marks until an empty line. Tell the user when a mark is not valid and carry on. Print the results.
-10. Write your 5-sentence note (see below).
+10. Write your 5-sentence note in `comparison_note.txt` (see below). This is the second part of your portfolio item.
 
 ### Example run
 
@@ -1484,7 +1477,7 @@ Your wording can differ.
 
 ### Your 5-sentence note
 
-Write five sentences, in a file or a comment at the bottom of your code, comparing the loop version (Part A) with your functional version (Part B). You could cover:
+Write five sentences in a plain text file called `comparison_note.txt`, comparing the loop version (Part A) with your functional version (Part B). You could cover:
 
 1. Which version is shorter?
 2. Which is easier to read, and for whom?
@@ -1499,7 +1492,7 @@ Write five sentences, in a file or a comment at the bottom of your code, compari
 - [ ] Typing `abc`, `-5` or `150` does not crash the program.
 - [ ] An empty list of marks does not crash `average`.
 - [ ] `letter_grades`, `passing_marks` and `grade_counts` do not change the list you give them.
-- [ ] Your note has five sentences.
+- [ ] `comparison_note.txt` has five sentences.
 
 :::::::::::::::::::::::::::::::::::::: keypoints
 
@@ -1507,12 +1500,11 @@ Write five sentences, in a file or a comment at the bottom of your code, compari
 - [expression for item in iterable if condition] builds a new list.
 - A lambda is a small function written in one expression.
 - Functions are values: you can pass them around.
-- map() changes every item, filter() keeps some items, reduce() combines items into one value.
+- map() changes every item; filter() keeps the items that pass a test.
 - The last line of a traceback names the error type.
 - Read error messages carefully: Python often suggests the fix.
 - try runs risky code; except handles the error.
 - Catch the specific error you expect, not every error.
-- * unpacks lists and ** unpacks dictionaries.
 - A pure function has no side effects.
 - Recursion solves a problem by calling the function on a smaller problem.
 - Logic programming states facts and rules, then asks questions.

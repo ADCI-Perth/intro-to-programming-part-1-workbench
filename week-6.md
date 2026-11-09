@@ -1,6 +1,6 @@
 ---
-title: 'Week 6: Modules, libraries and choosing a paradigm'
-teaching: 105
+title: 'Week 6: Modules and choosing a paradigm'
+teaching: 80
 exercises: 214
 ---
 
@@ -8,8 +8,6 @@ exercises: 214
 
 - What will I learn in Week 6, and how should I spend my 6 hours?
 - How do I split code into files and use code others have written?
-- How do I install and use third-party packages?
-- How do I use packages safely?
 - How do I choose a paradigm for a problem?
 - Can I finish a complete program and justify its design?
 
@@ -19,22 +17,18 @@ exercises: 214
 
 - Plan your study time for the week using the time plan.
 - Create and import your own module.
-- Use built-in modules such as math, random, os and statistics.
-- Install, list and remove packages with pip.
-- Fetch data from the web with requests.
-- Create a simple package of your own.
-- Add type hints to a function.
-- Describe the risks of third-party libraries.
+- Use built-in modules such as math and random.
 - Compare paradigms using a set of criteria.
-- Finish the library-loan manager across modules, and compare two paradigms in it.
+- Write a short note that justifies a choice.
+- Finish the library-loan manager with a menu and search, and compare two paradigms in it.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Week 6 overview {#week-6-overview}
 
-**Theme:** split your code into modules, use other people's code safely, and decide which programming style suits a problem.
+**Theme:** split your code into modules, use the built-in modules that come with Python, and decide which programming style suits a problem.
 
-This is the last week. You also finish the mini project you started in Week 5.
+This is the last week of Part 1. You also finish the library mini project you started in Week 5.
 
 ### Learning goals
 
@@ -42,22 +36,21 @@ By the end of this week you can:
 
 1. Write your own module and import it, and explain what `if __name__ == "__main__":` does.
 2. Use built-in modules such as `random` and `math`.
-3. Install a third-party package with `pip` inside a virtual environment, and say why pinning versions matters.
-4. Explain, in a few sentences, which programming paradigm (style) suits a problem and why.
+3. Add a search feature and a text menu to a small program, and handle bad input without crashing.
+4. Explain, in a few sentences, which programming paradigm (style) suits a problem and why (LO 4).
 
-### Time plan (5 h 19 min)
+### Time plan (under 6 hours)
 
 | Block | Time | What you do |
 |---|---|---|
-| Watch | 49 min | Six videos (below) |
-| Read & practise | 1 h | Section 6.1 and Section 6.2 notes, install practice, plus Level 1 exercises |
-| Concepts Bridge | 30 min | [bridge.md](#week-6-bridge): type safety, library risk, choosing a paradigm |
-| Build | 3 h | [Mini project, Part 2](#week-6-practice) |
-| **Total** | **5 h 19 min** | Under the 6 h cap, so there is spare time for catching up |
+| Watch | 24 min | Three videos (below) |
+| Read & practise | 1 h 0 m | Section 6.1 (modules), with Level 1 exercises |
+| Concepts Bridge | 30 min | [Choosing a paradigm](#week-6-bridge) |
+| Build | 3 h | [Mini project, part 2](#week-6-practice), your portfolio item for this week |
+| Quiz | 15 min | Canvas quiz, 6 questions |
+| **Total** | **5 h 9 min** | Under the 6 h cap |
 
-Optional material is not counted in the total.
-
-### Watch (49 min)
+### Watch (24 min)
 
 Watch in this order. Pause and try things in PyCharm as you go.
 
@@ -65,16 +58,13 @@ Watch in this order. Pause and try things in PyCharm as you go.
 |---|---|---|---|
 | 1 | **T#45** Modules | 7:20 | How `import` finds a file and runs it. https://www.youtube.com/watch?v=1RuMJ53CKds&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3 |
 | 2 | **T#46** Special Variable `__name__` | 5:43 | Why code under `if __name__ == "__main__":` runs only when you run the file directly. https://www.youtube.com/watch?v=pzNISmtmzcY&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3 |
-| 3 | **[Corey Schafer]** pip: An In-Depth Look at the Package Management System | 9:06 | The main pip commands: install, uninstall, list, freeze. https://www.youtube.com/watch?v=U2ZN104hIcc |
-| 4 | **[Tech With Tim]** Python Virtual Environments: Full Tutorial for Beginners | 9:05 | Why each project gets its own "box" of packages. https://www.youtube.com/watch?v=Y21OR1OPC9A |
-| 5 | **T#28** Why NumPy? Installing NumPy | 6:58 | How PyCharm installs a package for you. https://www.youtube.com/watch?v=8LlXhtfNZEQ&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3 |
-| 6 | **[Computerphile]** Programming Paradigms | 10:44 | The names of the styles and what each is good at. You will use this for your paradigm note. https://www.youtube.com/watch?v=sqV3pL5x8PI |
+| 3 | **[Computerphile]** Programming Paradigms | 10:44 | The names of the styles and what each is good at. You will use this for your paradigm note. https://www.youtube.com/watch?v=sqV3pL5x8PI |
 
-### Read & practise (1 h)
+### Read & practise (1 h 0 m)
 
-Open each lesson, read it, type out the examples and run them. Do not just copy and paste.
+Open the lesson, read it, type out the examples and run them. Do not just copy and paste.
 
-#### Section 6.1: Modules (about 22 min)
+#### Section 6.1: Modules (about 1 h)
 
 Lesson: [Section 6.1: Modules](#section-6-1). Code: [lessons/6.1_code/](files/code/6.1/).
 
@@ -82,74 +72,43 @@ Lesson: [Section 6.1: Modules](#section-6-1). Code: [lessons/6.1_code/](files/co
 - Skim: OS, Sys, Statistics and String modules. Just know they exist.
 - Do the **Level 1** exercises (1 to 3). They use `random`.
 
-#### Section 6.2: pip and packages (about 28 min)
-
-Lesson: [Section 6.2: pip and Packages](#section-6-2). Code: [lessons/6.2_code/mypackage/](files/code/6.2/mypackage).
-
-- Read: What is PIP, Installing packages using pip, Uninstalling, List of Packages, Show Package, PIP Freeze, Creating a Package.
-- Skim: Reading from URL. You need an internet connection and the `requests` package.
-- Section 6.2's exercises read web data and use statistics, so they are too big for this block. Instead, create a small package of your own (a folder with `__init__.py` and one module), then import it from a separate file.
-
-#### Installing packages: command line and PyCharm (about 10 min hands-on)
-
-The lessons show the command line (Mac or Linux style). On Windows, use PowerShell or the **Terminal** tab inside PyCharm. If `pip` is not found, type `python -m pip` instead.
-
-**Command line way**
-
-```
-python -m venv .venv
-.venv\Scripts\activate
-python -m pip install requests
-python -m pip freeze
-```
-
-- On Mac or Linux, activate with `source .venv/bin/activate`.
-- A **virtual environment** is a private folder of packages for one project. It stops projects from clashing.
-
-**PyCharm way**
-
-- Make a virtual environment: *File > Settings > Project > Python Interpreter > Add Interpreter > Add Local Interpreter > Virtualenv Environment > New*. (On Mac: *PyCharm > Settings*.) New projects usually do this for you.
-- Install a package: in the same *Python Interpreter* page, click the **+** button, search for the package (for example `requests`), then click **Install Package**. This is what T#28 shows with NumPy.
-- You can also open the **Terminal** tab at the bottom of PyCharm. It starts with your virtual environment already active.
-
-#### Data files
-
-Some optional lessons open files such as `data/weight-height.csv`. Those files live in [`assets/data/`](data/course-data.zip) at the top of this repository. Point your code at that folder.
+**PyCharm note:** create `mymodule.py` and `main.py` in the same PyCharm project. Right-click `main.py` and choose **Run**.
 
 ### Concepts Bridge (30 min)
 
-Go to [bridge.md](#week-6-bridge). It covers type hints, risks of third-party libraries, and a criteria table for choosing a paradigm (LO 4).
+Go to [bridge.md](#week-6-bridge). It gives you a criteria table for choosing a paradigm (LO 4), and two short activities.
 
 ### Build (3 h)
 
-Go to [practice/README.md](#week-6-practice). You finish the Week 5 mini project (a library-loan manager): add search, type hints, a menu program, and a short note on paradigms.
+Go to [practice/README.md](#week-6-practice). You finish the Week 5 mini project (a library-loan manager). You add search, a text menu program, and a short note on paradigms. This is your portfolio item for Week 6.
 
-This is practice only. Nothing here is marked.
+### Quiz (15 min)
+
+Take the Canvas quiz for Week 6 after you finish the Build. It has 6 questions, drawn from a pool. It is marked automatically.
+
+### Portfolio this week
+
+Submit at the end of the week, in your portfolio folder:
+
+- `library.py` (your finished library classes, including `search`)
+- `main.py` (your menu program)
+- `note.txt` (five or six sentences comparing two paradigms, see the practice task)
+
+Your tutor marks the portfolio. The quiz is marked automatically.
 
 ### Optional
 
 Only if you have time and are curious.
 
-**Videos**
-
 - **T#47** `__name__` part 2 (Telusko playlist)
-- **T#29 to T#31** NumPy arrays and matrices (Telusko playlist)
-- **T#77** Jupyter Notebook (Telusko playlist)
-- **T#74** Git and GitHub with Python (Telusko playlist)
-- **[Low Level]** How Can Memory-Safe Code Stop Hackers? (7:43): https://www.youtube.com/watch?v=lxUYZVX_FjQ
+- Section 6.1 Level 2 exercises (they use `random` and lists).
+- Driscoll, M. (2017) *Python 101*, chapter 27, 29 and 33. Available at: https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/
 
-**Lessons**
+---
 
-- [Section 6.4: Virtual environments](../learners/6-4-virtual-environments.md)
-- [Section 6.3: Web scraping](../learners/6-3-web-scraping.md)
-- [Section 6.5: Statistics (NumPy)](../learners/6-5-statistics-numpy.md)
-- [Section 6.6: Pandas](../learners/6-6-pandas.md)
+### What comes next
 
-**Other**
-
-- Unix time and time-related bugs: https://www.youtube.com/watch?v=-5wpm-gesOY
-- Driscoll, M. (2017) *Python 101*, chapters 27, 29 and 33. Available at: https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/
-- Romano, F. (2018) *Learn Python Programming*, 2nd edn, chapter 5. Packt.
+Part 2 starts in Week 7 with text and encoding. It covers files, data, libraries (pip, virtual environments, NumPy, Pandas and Matplotlib) and security basics. Saving the library to a file is added in Week 8.
 
 ## 6.1 Modules {#section-6-1}
 
@@ -437,433 +396,17 @@ print(rgb_color_gen())
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## 6.2 pip and Packages {#section-6-2}
+## Concepts Bridge: Choosing a Paradigm {#week-6-bridge}
 
-### Python PIP - Python Package Manager
-
-#### What is PIP ?
-
-PIP stands for Preferred installer program. We use _pip_ to install different Python packages.
-Package is a Python module that can contain one or more modules or other packages. A module or modules that we can install to our application is a package.
-In programming, we do not have to write every utility program, instead we install packages and import them to our applications.
-
-#### Installing PIP
-
-pip comes with Python, so you normally already have it. Open a terminal (in PyCharm: **View > Tool Windows > Terminal**) and check it:
-
-```bash
-python -m pip --version
-```
-
-```output
-pip 25.0.1 from C:\...\site-packages\pip (python 3.12)
-```
-
-If you see a version number, pip is installed. Your number may be a little higher or lower. To upgrade pip to the newest version, run:
-
-```bash
-python -m pip install --upgrade pip
-```
-
-We write `python -m pip` rather than just `pip`, because it makes sure pip installs packages for the same Python that runs your code.
-
-Let us check some of the packages used in the Python community for different purposes. Just to let you know that there are lots of packages available for use with different applications.
-
-#### Installing packages using pip
-
-Let us try to install _numpy_, called numeric python. It is one of the most popular packages in machine learning and data science community.
-
-- NumPy is the fundamental package for scientific computing with Python. It contains among other things:
-  - a powerful N-dimensional array object
-  - sophisticated (broadcasting) functions
-  - tools for integrating C/C++ and Fortran code
-  - useful linear algebra, Fourier transform, and random number capabilities
-
-```bash
-python -m pip install numpy
-```
-
-Let us start using numpy. Open the Python interactive shell (type `python` in the terminal, or use PyCharm's **Python Console**) and import numpy as follows:
-
-```python
->>> import numpy
->>> numpy.__version__
-'2.5.3'
->>> lst = [1, 2, 3, 4, 5]
->>> np_arr = numpy.array(lst)
->>> np_arr
-array([1, 2, 3, 4, 5])
->>> len(np_arr)
-5
->>> np_arr * 2
-array([ 2,  4,  6,  8, 10])
->>> np_arr + 2
-array([3, 4, 5, 6, 7])
->>>
-```
-
-Your numpy version may be different; that is fine.
-
-Pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language. Let us install the big brother of numpy, _pandas_:
-
-```bash
-python -m pip install pandas
-```
-
-```python
->>> import pandas
->>>
-```
-
-If the import gives no error, pandas is installed.
-
-This section is not about numpy nor pandas, here we are trying to learn how to install packages and how to import them. If it is needed, we will talk about different packages in other sections.
-
-Let us import a web browser module, which can help us to open any website. We do not need to install this module, it is already installed by default with Python 3. For instance if you like to open any number of websites at any time or if you like to schedule something, this _webbrowser_ module can be used.
-
-```python
-import webbrowser # web browser module to open websites
-
-# list of urls: python
-url_lists = [
-    'https://www.python.org',
-    'https://adci.edu.au',
-    'https://docs.python.org/3/',
-    'https://pypi.org',
-]
-
-# opens the above list of websites in a different tab
-for url in url_lists:
-    webbrowser.open_new_tab(url)
-```
-
-#### Uninstalling Packages
-
-If you do not like to keep the installed packages, you can remove them using the following command.
-
-```bash
-python -m pip uninstall packagename
-```
-
-#### List of Packages
-
-To see the installed packages on our machine. We can use pip followed by list.
-
-```bash
-python -m pip list
-```
-
-#### Show Package
-
-To show information about a package
-
-```bash
-python -m pip show packagename
-```
-
-```bash
-python -m pip show requests
-```
-
-```output
-Name: requests
-Version: 2.34.2
-Summary: Python HTTP for Humans.
-Home-page:
-Author:
-Author-email: Kenneth Reitz <me@kennethreitz.org>
-License: Apache-2.0
-Location: C:\...\site-packages
-Requires: certifi, charset_normalizer, idna, urllib3
-Required-by:
-```
-
-If we want even more details, just add --verbose
-
-```bash
-python -m pip show --verbose requests
-```
-
-#### PIP Freeze
-
-Generate installed Python packages with their version and the output is suitable to use it in a requirements file. A requirements.txt file is a file that should contain all the installed Python packages in a Python project.
-
-```bash
-python -m pip freeze
-```
-
-```output
-certifi==2026.7.22
-idna==3.20
-numpy==2.5.3
-pandas==3.0.6
-requests==2.34.2
-urllib3==2.8.0
-```
-
-Your list and version numbers will differ. The pip freeze gave us the packages used, installed and their version. We use it with requirements.txt file for deployment.
-
-#### Reading from URL
-
-By now you are familiar with how to read or write on a file located on your local machine. Sometimes, we would like to read from a website using url or from an API.
-API stands for Application Program Interface. It is a means to exchange structured data between servers primarily as json data. To open a network connection, we need a package called _requests_ - it allows to open a network connection and to implement CRUD(create, read, update and delete) operations. In this section, we will cover only reading or getting part of a CRUD.
-
-Let us install _requests_:
-
-```bash
-python -m pip install requests
-```
-
-We will see _get_, _status_code_, _headers_, _text_ and _json_ methods in _requests_ module:
-  - _get()_: to open a network and fetch data from url - it returns a response object
-  - _status_code_: After we fetched data, we can check the status of the operation (success, error, etc)
-  - _headers_: To check the header types
-  - _text_: to extract the text from the fetched response object
-  - _json_: to extract json data
-
-Let's read a text file from Project Gutenberg: the play *Romeo and Juliet*.
-
-```python
-import requests # importing the request module
-
-url = 'https://www.gutenberg.org/cache/epub/1112/pg1112.txt' # text from a website
-
-response = requests.get(url) # opening a network and fetching a data
-print(response)                          # <Response [200]>
-print(response.status_code)              # 200 - status code, success
-print(response.headers['Content-Type'])  # text/plain; charset=utf-8
-print(response.text[:47])                # The Project Gutenberg eBook of Romeo and Juliet
-```
-
-- Let us read from an API. PyPI, the website pip installs packages from, has a JSON API that describes every package: https://pypi.org/pypi/requests/json
-
-```python
-import requests
-
-url = 'https://pypi.org/pypi/requests/json'  # information about the requests package
-response = requests.get(url)  # opening a network and fetching a data
-print(response)              # <Response [200]>
-print(response.status_code)  # 200
-package = response.json()    # change the JSON into a Python dictionary
-print(package['info']['name'])     # requests
-print(package['info']['version'])  # e.g. 2.34.2 - the newest version when you run it
-print(package['info']['summary'])  # Python HTTP for Humans.
-```
-
-We use _json()_ method from response object, if the we are fetching JSON data. For txt, html, xml and other file formats we can use _text_.
-
-#### Creating a Package
-
-We organize a large number of files in different folders and sub-folders based on some criteria, so that we can find and manage them easily. As you know, a module can contain multiple objects, such as classes, functions, etc. A package can contain one or more relevant modules. A package is actually a folder containing one or more module files. Let us create a package named mypackage, using the following steps:
-
-Create a new folder named mypackage inside IntroToProgramming folder
-Create an empty **__init__**.py file in the mypackage folder.
-Create modules arithmetics.py and greet.py with following code:
-
-```python
-# mypackage/arithmetics.py
-# arithmetics.py
-def add_numbers(*args):
-    total = 0
-    for num in args:
-        total += num
-    return total
-
-def subtract(a, b):
-    return (a - b)
-
-def multiple(a, b):
-    return a * b
-
-def division(a, b):
-    return a / b
-
-def remainder(a, b):
-    return a % b
-
-def power(a, b):
-    return a ** b
-```
-
-```python
-# mypackage/greet.py
-# greet.py
-def greet_person(firstname, lastname):
-    return f'{firstname} {lastname}, welcome to Intro to Programming!'
-```
-
-The folder structure of your package should look like this:
-
-```output
-─ mypackage
-    ├── __init__.py
-    ├── arithmetics.py
-    └── greet.py
-```
-
-Now let's open the python interactive shell and try the package we have created:
-
-Open the Python interactive shell from your IntroToProgramming folder (the folder that contains mypackage):
-
-```python
->>> from mypackage import arithmetics
->>> arithmetics.add_numbers(1, 2, 3, 5)
-11
->>> arithmetics.subtract(5, 3)
-2
->>> arithmetics.multiple(5, 3)
-15
->>> arithmetics.division(5, 3)
-1.6666666666666667
->>> arithmetics.remainder(5, 3)
-2
->>> arithmetics.power(5, 3)
-125
->>> from mypackage import greet
->>> greet.greet_person('Jack', 'Wilson')
-'Jack Wilson, welcome to Intro to Programming!'
->>>
-```
-
-As you can see our package works perfectly. The package folder contains a special file called **__init__**.py - it stores the package's content. If we put **__init__**.py in the package folder, python start recognizes it as a package.
-The **__init__**.py exposes specified resources from its modules to be imported to other python files. An empty **__init__**.py file makes all functions available when a package is imported. The **__init__**.py is essential for the folder to be recognized by Python as a package.
-
-#### Further Information About Packages
-
-- Database
-  - SQLAlchemy or SQLObject - Object oriented access to several different database systems
-    - _pip install SQLAlchemy_
-- Web Development
-  - Django - High-level web framework.
-    - _pip install django_
-  - Flask - micro framework for Python based on Werkzeug, Jinja 2. (It's BSD licensed)
-    - _pip install flask_
-- HTML Parser
-  - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - HTML/XML parser designed for quick turnaround projects like screen-scraping, will accept bad markup.
-    - _pip install beautifulsoup4_
-  - PyQuery - implements jQuery in Python; faster than BeautifulSoup, apparently.
-
-- XML Processing
-  - ElementTree - The Element type is a simple but flexible container object, designed to store hierarchical data structures, such as simplified XML infosets, in memory. --Note: Python 2.5 and up has ElementTree in the Standard Library
-- GUI
-  - PyQt - Bindings for the cross-platform Qt framework.
-  - TkInter - The traditional Python user interface toolkit.
-- Data Analysis, Data Science and Machine learning
-  - Numpy: Numpy(numeric python) is known as one of the most popular machine learning library in Python.
-  - Pandas: is a data analysis, data science and a machine learning library in Python that provides data structures of high-level and a wide variety of tools for analysis.
-  - SciPy: SciPy is a machine learning library for application developers and engineers. SciPy library contains modules for optimization, linear algebra, integration, image processing, and statistics.
-  - Scikit-Learn: It is NumPy and SciPy. It is considered as one of the best libraries for working with complex data.
-  - TensorFlow: is a machine learning library built by Google.
-  - Keras: is considered as one of the coolest machine learning libraries in Python. It provides an easier mechanism to express neural networks. Keras also provides some of the best utilities for compiling models, processing data-sets, visualization of graphs, and much more.
-- Network:
-  - requests: is a package which we can use to send requests to a server(GET, POST, DELETE, PUT)
-    - _pip install requests_
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-### Exercises
-
-1. Read this url and find the 10 most frequent words. romeo_and_juliet = 'https://www.gutenberg.org/cache/epub/1112/pg1112.txt'
-2. Read the cat breeds API, cat_breeds_api = 'https://catfact.ninja/breeds?limit=100', and create a frequency table of the country each breed comes from (the data is in the 'data' key).
-3. Use the PyPI JSON API (https://pypi.org/pypi/PACKAGE_NAME/json) to print the newest version and the summary of numpy, pandas and requests.
-4. UCI is one of the most common places to get data sets for data science and machine learning. Read the content of UCI (https://archive.ics.uci.edu/datasets). Without additional libraries it will be difficult, so you may try it with BeautifulSoup4
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Concepts Bridge: Type Safety, Library Risk and Choosing a Paradigm {#week-6-bridge}
-
-**Time: 30 minutes.** Video 11 min (Indently, 11:25), reading 10 min, activity 9 min.
+**Time: 30 minutes.** Reading 15 minutes, activity 10 minutes, checking the model answer 5 minutes.
 
 ### Why this matters
 
-Choosing approaches and tools means knowing the risks of third-party libraries, and understanding type safety and memory safety. The lessons this week show how to *use* packages. This note shows how to use them *safely*, then gives you a table of criteria for LO 4: judging which paradigm best suits a problem.
+A **paradigm** is a style of programming. This course has taught four: imperative, object-oriented, functional and logic. Python supports all four, but no style is best everywhere. Choosing well is LO 4: you must judge which paradigm best suits a particular problem, and say why.
 
-### 1. Type safety
+### The four paradigms
 
-A **type** says what kind of value you have: a whole number (`int`), text (`str`) and so on. **Type safety** means the language or its tools stop you using a value the wrong way.
-
-Python checks types only while the program runs. This is called **dynamic typing**. A mistake can hide until the exact line runs:
-
-```python
-def double(x):
-    return x * 2
-
-print(double(4))
-print(double("ha"))
-```
-
-Both lines work, but the second gives `haha`, which you may not have wanted. A **type hint** (or type annotation) tells readers, and checking tools, what you expect:
-
-```python
-def double(x: int) -> int:
-    return x * 2
-
-print(double(4))
-```
-
-`x: int` means "x should be an int". `-> int` means "this function returns an int". Python itself ignores hints when it runs. They are notes for people and tools.
-
-A tool called **mypy** reads the hints and warns you *before* you run the code. This is **static type checking**. It is a third-party package, so install it with pip first (inside your virtual environment):
-
-```
-python -m pip install mypy
-```
-
-Now save this as `bad_types.py`:
-
-```python
-def double(x: int) -> int:
-    return x * 2
-
-double("ha")
-```
-
-Then run mypy:
-
-```
-python -m mypy bad_types.py
-```
-
-Mypy reports an error like `Argument 1 to "double" has incompatible type "str"; expected "int"`. The code still runs in plain Python, but mypy caught the likely mistake early. You do not need mypy to finish this course. The commands are here so you know what it does.
-
-#### Watch
-
-**[Indently]** A Quick Guide to Type Annotations (ft. Mypy) (11:25): https://www.youtube.com/watch?v=Y9fT4HVdCuQ
-
-Look for: how to hint a function, a list (`list[int]`) and a value that might be `None`.
-
-### 2. Third-party library risk
-
-Every package you install is code written by a stranger. It runs with your permissions. Two simple habits lower the risk.
-
-**Pin versions.** A **version** is a number such as `2.34.2`. If you ask for "the latest" `requests`, you may get a different version next month, and it might break your program or contain a new bug. **Pinning** means asking for one exact version. Record pins in a file called `requirements.txt`:
-
-```
-requests==2.34.2
-```
-
-`==` means "exactly this version". Anyone can then rebuild your setup with:
-
-```
-python -m pip install -r requirements.txt
-```
-
-You can create the file from your current environment with `python -m pip freeze > requirements.txt`. Pinning also gives you a calm moment to read what changed before you update. Pinning an old version is not automatically safe: `requests` 2.32.5, for example, has a known security advisory (CVE-2026-25645) fixed in 2.33.0. Check for security advisories before you pin (run `python -m pip install pip-audit` then `python -m pip_audit`, or read the package's GitHub "Security" page), and update your pins regularly.
-
-**Watch out for look-alike packages.** Attackers upload packages with names close to popular ones. This is **typosquatting**: they rely on a typing slip. For example, `reqeusts` or `python-requests` instead of `requests`. Such a package may steal passwords or files when you install or import it. Before you install:
-
-- Copy the exact name from the official documentation. Do not type it from memory.
-- Check the package page on pypi.org: its age, download numbers, and project links.
-- Be wary of tiny, brand-new packages with names that nearly match a famous one.
-- Install only what you need.
-
-### 3. Memory safety
-
-A **memory-safe** language stops code from reading or writing memory it does not own. Python checks every list position and frees unused memory for you, while C leaves that work to the programmer, which is faster but allows bugs such as buffer overflows. (Optional: **[Low Level]** How Can Memory-Safe Code Stop Hackers? 7:43, https://www.youtube.com/watch?v=lxUYZVX_FjQ.)
-
-### 4. Choosing a paradigm (LO 4)
-
-A **paradigm** is a style of programming. Python supports the four you have met in this course. No style is best everywhere. Judge a problem against the same criteria each time:
+Judge a problem against the same criteria each time:
 
 | Criterion | Imperative | Object-oriented | Functional | Logic |
 |---|---|---|---|---|
@@ -872,47 +415,54 @@ A **paradigm** is a style of programming. Python supports the four you have met 
 | **Testability** | Fair: tests must set up and check shared variables. | Good if each object is small. Tests must build objects in the right state first. | Best: same input always gives the same output, with nothing to set up. | Good for the rules themselves. Tracing why an answer appeared can be hard. |
 | **Example in this course** | Week 3 grade calculator (loops and if statements). | Week 5 library (`Book` and `Library` classes). | Week 4 rewrite of the grade calculator (`map`, `filter`, small functions). | Week 4 family tree (facts and rules about parents). |
 
-Real programs mix styles. The Week 6 library is object-oriented overall, but its `search` is a functional list comprehension. When you judge a problem, ask: where does the state live, how easy is each part to test, and does the problem look like steps, things, transformations or rules?
+Real programs mix styles. The library is object-oriented overall, but its `search` is a functional list comprehension. When you judge a problem, ask three questions:
+
+1. Where does the state live?
+2. How easy is each part to test?
+3. Does the problem look like steps, things, transformations or rules?
+
+### Writing a paradigm note
+
+Your portfolio note compares **at least two** paradigms, using the table above. A good note:
+
+- names the paradigms it compares,
+- points to one real example in your library project for each,
+- says which is easier to test, and why,
+- says what would change for a much larger library.
+
+Use the table as your checklist. There is no single right answer. The reasons matter most.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Activity (about 8 minutes)
+### Activity 1: name the paradigm (5 minutes)
 
-1. Take this function and add type hints to the parameters and the return value:
+A program must work out "who is a grandparent of whom" from a list of parent facts. Using the table, name the paradigm you would pick, and give one reason in one sentence.
 
-   ```python
-   def full_name(first, last):
-       return first + " " + last
-   ```
+### Activity 2: spot the style (5 minutes)
 
-2. Add a `requirements.txt` line that pins `requests` to version `2.34.2`.
-3. Write one sentence: which of the names `requests`, `reqeusts`, `request` would you check carefully on pypi.org before installing, and why?
-4. Using the table in section 4, name the paradigm you would pick for a program that works out "who is a grandparent of whom" from a list of parent facts, and give one reason.
+Look at this code. Which paradigm is it mostly written in? Give one reason.
+
+```python
+def double_all(numbers):
+    return [n * 2 for n in numbers]
+```
 
 :::::::::::::::: solution
 
 ### Model answer
 
-1. ```python
-   def full_name(first: str, last: str) -> str:
-       return first + " " + last
-
-   print(full_name("Ada", "Lovelace"))
-   ```
-2. `requests==2.34.2`
-3. All three need checking, but `reqeusts` (a typo) and `request` (a different, similar package) are the risky ones. Copying the name from the official docs avoids typosquatting.
-4. Logic programming, as in the Week 4 family tree: you state parent facts and one grandparent rule, and the system finds every answer. An imperative version would need nested loops that are harder to read and extend.
+1. **Logic programming.** The problem is about relationships (parent facts and a grandparent rule), and it is shorter and clearer to state the rule than to write nested loops. This matches the Week 4 family tree. An imperative version would need loops that are harder to read and extend.
+2. **Functional.** The function takes values in and returns a new list. It does not change `numbers`, and the same input always gives the same output, so it is easy to test.
 
 :::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Further reading
+### Further reading
 
-- Driscoll, M. (2017) *Python 101*. Available at: https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/ (accessed 2 November 2026).
-- Romano, F. (2018) *Learn Python Programming*, 2nd edn. Birmingham: Packt Publishing.
-- Indently (no date) *A quick guide to type annotations (ft. Mypy)* [Video]. Available at: https://www.youtube.com/watch?v=Y9fT4HVdCuQ (accessed 2 November 2026).
+- Computerphile (n.d.) *Programming Paradigms* [Video]. YouTube. Available at: https://www.youtube.com/watch?v=sqV3pL5x8PI (Accessed: 2 November 2026).
+- Driscoll, M. (2017) *Python 101*. Available at: https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/ (Accessed: 2 November 2026).
 
-## Practice task: Mini Project (Part 2) {#week-6-practice}
+## Practice task: Library Menu Program (Part 2 of the mini project) {#week-6-practice}
 
 :::::::::::::::::::::::::::::::::::::::: callout
 
@@ -926,33 +476,35 @@ Download these files into a folder for this task and open the folder in PyCharm.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**Time guide: 3 hours.** This is practice, not a graded task. You finish the project you started in Week 5.
+**Time guide: 3 hours.** This is your portfolio item for Week 6. Your tutor marks it at the end of the week. You finish the project you started in Week 5.
 
 ### Goal
 
-Turn your Week 5 `library.py` into a small program with a text menu. You will add a search, type hints, error handling and a short written note.
+Turn your Week 5 `library.py` into a small program with a text menu. You will add a search, error handling and a short paradigm note.
 
 New words this week:
 
-- **Type hint:** a note in the code saying what type a value should be, such as `title: str`.
 - **Module:** a `.py` file whose code another file can `import`.
+- **Docstring:** a short piece of text, in triple quotes, that explains what a function or class does. Python keeps it, and it is shown by `help()`.
 - **Paradigm:** a style of programming (for example object-oriented, functional or imperative).
 
 ### What you start with
 
-Your Week 5 `Library` and `Book` classes:
+Your Week 5 `Book` and `Library` classes:
 
-- `Book(title, author, isbn)` with `on_loan` (starts as `False`), `to_dict()`, `from_dict(data)` and `__str__`.
-- `Library` with `books` (a dictionary keyed by ISBN), `add_book`, `lend`, `return_book`, `available_books`, `save(path)` and `load(path)`.
+- `Book(title, author, isbn)` with `on_loan` (starts as `False`) and `__str__`.
+- `Library` with `books` (a dictionary keyed by ISBN), `add_book`, `lend`, `return_book` and `available_books`.
 
-If your Part 1 is not finished, finish the [Week 5 mini project](week-5.md#week-5-mini-project) first, or look at `solution/library.py` after a real attempt.
+If your Week 5 mini project is not finished, finish it first, or look at `solution/library.py` after a real attempt.
+
+The library works in memory in this week: books are kept while the program runs. Saving to a file comes in Week 8.
 
 ### Steps
 
 #### Step 1: Set up the Week 6 folder (10 min)
 
 1. Make a new folder for Week 6, for example `mini_project_part2`.
-2. Copy your Week 5 `library.py` into it. It is in your own Week 5 project folder; the course version is [`weeks/week-5/practice/mini_project/library.py`](files/week-5/mini_project/library.py).
+2. Copy your Week 5 mini project file `library_starter.py` into it, and rename the copy `library.py`.
 3. Open the folder as a project in PyCharm.
 
 #### Step 2: Add `search` (30 min)
@@ -970,21 +522,15 @@ def search(self, text):
 
 Hint: `text.lower() in book.title.lower()`.
 
-#### Step 3: Add type hints (20 min)
+#### Step 3: Add docstrings (20 min)
 
-Add hints to every method in `Book` and `Library`, including the return type. For example:
+Add a one-line docstring under the `class` line and under every method in `Book` and `Library`. Say what the method does in plain words. For example:
 
 ```python
-def add_book(self, book: Book) -> None:
-def available_books(self) -> list[Book]:
+def add_book(self, book):
+    """Store a book under its isbn."""
+    self.books[book.isbn] = book
 ```
-
-Hints:
-
-- Methods that return nothing use `-> None`.
-- Inside `Book`, a method that returns a `Book` writes the type in quotes: `-> "Book"`.
-- A file path can be `str | Path` (add `from pathlib import Path`).
-- Optional: if you have installed mypy (`python -m pip install mypy`), run `python -m mypy library.py`. See the Bridge note.
 
 #### Step 4: Write `main.py` (60 min)
 
@@ -998,11 +544,9 @@ Show this menu in a loop:
 3. Lend a book
 4. Return a book
 5. Search
-6. Save and quit
+6. Quit
 ```
 
-- Load the library from `library.json` when the program starts (a missing file is fine: it gives an empty library).
-- Option 6 saves to `library.json` and stops the loop.
 - Put the menu loop in a function called `main()`, and finish the file with:
 
 ```python
@@ -1011,6 +555,8 @@ if __name__ == "__main__":
 ```
 
 This means the menu runs only when you run `main.py` directly, not when another file imports it (see T#46).
+
+- Option 6 quits. The books are not saved yet, so the program should say so, for example: `Goodbye. Books are not saved yet.`
 
 #### Step 5: Handle bad input (30 min)
 
@@ -1023,7 +569,7 @@ Use `try` and `except` so the program never crashes:
 
 #### Step 6: Write the paradigm note (20 min)
 
-Write 5 to 6 sentences in a file called `note.txt` (or a comment at the top of `main.py`). Compare **at least two named paradigms** (object-oriented, imperative, functional or logic) using the criteria table in ["Choosing a paradigm" in the Bridge](#week-6-bridge): how each handles state, when it fits, and how easy it is to test.
+Write 5 to 6 sentences in a file called `note.txt`. Compare **at least two named paradigms** (object-oriented, imperative, functional or logic) using the criteria table in ["Choosing a paradigm" in the Bridge](#week-6-bridge): how each handles state, when it fits, and how easy it is to test.
 
 1. Name the paradigms you are comparing (at least two).
 2. Which parts of your library project are object-oriented? Point to one example, such as `Library.lend`.
@@ -1055,20 +601,22 @@ No book with that ISBN.
 Choose 1-6: 5
 Search for: herbert
 Dune by Frank Herbert (111) - available
+Choose 1-6: 6
+Goodbye. Books are not saved yet.
 ```
 
 ### Check your work
 
 - [ ] `search("AUSTEN")` and `search("austen")` give the same result.
-- [ ] Every method has type hints.
+- [ ] Every method in `Book` and `Library` has a docstring.
 - [ ] `main.py` imports `library` and uses `if __name__ == "__main__":`.
 - [ ] Bad ISBNs and bad menu choices print a message and do not crash.
-- [ ] Quitting with option 6 saves, and starting again shows your books.
-- [ ] Your 5 to 6 sentence paradigm note compares at least two paradigms.
+- [ ] Adding a book with an empty field is refused.
+- [ ] Your paradigm note compares at least two paradigms.
 
 ### Run the tests
 
-From the top folder of the course repository, test your own folder by setting `MINI_PROJECT_DIR` to it.
+From the top folder of the course repository, test your own folder by setting `MINI_PROJECT_DIR` to it. Your folder must contain `library.py` and `main.py`.
 
 PowerShell:
 
@@ -1097,11 +645,6 @@ Try it yourself first. Then compare with [solution/library.py](files/week-6/solu
 - A module is a .py file you can import.
 - from module import name imports just what you need.
 - Python ships with many useful built-in modules.
-- Use python -m pip so packages install for the Python you run.
-- pip freeze lists installed packages for a requirements.txt file.
-- A folder with an __init__.py file is a package.
-- Type hints document intent and let tools find mistakes.
-- Pin versions and check package names before installing.
 - No paradigm is best everywhere: judge each problem against the same criteria.
 - Splitting code into modules keeps programs manageable.
 - Explain design choices using clear criteria.

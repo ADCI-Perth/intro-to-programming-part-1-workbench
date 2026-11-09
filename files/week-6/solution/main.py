@@ -1,8 +1,9 @@
-"""Text menu for the library-loan manager."""
+"""Text menu for the library-loan manager (Week 6 model solution).
+
+Books are kept in memory only. Saving to a file comes in Week 8.
+"""
 
 from library import Book, Library
-
-DATA_FILE = "library.json"
 
 MENU = """
 1. Add a book
@@ -10,11 +11,12 @@ MENU = """
 3. Lend a book
 4. Return a book
 5. Search
-6. Save and quit
+6. Quit
 """
 
 
-def add_book(library: Library) -> None:
+def add_book(library):
+    """Ask for a book's details and add it. Empty fields are refused."""
     title = input("Title: ").strip()
     author = input("Author: ").strip()
     isbn = input("ISBN: ").strip()
@@ -25,7 +27,8 @@ def add_book(library: Library) -> None:
     print("Book added.")
 
 
-def list_available(library: Library) -> None:
+def list_available(library):
+    """Print every book that is not on loan."""
     books = library.available_books()
     if not books:
         print("No books available.")
@@ -33,7 +36,8 @@ def list_available(library: Library) -> None:
         print(book)
 
 
-def lend_book(library: Library) -> None:
+def lend_book(library):
+    """Lend a book by its isbn, with friendly messages for mistakes."""
     isbn = input("ISBN to lend: ").strip()
     try:
         library.lend(isbn)
@@ -44,7 +48,8 @@ def lend_book(library: Library) -> None:
         print(error)
 
 
-def return_book(library: Library) -> None:
+def return_book(library):
+    """Return a book by its isbn, with friendly messages for mistakes."""
     isbn = input("ISBN to return: ").strip()
     try:
         library.return_book(isbn)
@@ -55,7 +60,8 @@ def return_book(library: Library) -> None:
         print(error)
 
 
-def search_books(library: Library) -> None:
+def search_books(library):
+    """Ask for text and print the books whose title or author matches."""
     text = input("Search for: ").strip()
     results = library.search(text)
     if not results:
@@ -64,9 +70,9 @@ def search_books(library: Library) -> None:
         print(book)
 
 
-def main() -> None:
+def main():
+    """Show the menu until the user chooses Quit."""
     library = Library()
-    library.load(DATA_FILE)
     while True:
         print(MENU)
         try:
@@ -84,8 +90,7 @@ def main() -> None:
         elif choice == "5":
             search_books(library)
         elif choice == "6":
-            library.save(DATA_FILE)
-            print("Saved. Goodbye!")
+            print("Goodbye. Books are not saved yet.")
             break
         else:
             print("Please enter a number from 1 to 6.")

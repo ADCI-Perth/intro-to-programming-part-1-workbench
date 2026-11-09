@@ -21,7 +21,7 @@ carpentry_description: "ADCI"
 title: 'Intro to Programming'
 
 # Short description used in the page metadata (sandpaper reads the key 'desc')
-desc: 'A six-week beginner Python micro-credential from ADCI, designed to support credit towards an introductory programming unit.'
+desc: 'Part 1 of a two-part beginner Python micro-credential from ADCI (six weeks, at most 6 hours a week), designed to support credit towards an introductory programming unit.'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2026-11-03'
@@ -38,7 +38,7 @@ life_cycle: 'alpha'
 license: 'To be confirmed (see LICENSE)'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/ADCI-Perth/intro-to-programming-workbench'
+source: 'https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench'
 
 # Default branch of your lesson
 branch: 'main'
@@ -81,12 +81,6 @@ episodes:
 learners:
 - setup.md
 - reference.md
-- 5-3-date-time.md
-- 5-4-regular-expressions.md
-- 6-3-web-scraping.md
-- 6-4-virtual-environments.md
-- 6-5-statistics-numpy.md
-- 6-6-pandas.md
 
 # Information for Instructors
 instructors:

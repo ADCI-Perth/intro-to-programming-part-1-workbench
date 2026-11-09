@@ -1,7 +1,7 @@
 ---
 title: 'Week 1: Getting started: how programs run, values and operators'
-teaching: 176
-exercises: 180
+teaching: 164
+exercises: 176
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -13,7 +13,7 @@ exercises: 180
 - Which functions come built into Python?
 - How does Python do arithmetic?
 - How do I compare values and combine conditions?
-- How does the code I type become something a computer can run?
+- How does a program take in information, work on it and give a result?
 - Can I combine input, variables and operators in a small program?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -29,8 +29,8 @@ exercises: 180
 - Convert between data types (casting).
 - Use arithmetic, assignment, comparison and logical operators.
 - Predict the result of an expression before running it.
-- Explain the difference between machine code, assembly, compilers and interpreters.
-- Compare Hello World in Python with other languages.
+- Describe a task as input, process and output.
+- Write a short program that follows those three steps.
 - Write a unit converter or calculator that runs in PyCharm.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -45,21 +45,22 @@ exercises: 180
 - Install Python and PyCharm, then write, run and debug a short script.
 - Store values in variables and name the basic data types (numbers, text, true/false).
 - Use arithmetic, comparison and logical operators.
-- Explain, in plain words, how Python code becomes something a computer can run.
+- Read a short program and say, in plain words, what each line does.
 
 ### Time plan (under 6 hours)
 
 | Block | What you do | Time |
 |---|---|---|
-| Watch | 8 short videos | 1 h 22 m |
-| Read & practise | Sections 1.1, 1.2 and 1.3, with the assigned exercises | 2 h 4 m |
-| Concepts Bridge | [How code runs](#week-1-bridge) | 0.5 h |
-| Build | [Practice task](#week-1-practice) | 2 h |
-| **Total** | | **5 h 56 m** |
+| Watch | 7 short videos | 1 h 15 m |
+| Read & practise | Sections 1.1, 1.2 and 1.3, with the assigned exercises | 1 h 55 m |
+| Concepts Bridge | [Input, process, output](#week-1-bridge) | 0.5 h |
+| Build | [Unit converter](#week-1-practice), your portfolio item for this week | 2 h |
+| Quiz | Canvas quiz, 6 questions | 0.25 h |
+| **Total** | | **5 h 55 m** |
 
-Suggested order: watch a video, then read the matching lesson, then try the code yourself in PyCharm. Do the Bridge and Build blocks last.
+Suggested order: watch a video, then read the matching lesson, then try the code yourself in PyCharm. Do the Bridge, Build and Quiz blocks last.
 
-### Watch (1 h 22 m)
+### Watch (1 h 15 m)
 
 Watch in this order. Each link opens inside the Telusko playlist. **T#n** means "Telusko video number n".
 
@@ -72,27 +73,26 @@ Watch in this order. Each link opens inside the Telusko playlist. **T#n** means 
 | 5 | [T#4 Variables in Python](https://www.youtube.com/watch?v=TqPzwenhMj0&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 10:22 | A variable is a name that points to a value. |
 | 6 | [T#10 Data Types in Python](https://www.youtube.com/watch?v=gCCVsvgR2KU&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 14:35 | The main types: `int`, `float`, `str`, `bool`. |
 | 7 | [T#11 Operators in Python](https://www.youtube.com/watch?v=v5MR5JnKcZI&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 11:07 | What `+`, `-`, `*`, `/`, `//`, `%` and `**` each do. |
-| 8 | [T#67 Is Python Compiled or Interpreted?](https://www.youtube.com/watch?v=0BhSWyDEDC4&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) | 6:48 | The difference between compiling and interpreting. The Bridge builds on this. |
 
-**Video total: 1 h 22 m.**
+**Video total: 1 h 15 m.**
 
 #### PyCharm note
 
 T#2 was recorded before 2025. The PyCharm download page now looks different: there is **one** PyCharm download, with no "Community" or "Professional" choice. Install it and carry on with the free core features. This course uses PyCharm for everything.
 
-### Read & practise (2 h 4 m)
+### Read & practise (1 h 55 m)
 
 Read each lesson, type the examples into PyCharm and run them. Then do the exercises in the table below (about 3 minutes each). Skip Level 2 and Level 3 unless you have time left over.
 
-Each time includes reading the lesson plus about 3 minutes for each assigned exercise. Total: 35 + 40 + 49 = 124 minutes (2 h 4 m).
+Each time includes reading the lesson plus about 3 minutes for each assigned exercise. Total: 35 + 35 + 45 = 115 minutes (1 h 55 m).
 
 **Where is the data?** Some lessons open files such as `data/...` or `files/...`. These live in `assets/data/` and `assets/files/` at the root of this repository. You will not need them this week.
 
-| Lesson | Time | Read | Exercises |
-|---|---|---|---|
-| [Section 1.1: Introduction](#section-1-1) | about 35 min | Everything except the VS Code section (see below). | Level 1 |
-| [Section 1.2: Variables and built-in functions](#section-1-2) | about 40 min | All of it. | Level 1, exercises 1 to 7. |
-| [Section 1.3: Operators](#section-1-3) | about 49 min | All of it. | The Section 1.3 exercises (the page has one list, not levels). Do exercises 1 to 11, then 17 to 22 if time allows. |
+| Order | Lesson | Time | Read | Exercises |
+|---|---|---|---|---|
+| 1 | [Section 1.1: Introduction](#section-1-1) | about 35 min | Everything except the VS Code section (see below). | Level 1 |
+| 2 | [Section 1.2: Variables and built-in functions](#section-1-2) | about 35 min | All of it. | Level 1, exercises 1 to 7. |
+| 3 | [Section 1.3: Operators](#section-1-3) | about 45 min | All of it. | The Section 1.3 exercises (the page has one list, not levels). Do exercises 1 to 8. Exercises 9 to 11 are optional. |
 
 #### Section 1.1 uses VS Code. Use PyCharm instead.
 
@@ -109,11 +109,24 @@ If a lesson asks you to make a folder such as `section_1_2`, make it inside your
 
 ### Concepts Bridge (0.5 h)
 
-Open [bridge.md](#week-1-bridge). It explains how code runs: machine code, assembly, compilers and interpreters. You compare "Hello World" in C, Java and assembly with Python. It builds on video T#67.
+Open [bridge.md](#week-1-bridge). It shows how every program takes in information, works on it and gives a result. You practise this with everyday tasks before you write code. You will use the same steps in Week 3.
 
 ### Build (2 h)
 
-Open the [practice task](#week-1-practice). You write a small unit converter, then write five sentences comparing Python's "Hello World" with another language. This is practice only. It is not marked.
+Open the [practice task](#week-1-practice). You write a unit converter, then a short reflection about what your program does. Both go into your portfolio for this week.
+
+### Quiz (0.25 h)
+
+Take the Canvas quiz for Week 1 after you finish the Build. It has 6 questions, drawn from a pool. It is marked automatically.
+
+### Portfolio this week
+
+Submit at the end of the week, in your portfolio folder:
+
+- `starter.py` (your converter)
+- `reflection.txt` (five sentences, see the practice task)
+
+Your tutor marks the portfolio. The quiz is marked automatically.
 
 ### Optional
 
@@ -126,6 +139,7 @@ Nothing here is required. Try these if you want more.
 - T#14 Bitwise operators
 - T#15 Math functions
 - T#17 Swap two variables
+- T#67 Is Python Compiled or Interpreted? (6:48): https://www.youtube.com/watch?v=0BhSWyDEDC4&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3
 - [Max Rohowsky] [PyCharm Tutorial: Basics in 10 Minutes](https://www.youtube.com/watch?v=HHcZbXsZtm0) (10:00)
 
 Find the Telusko videos by number in the [playlist](https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3).
@@ -322,7 +336,7 @@ The Python interactive shell is good to try and test small script codes but it w
 > Add your screenshot as `episodes/fig/1.1-pycharm-download.png` and replace this note with `![PyCharm download page (this course uses PyCharm instead of Visual Studio Code)](fig/1.1-pycharm-download.png)`.
 
 If you installed visual studio code, let us see how to use it.
-If you prefer a video, you can follow this Visual Studio Code for Python [Video tutorial](https://www.youtube.com/watch?v=bn7Cx4z-vSo)
+If you prefer a video, watch [T#16 Working with PyCharm: Run, Debug, Trace](https://www.youtube.com/watch?v=akcEaEH91gI&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) (10:26). It shows how to use PyCharm, which this course uses.
 
 ##### How to use visual studio code
 
@@ -1259,164 +1273,71 @@ You have lived for 3153600000 seconds.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Concepts Bridge: How Code Runs {#week-1-bridge}
+## Concepts Bridge: Input, Process, Output {#week-1-bridge}
 
-**Time:** about 30 minutes (15 min reading, 5 min trying the code, 10 min activity).
+**Time:** about 30 minutes (10 min reading, 10 min running the example, 10 min activity).
 
 ### Why this matters
 
-Before you write much code, it helps to know how the code you type becomes something a computer can run: machine code, assembly language, compilers and interpreters. Comparing "Hello World" in several languages helps you analyse a problem and its solution (LO 1). It also sets you up for LO 4, where you judge which language or paradigm suits a problem. It builds on video **T#67**, which you have already watched in the Watch block. You do not need to watch it again.
+Every program, however big, does three jobs:
 
-### The big idea: a computer only understands machine code
+1. **Input**: it gets information in.
+2. **Process**: it works on that information.
+3. **Output**: it gives a result back.
 
-A computer chip can only follow very simple instructions, such as "add these two numbers" or "move this value". Each instruction is a pattern of 1s and 0s. This is called **machine code**.
+Thinking in these three steps before you type helps you solve problems (LO 1). You will use the same steps for the grade calculator in Week 3, and again when you design programs in Week 6.
 
-Nobody wants to write patterns of 1s and 0s. So people invented layers that make code easier to write.
+### The big idea: everyday tasks have inputs, processes and outputs
 
-| Layer | What it looks like | Who writes it |
-|---|---|---|
-| Machine code | `10110000 01100001` | Almost nobody |
-| **Assembly language** | `mov al, 97` | Specialists, for very small or very fast code |
-| **High-level language** (C, Java, Python) | `print("Hello")` | Almost everyone |
+You already do this at home and at work. Here are three examples:
 
-**Assembly language** is machine code with short names instead of numbers. One assembly line is about one machine instruction. A program called an **assembler** turns it into machine code.
+| Everyday task | Input | Process | Output |
+|---|---|---|---|
+| Working out your pay | Hours worked, hourly rate | Multiply hours by rate | Gross pay |
+| Making a cup of tea | Water, tea bag, milk | Heat the water, steep the tea bag | A cup of tea |
+| Checking your change at a shop | Price, money given | Subtract price from money given | Change to hand back |
 
-A **high-level language** reads more like English. One line can become many machine instructions. Something must translate it. There are two main ways.
+Notice that the process is the step that does the work. The input and output are what goes in and comes out.
 
-### Compilers and interpreters
+### How Python runs your file
 
-A **compiler** translates the whole program into machine code *before* it runs. You get a separate file that the computer runs directly. C works this way. Compiled programs usually run fast. A mistake in the code is often caught before the program starts.
+Python reads your file from top to bottom and carries out each line in order. When it reaches `input()`, it waits for the user to type something. When it reaches `print()`, it shows a result on the screen.
 
-An **interpreter** reads your program and carries it out *while it runs*, one step at a time. You do not make a separate machine-code file first. This makes testing quick, because you change a line and run it again.
+### Worked example
 
-Think of a speech in another language. A compiler is like translating the whole speech into a written copy first. An interpreter is like a person translating live, sentence by sentence.
+Here is the pay example as a program. Copy it into PyCharm and run it.
 
-### Where Python sits
-
-Python is usually called an interpreted language, but the real story has two steps:
-
-1. Python first **compiles** your code into **bytecode**. Bytecode is a simple set of instructions for Python itself, not for your computer chip.
-2. The **Python virtual machine** (PVM), which is part of the interpreter, then runs the bytecode one instruction at a time.
-
-Java is similar. It compiles to bytecode, and the Java Virtual Machine runs it. Python does the compile step for you, automatically, each time you run a file. That is why T#67 says the answer is "both".
-
-You can see Python's bytecode with the built-in `dis` module (short for "disassemble"). Save this as a file and run it.
-
-> **Just copy and run this.** You have not learned `def` or `import` yet. You will learn `def` (making your own functions) in Week 3 and `import` (using other code) in Week 6. For now, only look at the output.
+> **Just copy and run this.** You have not used every part of this yet. `input()` asks the user for text, and `float()` turns that text into a number. You will use both in the Build task.
 
 ```python
-import dis
-
-def add(a, b):
-    return a + b
-
-dis.dis(add)
+hours = float(input("Hours worked: "))   # input
+rate = float(input("Hourly rate: "))     # input
+pay = hours * rate                       # process
+print("Gross pay:", pay)                 # output
 ```
 
-The exact lines depend on your Python version. You will see names such as `LOAD_FAST` (fetch a value) and `BINARY_OP` (do the maths) and `RETURN_VALUE`. Those are bytecode instructions. You wrote one short line. Python turned it into several steps.
+Run it twice, with different numbers. Each time, notice:
 
-Here is a second small check. Python's `compile()` function does the compile step by hand. Again, just copy and run it. `compile()` and `exec()` are not part of this week's lessons.
-
-```python
-code = compile("print('Hello, World!')", "<example>", "exec")
-print(type(code))
-exec(code)
-```
-
-`compile()` returns a **code object** (the bytecode and its details). `exec()` then runs it. This is what Python does for every file you run.
-
-### Hello World in four languages
-
-The same job, printing one line, looks very different in each language.
-
-**C** (compiled to machine code, then run):
-
-```c
-#include <stdio.h>
-
-int main(void) {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-**Java** (compiled to bytecode, run by the Java Virtual Machine):
-
-```java
-public class Hello {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-
-**Assembly** (x86-64 for Linux, NASM assembler). You do not need to understand it. Notice how many instructions it takes:
-
-```nasm
-section .data
-    msg db "Hello, World!", 10
-    len equ $ - msg
-
-section .text
-    global _start
-
-_start:
-    mov rax, 1        ; system call number for "write"
-    mov rdi, 1        ; 1 means "standard output" (the screen)
-    mov rsi, msg      ; the address of the text
-    mov rdx, len      ; how many characters to write
-    syscall           ; ask the operating system to do it
-    mov rax, 60       ; system call number for "exit"
-    xor rdi, rdi      ; exit code 0
-    syscall
-```
-
-**Python** (compiled to bytecode, run by the interpreter):
-
-```python
-print("Hello, World!")
-```
-
-One line. No `main`, no semicolons, no types, no set-up. That is why Python suits beginners. The trade-off is speed: Python is usually slower than C, because of the extra interpreting step.
-
-### Video
-
-You have already watched this in the Watch block. Rewatch it only if the ideas above feel new.
-
-- **T#67** Is Python Compiled or Interpreted? (6:48): https://www.youtube.com/watch?v=0BhSWyDEDC4&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3
+- which lines take in information (input),
+- which line does the work (process),
+- which line shows the result (output).
 
 ### Activity (10 minutes)
 
-1. Run the three Python code blocks above in PyCharm. Use a new file for each.
-2. Fill in this table in your own notes. Count lines of code for "Hello World" (blank lines do not count) and say how each language is run.
-
-| Language | Lines | Compiled, interpreted or both? |
-|---|---|---|
-| C | | |
-| Java | | |
-| Assembly | | |
-| Python | | |
-
-3. In two or three sentences, answer: *why would someone still choose C or assembly when Python is so short?*
-
-Keep your answers. You will use them in the practice task.
+1. Write the input, process and output for **two** everyday tasks from your own life or work. Use a table like the one above, on paper or in a text file.
+2. Change the process line in the worked example so the pay has 10% tax taken off. Hint: `pay = hours * rate * 0.9` takes off 10%. Run the program again to check.
+3. In two or three sentences, answer: *what would happen if the user typed "ten" instead of 10?* You will learn how to deal with this in Week 4.
 
 #### Model answer
 
-| Language | Lines | Compiled, interpreted or both? |
-|---|---|---|
-| C | 5 | Compiled to machine code |
-| Java | 5 | Compiled to bytecode, then run by the JVM |
-| Assembly | 14 (with the data and text sections) | Assembled to machine code |
-| Python | 1 | Both: compiled to bytecode, then interpreted |
-
-Exact counts change a little with how you write each program. A fair answer is: C and assembly give you close control of the hardware and run very fast, and their programs are small and need no interpreter. That matters for operating systems, device software and games. Python trades that speed for being quick to write and easy to read.
+1. Answers will vary. A good answer names the inputs, one clear process, and one clear output.
+2. The result is 90% of the gross pay. For example, 38 hours at $30 per hour is $1,140 before tax, and $1,026 after the 10% reduction.
+3. The program stops with an error, because `float("ten")` cannot turn the word into a number. Good programs check input before using it.
 
 ### Further reading
 
 - Driscoll, M. (2017) *Python 101*. Available at: https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/ (Introduction).
-- Romano, F. (2018) *Learn Python Programming*, 2nd edn. Birmingham: Packt. Chapter 1, on how Python code is run.
-- Python Software Foundation (2024) *dis: Disassembler for Python bytecode*. Available at: https://docs.python.org/3/library/dis.html (Accessed: 2 November 2026).
+- Romano, F. (2018) *Learn Python Programming*, 2nd edn. Birmingham: Packt. Chapter 1.
 
 ## Practice task: Unit Converter {#week-1-practice}
 
@@ -1432,11 +1353,11 @@ Download these files into a folder for this task and open the folder in PyCharm.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**Time:** about 2 hours. This is practice only. It is not marked.
+**Time:** about 2 hours. This is your portfolio item for Week 1. Your tutor marks it at the end of the week.
 
 ### Goal
 
-Write a small script that asks for a distance and a temperature, converts them and prints the answers. Then write five sentences comparing Python's "Hello World" with another language.
+Write a small script that asks for a distance and a temperature, converts them and prints the answers. Then write five sentences about what your program does.
 
 You only need what you learned this week: variables, `input()`, `float()`, arithmetic operators and `print()`.
 
@@ -1470,17 +1391,17 @@ The `10` and `25` are typed by the user. Everything else is printed by your scri
 
 Add a third conversion, such as kilograms to pounds (1 kg = 2.20462 lb). Keep the same style.
 
-### Part 2: compare Hello World (about 45 min)
+### Part 2: reflection (about 30 min)
 
-Create a plain text file called `comparison.txt` (in PyCharm: **New > File**). Write **exactly five sentences** comparing Python's Hello World with one other language: C, Java or assembly from the [Bridge](#week-1-bridge). You can use your notes from the Bridge activity.
+Create a plain text file called `reflection.txt` (in PyCharm: **New > File**). Write **exactly five sentences** about your program:
 
-Think about:
+1. What the program asks the user for.
+2. What it calculates.
+3. What it prints.
+4. What happens if the user types a word, such as `ten`, instead of a number. Try it to check.
+5. One change you would make to make the program easier to use.
 
-- How many lines does each version need?
-- Which one is easier for a beginner to read, and why?
-- What does the other language make you write that Python does not?
-- Is each one compiled, interpreted or both?
-- What is one good reason to choose the other language anyway?
+Use the [Concepts Bridge](#week-1-bridge) to help you describe the input, process and output.
 
 ### Check your work
 
@@ -1489,7 +1410,7 @@ Think about:
 - [ ] 10 km prints `10.0 km is 6.21 miles`.
 - [ ] 25 C prints `25.0 C is 77.0 F`.
 - [ ] You used only variables, `input()`, `float()`, `round()`, arithmetic and `print()`.
-- [ ] `comparison.txt` has five sentences, and they name the other language.
+- [ ] `reflection.txt` has five sentences, covering all five points above.
 
 ### Run the automatic checks (optional)
 
@@ -1523,9 +1444,9 @@ If pytest is not installed, run `python -m pip install pytest` first. Try the ta
 - Comparison operators give True or False.
 - and, or and not combine conditions.
 - == checks equal values; is checks the same object.
-- Computers only run machine code.
-- Compilers translate a whole program first; interpreters run it step by step.
-- Python compiles to bytecode, then the interpreter runs it.
+- Every program takes in information, works on it and gives a result.
+- input() waits for the user; print() shows the result.
+- Python reads a file from top to bottom and carries out each line.
 - Small programs are built from variables, input, operators and print.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
