@@ -75,7 +75,7 @@ Lesson: [Section 5.1: Classes and Objects](#section-5-1)
 - **Do:** Exercises Level 1. This is the `Statistics` class. Start with `count`, `sum`, `min`, `max`, `range` and `mean`, and stop there if time is short. Add the rest only if you have time.
 - The lesson uses `super().__init__(...)` in the Inheritance section. Compare it with the `Dog` class you will write in the Build block.
 
-**PyCharm note:** the lessons were written with VS Code in mind. In PyCharm, right-click your file and choose **Run**, or press the green arrow. Nothing else changes.
+**PyCharm note:** in PyCharm, right-click your file and choose **Run**, or press the green arrow.
 
 Files and saving are not part of this week. You will learn them in Part 2.
 

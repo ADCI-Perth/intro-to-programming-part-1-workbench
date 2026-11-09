@@ -113,7 +113,7 @@ Open each lesson, read it, type the examples into PyCharm and run them. Then do 
 - **Skip** packing and unpacking, spreading, enumerate and zip for now. They are optional.
 - The lesson's exercise is about unpacking, so skip it. Write your own instead. Ask for a number with `input()`, convert it with `int()`, and print a friendly message in an `except ValueError` block if the text is not a number.
 
-> **PyCharm note:** the lessons were written with VS Code in mind. In PyCharm, right-click a file and choose **Run**, or use the Python Console for short tests.
+> **PyCharm note:** in PyCharm, right-click a file and choose **Run**, or use the Python Console for short tests.
 
 ---
 

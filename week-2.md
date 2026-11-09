@@ -74,7 +74,7 @@ The four videos add up to 41 min 46 s, shown as 42 min.
 
 ### Read & practise (1 h 58 min)
 
-Read each lesson and run the examples in PyCharm. Then do the exercises. The lessons were written for VS Code. In PyCharm, create a new Python file, paste the example and click **Run**.
+Read each lesson and run the examples in PyCharm. Then do the exercises. In PyCharm, create a new Python file, paste the example and click **Run**.
 
 | Lesson | Time | Read | Exercises |
 |---|---|---|---|

@@ -7,7 +7,7 @@ title: 'Instructor Notes'
 - Six weeks, **hard cap of 6 hours per week** (36 hours in total). Weeks 4 to 6 come in under 6 hours on purpose; the spare time is a buffer.
 - Complete beginners, mostly working adults: people in office jobs who want to change career or move into programming or computing. Assume no programming or technical background and no maths beyond everyday arithmetic. Weeks 1 to 3 lean on video; Weeks 4 to 6 shift towards independent problem solving.
 - Videos are third-party YouTube content: mainly the Telusko *Python for Beginners (Full Course)* playlist (labelled **T#n**), plus a few short videos from other channels (labelled **[Channel]**). Check every link before each intake.
-- Editor: **PyCharm** (free core). VS Code is the fallback if the PyCharm licence ever changes.
+- Editor: **PyCharm only** for Part 1 and Part 2 (free core). VS Code is not used.
 
 ## Weekly structure
 

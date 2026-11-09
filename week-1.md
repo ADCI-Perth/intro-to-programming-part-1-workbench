@@ -90,20 +90,20 @@ Each time includes reading the lesson plus about 3 minutes for each assigned exe
 
 | Order | Lesson | Time | Read | Exercises |
 |---|---|---|---|---|
-| 1 | [Section 1.1: Introduction](#section-1-1) | about 35 min | Everything except the VS Code section (see below). | Level 1 |
+| 1 | [Section 1.1: Introduction](#section-1-1) | about 35 min | All of it. | Level 1 |
 | 2 | [Section 1.2: Variables and built-in functions](#section-1-2) | about 35 min | All of it. | Level 1, exercises 1 to 7. |
 | 3 | [Section 1.3: Operators](#section-1-3) | about 45 min | All of it. | The Section 1.3 exercises (the page has one list, not levels). Do exercises 1 to 8. Exercises 9 to 11 are optional. |
 
-#### Section 1.1 uses VS Code. Use PyCharm instead.
+#### Set up PyCharm
 
-The Section 1.1 lesson shows how to set up **Visual Studio Code**. You do not need it. Skip the section called **"Installing Visual Studio Code"** and its sub-section **"How to use visual studio code"**. Use PyCharm instead:
+This course uses **PyCharm** only. Section 1.1 shows how to install and use PyCharm in the section called **"Installing PyCharm"**. A quick start:
 
 1. Open PyCharm and choose **New Project**.
 2. Name the project `IntroToProgramming` (or any name you like).
 3. Right-click the project name, choose **New > Python File** and call it `helloworld`.
 4. Type `print("Hello, World!")` and click the green **Run** arrow.
 
-Everything else in Section 1.1 (the Python shell, syntax, comments, data types) works the same in PyCharm.
+The Python shell, syntax, comments and data types in Section 1.1 all work in PyCharm too.
 
 If a lesson asks you to make a folder such as `section_1_2`, make it inside your PyCharm project. Right-click the project name, then choose **New > Directory**.
 
@@ -328,24 +328,25 @@ Before we move on to the next section, let us practice more on the Python intera
 >>> exit()
 ```
 
-#### Installing Visual Studio Code
+#### Installing PyCharm
 
-The Python interactive shell is good to try and test small script codes but it will not be for a big project. In real work environment, developers use different code editors to write codes. This course uses PyCharm, but many developers also use Visual Studio Code. Visual Studio Code is a very popular open source text editor. I am a fan of vscode and I would recommend to [download](https://code.visualstudio.com/) visual studio code, but if you are in favor of other editors, feel free to follow with what you have.
+Python shell is good for trying small pieces of code, but it is not good for a bigger project. Real developers write code in a code editor. This course uses **PyCharm** for every lesson, exercise and build, so you only need to install PyCharm.
 
-> 📷 **Image placeholder:** PyCharm download page (this course uses PyCharm instead of Visual Studio Code)  
-> Add your screenshot as `episodes/fig/1.1-pycharm-download.png` and replace this note with `![PyCharm download page (this course uses PyCharm instead of Visual Studio Code)](fig/1.1-pycharm-download.png)`.
+If you prefer a video, watch [T#16 Working with PyCharm: Run, Debug, Trace](https://www.youtube.com/watch?v=akcEaEH91gI&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) (10:26). It shows how to use PyCharm.
 
-If you installed visual studio code, let us see how to use it.
-If you prefer a video, watch [T#16 Working with PyCharm: Run, Debug, Trace](https://www.youtube.com/watch?v=akcEaEH91gI&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3) (10:26). It shows how to use PyCharm, which this course uses.
+Download PyCharm from the [JetBrains website](https://www.jetbrains.com/pycharm/download/). There is one download, and the free core features are enough for this course.
 
-##### How to use visual studio code
+> 📷 **Image placeholder:** PyCharm download page  
+> Add your screenshot as `episodes/fig/1.1-pycharm-download.png` and replace this note with `![PyCharm download page](fig/1.1-pycharm-download.png)`.
 
-Open the visual studio code by double clicking the visual studio icon. When you open it you will get this kind of interface. Try to interact with the labeled icons.
+##### How to use PyCharm
+
+Open PyCharm. When you open it you will see the main window. Try to interact with the labelled icons.
 
 > 📷 **Image placeholder:** PyCharm window with the main areas labelled (project files, editor, Run button, terminal)  
 > Add your screenshot as `episodes/fig/1.1-pycharm-ui.png` and replace this note with `![PyCharm window with the main areas labelled (project files, editor, Run button, terminal)](fig/1.1-pycharm-ui.png)`.
 
-Create a folder named IntroToProgramming on your desktop. Then open it using visual studio code.
+Create a folder named IntroToProgramming on your desktop. Then open it in PyCharm using **File > Open**.
 
 > 📷 **Image placeholder:** opening a project folder in PyCharm (File > Open)  
 > Add your screenshot as `episodes/fig/1.1-pycharm-open-project.png` and replace this note with `![opening a project folder in PyCharm (File > Open)](fig/1.1-pycharm-open-project.png)`.
@@ -353,12 +354,12 @@ Create a folder named IntroToProgramming on your desktop. Then open it using vis
 > 📷 **Image placeholder:** the project folder open in PyCharm  
 > Add your screenshot as `episodes/fig/1.1-pycharm-project-open.png` and replace this note with `![the project folder open in PyCharm](fig/1.1-pycharm-project-open.png)`.
 
-After opening it, you will see shortcuts for creating files and folders inside of IntroToProgramming project's directory. As you can see below, I have created the very first file, `helloworld.py`. You can do the same.
+After the project opens, you will see shortcuts for creating files and folders inside the IntroToProgramming folder. The screenshot below shows the first file, `helloworld.py`. You can do the same.
 
 > 📷 **Image placeholder:** a new file helloworld.py created in the PyCharm project  
 > Add your screenshot as `episodes/fig/1.1-pycharm-helloworld.png` and replace this note with `![a new file helloworld.py created in the PyCharm project](fig/1.1-pycharm-helloworld.png)`.
 
-After a long day of coding, you want to close your code editor, right? This is how you will close the opened project.
+When you finish for the day, close the project. This is how you do it.
 
 > 📷 **Image placeholder:** closing a project in PyCharm (File > Close Project)  
 > Add your screenshot as `episodes/fig/1.1-pycharm-close-project.png` and replace this note with `![closing a project in PyCharm (File > Close Project)](fig/1.1-pycharm-close-project.png)`.
@@ -531,9 +532,9 @@ To check the data type of certain data/variable we use the **type** function. In
 
 #### Python File
 
-First open your project folder, IntroToProgramming. If you don't have this folder, create a folder name called IntroToProgramming. Inside this folder, create a file called helloworld.py. Now, let's do what we did on python interactive shell using visual studio code.
+First open your project folder, IntroToProgramming. If you don't have this folder, create a folder name called IntroToProgramming. Inside this folder, create a file called helloworld.py. Now, let's do what we did in the Python interactive shell, but in PyCharm.
 
-The Python interactive shell was printing without using **print** but on visual studio code to see our result we should use a built in function _print()_. The _print()_ built-in function takes one or more arguments as follows _print('arument1', 'argument2', 'argument3')_. See the examples below.
+The Python interactive shell was printing without using **print** but in PyCharm to see our result we should use a built in function _print()_. The _print()_ built-in function takes one or more arguments as follows _print('arument1', 'argument2', 'argument3')_. See the examples below.
 
 **Example:**
 
@@ -561,7 +562,7 @@ print(type({9.8, 3.14, 2.7}))    # Set
 print(type((9.8, 3.14, 2.7)))    # Tuple
 ```
 
-To run the python file check the image below. You can run the python file either by running the green button on Visual Studio Code or by typing _python helloworld.py_ in the terminal .
+To run the python file check the image below. You can run the Python file by clicking the green Run button in PyCharm, or by typing _python helloworld.py_ in the terminal .
 
 > 📷 **Image placeholder:** helloworld.py running in PyCharm (green Run button) with the output in the Run window  
 > Add your screenshot as `episodes/fig/1.1-pycharm-run.png` and replace this note with `![helloworld.py running in PyCharm (green Run button) with the output in the Run window](fig/1.1-pycharm-run.png)`.
