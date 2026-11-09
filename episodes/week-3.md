@@ -75,7 +75,7 @@ The bubble sort video (T#70) is in the Concepts Bridge, not here.
 
 ### Read & practise (1 h 55 m)
 
-Read each lesson, type and run every example in PyCharm, then do the Level 1 exercises. Create one `.py` file per section, such as `section_3_1.py`. Where a lesson says to use VS Code, use PyCharm instead: **File > New > Python File**, then click the green arrow to run.
+Read each lesson, type and run every example in PyCharm, then do the Level 1 exercises. Create one `.py` file per section, such as `section_3_1.py`. In PyCharm, use **File > New > Python File**, then click the green arrow to run.
 
 | Order | Lesson | About | Read | Level 1 exercises |
 |---|---|---|---|---|
