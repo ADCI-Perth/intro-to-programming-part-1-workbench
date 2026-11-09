@@ -107,7 +107,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="reference.html">Reference</a></li><li><a class="dropdown-item" href="5-3-date-time.html">5.3 Date and Time (optional)</a></li><li><a class="dropdown-item" href="5-4-regular-expressions.html">5.4 Regular Expressions (optional)</a></li><li><a class="dropdown-item" href="6-3-web-scraping.html">6.3 Web Scraping (optional)</a></li><li><a class="dropdown-item" href="6-4-virtual-environments.html">6.4 Virtual Environments (optional)</a></li><li><a class="dropdown-item" href="6-5-statistics-numpy.html">6.5 Statistics and NumPy (optional)</a></li><li><a class="dropdown-item" href="6-6-pandas.html">6.6 Pandas (optional)</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="reference.html">Reference</a></li>
           </ul></li>
       </ul></div>
     <!--
@@ -222,7 +222,7 @@
 <li><a href="#section-1-1">1.1 Introduction to Python</a></li>
 <li><a href="#section-1-2">1.2 Variables and Built-in Functions</a></li>
 <li><a href="#section-1-3">1.3 Operators</a></li>
-<li><a href="#week-1-bridge">Concepts Bridge: How Code Runs</a></li>
+<li><a href="#week-1-bridge">Concepts Bridge: Input, Process, Output</a></li>
 <li><a href="#week-1-practice">Practice task: Unit Converter</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -233,7 +233,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="week-2.html">2. Week 2: Input, strings and data structures</a>
+        <a href="week-2.html">2. Week 2: Input and data structures</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -260,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="week-5.html">5. Week 5: Object-oriented programming and files</a>
+        <a href="week-5.html">5. Week 5: Object-oriented programming</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -269,7 +269,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="week-6.html">6. Week 6: Modules, libraries and choosing a paradigm</a>
+        <a href="week-6.html">6. Week 6: Modules and choosing a paradigm</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -311,7 +311,7 @@
                 </h2>
                 <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
-                    <ul><hr><li><a class="dropdown-item" href="reference.html">Reference</a></li><li><a class="dropdown-item" href="5-3-date-time.html">5.3 Date and Time (optional)</a></li><li><a class="dropdown-item" href="5-4-regular-expressions.html">5.4 Regular Expressions (optional)</a></li><li><a class="dropdown-item" href="6-3-web-scraping.html">6.3 Web Scraping (optional)</a></li><li><a class="dropdown-item" href="6-4-virtual-environments.html">6.4 Virtual Environments (optional)</a></li><li><a class="dropdown-item" href="6-5-statistics-numpy.html">6.5 Statistics and NumPy (optional)</a></li><li><a class="dropdown-item" href="6-6-pandas.html">6.6 Pandas (optional)</a></li>
+                    <ul><hr><li><a class="dropdown-item" href="reference.html">Reference</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -341,19 +341,19 @@
           Home
         </a>
         <a class="chapter-link float-end" href="../instructor/week-2.html" rel="next">
-          Next: Week 2: Input, strings and data...
+          Next: Week 2: Input and data structures...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Week 1: Getting started: how programs run, values and operators</h1>
-        <p>Last updated on 2026-11-03 |
+        <p>Last updated on 2026-11-09 |
 
-        <a href="https://github.com/ADCI-Perth/intro-to-programming-workbench/edit/main/episodes/week-1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/edit/main/episodes/week-1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 356 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 340 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -375,7 +375,8 @@
 <li>Which functions come built into Python?</li>
 <li>How does Python do arithmetic?</li>
 <li>How do I compare values and combine conditions?</li>
-<li>How does the code I type become something a computer can run?</li>
+<li>How does a program take in information, work on it and give a
+result?</li>
 <li>Can I combine input, variables and operators in a small
 program?</li>
 </ul></div>
@@ -395,9 +396,8 @@ input().</li>
 <li>Convert between data types (casting).</li>
 <li>Use arithmetic, assignment, comparison and logical operators.</li>
 <li>Predict the result of an expression before running it.</li>
-<li>Explain the difference between machine code, assembly, compilers and
-interpreters.</li>
-<li>Compare Hello World in Python with other languages.</li>
+<li>Describe a task as input, process and output.</li>
+<li>Write a short program that follows those three steps.</li>
 <li>Write a unit converter or calculator that runs in PyCharm.</li>
 </ul></div>
 </div>
@@ -414,8 +414,8 @@ script.</li>
 <li>Store values in variables and name the basic data types (numbers,
 text, true/false).</li>
 <li>Use arithmetic, comparison and logical operators.</li>
-<li>Explain, in plain words, how Python code becomes something a
-computer can run.</li>
+<li>Read a short program and say, in plain words, what each line
+does.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="time-plan-under-6-hours">Time plan (under 6 hours)<a class="anchor" aria-label="anchor" href="#time-plan-under-6-hours"></a></h3>
@@ -423,26 +423,31 @@ computer can run.</li>
 <th>What you do</th>
 <th>Time</th>
 </tr></thead><tbody><tr><td>Watch</td>
-<td>8 short videos</td>
-<td>1 h 22 m</td>
+<td>7 short videos</td>
+<td>1 h 15 m</td>
 </tr><tr><td>Read &amp; practise</td>
 <td>Sections 1.1, 1.2 and 1.3, with the assigned exercises</td>
-<td>2 h 4 m</td>
+<td>1 h 55 m</td>
 </tr><tr><td>Concepts Bridge</td>
-<td><a href="#week-1-bridge">How code runs</a></td>
+<td><a href="#week-1-bridge">Input, process, output</a></td>
 <td>0.5 h</td>
 </tr><tr><td>Build</td>
-<td><a href="#week-1-practice">Practice task</a></td>
+<td>
+<a href="#week-1-practice">Unit converter</a>, your portfolio item
+for this week</td>
 <td>2 h</td>
+</tr><tr><td>Quiz</td>
+<td>Canvas quiz, 6 questions</td>
+<td>0.25 h</td>
 </tr><tr><td><strong>Total</strong></td>
 <td></td>
-<td><strong>5 h 56 m</strong></td>
+<td><strong>5 h 55 m</strong></td>
 </tr></tbody></table><p>Suggested order: watch a video, then read the matching lesson, then
-try the code yourself in PyCharm. Do the Bridge and Build blocks
+try the code yourself in PyCharm. Do the Bridge, Build and Quiz blocks
 last.</p>
 </div>
 <div class="section level3">
-<h3 id="watch-1-h-22-m">Watch (1 h 22 m)<a class="anchor" aria-label="anchor" href="#watch-1-h-22-m"></a></h3>
+<h3 id="watch-1-h-15-m">Watch (1 h 15 m)<a class="anchor" aria-label="anchor" href="#watch-1-h-15-m"></a></h3>
 <p>Watch in this order. Each link opens inside the Telusko playlist.
 <strong>T#n</strong> means “Telusko video number n”.</p>
 <table class="table"><colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup><thead><tr><th>#</th>
@@ -488,13 +493,7 @@ Operators in Python</a></td>
 <td>11:07</td>
 <td>What <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
 <code>//</code>, <code>%</code> and <code>**</code> each do.</td>
-</tr><tr><td>8</td>
-<td><a href="https://www.youtube.com/watch?v=0BhSWyDEDC4&amp;list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3" class="external-link">T#67
-Is Python Compiled or Interpreted?</a></td>
-<td>6:48</td>
-<td>The difference between compiling and interpreting. The Bridge builds
-on this.</td>
-</tr></tbody></table><p><strong>Video total: 1 h 22 m.</strong></p>
+</tr></tbody></table><p><strong>Video total: 1 h 15 m.</strong></p>
 <div class="section level4">
 <h4 id="pycharm-note">PyCharm note<a class="anchor" aria-label="anchor" href="#pycharm-note"></a></h4>
 <p>T#2 was recorded before 2025. The PyCharm download page now looks
@@ -504,34 +503,38 @@ free core features. This course uses PyCharm for everything.</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="read-practise-2-h-4-m">Read &amp; practise (2 h 4 m)<a class="anchor" aria-label="anchor" href="#read-practise-2-h-4-m"></a></h3>
+<h3 id="read-practise-1-h-55-m">Read &amp; practise (1 h 55 m)<a class="anchor" aria-label="anchor" href="#read-practise-1-h-55-m"></a></h3>
 <p>Read each lesson, type the examples into PyCharm and run them. Then
 do the exercises in the table below (about 3 minutes each). Skip Level 2
 and Level 3 unless you have time left over.</p>
 <p>Each time includes reading the lesson plus about 3 minutes for each
-assigned exercise. Total: 35 + 40 + 49 = 124 minutes (2 h 4 m).</p>
+assigned exercise. Total: 35 + 35 + 45 = 115 minutes (1 h 55 m).</p>
 <p><strong>Where is the data?</strong> Some lessons open files such as
 <code>data/...</code> or <code>files/...</code>. These live in
 <code>assets/data/</code> and <code>assets/files/</code> at the root of
 this repository. You will not need them this week.</p>
-<table class="table"><colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup><thead><tr><th>Lesson</th>
+<table class="table"><colgroup><col width="20%"><col width="20%"><col width="20%"><col width="20%"><col width="20%"></colgroup><thead><tr><th>Order</th>
+<th>Lesson</th>
 <th>Time</th>
 <th>Read</th>
 <th>Exercises</th>
-</tr></thead><tbody><tr><td><a href="#section-1-1">Section 1.1: Introduction</a></td>
+</tr></thead><tbody><tr><td>1</td>
+<td><a href="#section-1-1">Section 1.1: Introduction</a></td>
 <td>about 35 min</td>
 <td>Everything except the VS Code section (see below).</td>
 <td>Level 1</td>
-</tr><tr><td><a href="#section-1-2">Section 1.2: Variables and built-in
+</tr><tr><td>2</td>
+<td><a href="#section-1-2">Section 1.2: Variables and built-in
 functions</a></td>
-<td>about 40 min</td>
+<td>about 35 min</td>
 <td>All of it.</td>
 <td>Level 1, exercises 1 to 7.</td>
-</tr><tr><td><a href="#section-1-3">Section 1.3: Operators</a></td>
-<td>about 49 min</td>
+</tr><tr><td>3</td>
+<td><a href="#section-1-3">Section 1.3: Operators</a></td>
+<td>about 45 min</td>
 <td>All of it.</td>
 <td>The Section 1.3 exercises (the page has one list, not levels). Do
-exercises 1 to 11, then 17 to 22 if time allows.</td>
+exercises 1 to 8. Exercises 9 to 11 are optional.</td>
 </tr></tbody></table><div class="section level4">
 <h4 id="section-1-1-uses-vs-code--use-pycharm-instead-">Section 1.1 uses VS Code. Use PyCharm instead.<a class="anchor" aria-label="anchor" href="#section-1-1-uses-vs-code--use-pycharm-instead-"></a></h4>
 <p>The Section 1.1 lesson shows how to set up <strong>Visual Studio
@@ -556,17 +559,31 @@ Directory</strong>.</p>
 </div>
 <div class="section level3">
 <h3 id="concepts-bridge-0-5-h">Concepts Bridge (0.5 h)<a class="anchor" aria-label="anchor" href="#concepts-bridge-0-5-h"></a></h3>
-<p>Open <a href="#week-1-bridge">bridge.md</a>. It explains how code
-runs: machine code, assembly, compilers and interpreters. You compare
-“Hello World” in C, Java and assembly with Python. It builds on video
-T#67.</p>
+<p>Open <a href="#week-1-bridge">bridge.md</a>. It shows how every
+program takes in information, works on it and gives a result. You
+practise this with everyday tasks before you write code. You will use
+the same steps in Week 3.</p>
 </div>
 <div class="section level3">
 <h3 id="build-2-h">Build (2 h)<a class="anchor" aria-label="anchor" href="#build-2-h"></a></h3>
 <p>Open the <a href="#week-1-practice">practice task</a>. You write a
-small unit converter, then write five sentences comparing Python’s
-“Hello World” with another language. This is practice only. It is not
-marked.</p>
+unit converter, then a short reflection about what your program does.
+Both go into your portfolio for this week.</p>
+</div>
+<div class="section level3">
+<h3 id="quiz-0-25-h">Quiz (0.25 h)<a class="anchor" aria-label="anchor" href="#quiz-0-25-h"></a></h3>
+<p>Take the Canvas quiz for Week 1 after you finish the Build. It has 6
+questions, drawn from a pool. It is marked automatically.</p>
+</div>
+<div class="section level3">
+<h3 id="portfolio-this-week">Portfolio this week<a class="anchor" aria-label="anchor" href="#portfolio-this-week"></a></h3>
+<p>Submit at the end of the week, in your portfolio folder:</p>
+<ul><li>
+<code>starter.py</code> (your converter)</li>
+<li>
+<code>reflection.txt</code> (five sentences, see the practice
+task)</li>
+</ul><p>Your tutor marks the portfolio. The quiz is marked automatically.</p>
 </div>
 <div class="section level3">
 <h3 id="optional">Optional<a class="anchor" aria-label="anchor" href="#optional"></a></h3>
@@ -577,6 +594,8 @@ marked.</p>
 <li>T#14 Bitwise operators</li>
 <li>T#15 Math functions</li>
 <li>T#17 Swap two variables</li>
+<li>T#67 Is Python Compiled or Interpreted? (6:48): <a href="https://www.youtube.com/watch?v=0BhSWyDEDC4&amp;list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3" class="external-link uri">https://www.youtube.com/watch?v=0BhSWyDEDC4&amp;list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3</a>
+</li>
 <li>[Max Rohowsky] <a href="https://www.youtube.com/watch?v=HHcZbXsZtm0" class="external-link">PyCharm Tutorial:
 Basics in 10 Minutes</a> (10:00)</li>
 </ul><p>Find the Telusko videos by number in the <a href="https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3" class="external-link">playlist</a>.</p>
@@ -849,8 +868,9 @@ with
 <code>![PyCharm download page (this course uses PyCharm instead of Visual Studio Code)](fig/1.1-pycharm-download.png)</code>.</p>
 </blockquote>
 <p>If you installed visual studio code, let us see how to use it. If you
-prefer a video, you can follow this Visual Studio Code for Python <a href="https://www.youtube.com/watch?v=bn7Cx4z-vSo" class="external-link">Video
-tutorial</a></p>
+prefer a video, watch <a href="https://www.youtube.com/watch?v=akcEaEH91gI&amp;list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3" class="external-link">T#16
+Working with PyCharm: Run, Debug, Trace</a> (10:26). It shows how to use
+PyCharm, which this course uses.</p>
 <div class="section level5">
 <h5 id="how-to-use-visual-studio-code">How to use visual studio code<a class="anchor" aria-label="anchor" href="#how-to-use-visual-studio-code"></a></h5>
 <p>Open the visual studio code by double clicking the visual studio
@@ -2101,238 +2121,102 @@ You have lived for 3153600000 seconds.</code></pre>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="week-1-bridge">Concepts Bridge: How Code Runs<a class="anchor" aria-label="anchor" href="#week-1-bridge"></a></h2>
-<hr class="half-width"><p><strong>Time:</strong> about 30 minutes (15 min reading, 5 min trying
-the code, 10 min activity).</p>
+</section><section><h2 class="section-heading" id="week-1-bridge">Concepts Bridge: Input, Process, Output<a class="anchor" aria-label="anchor" href="#week-1-bridge"></a></h2>
+<hr class="half-width"><p><strong>Time:</strong> about 30 minutes (10 min reading, 10 min
+running the example, 10 min activity).</p>
 <div class="section level3">
 <h3 id="why-this-matters">Why this matters<a class="anchor" aria-label="anchor" href="#why-this-matters"></a></h3>
-<p>Before you write much code, it helps to know how the code you type
-becomes something a computer can run: machine code, assembly language,
-compilers and interpreters. Comparing “Hello World” in several languages
-helps you analyse a problem and its solution (LO 1). It also sets you up
-for LO 4, where you judge which language or paradigm suits a problem. It
-builds on video <strong>T#67</strong>, which you have already watched in
-the Watch block. You do not need to watch it again.</p>
+<p>Every program, however big, does three jobs:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>Input</strong>: it gets information in.</li>
+<li>
+<strong>Process</strong>: it works on that information.</li>
+<li>
+<strong>Output</strong>: it gives a result back.</li>
+</ol><p>Thinking in these three steps before you type helps you solve
+problems (LO 1). You will use the same steps for the grade calculator in
+Week 3, and again when you design programs in Week 6.</p>
 </div>
 <div class="section level3">
-<h3 id="the-big-idea-a-computer-only-understands-machine-code">The big idea: a computer only understands machine code<a class="anchor" aria-label="anchor" href="#the-big-idea-a-computer-only-understands-machine-code"></a></h3>
-<p>A computer chip can only follow very simple instructions, such as
-“add these two numbers” or “move this value”. Each instruction is a
-pattern of 1s and 0s. This is called <strong>machine code</strong>.</p>
-<p>Nobody wants to write patterns of 1s and 0s. So people invented
-layers that make code easier to write.</p>
-<table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr><th>Layer</th>
-<th>What it looks like</th>
-<th>Who writes it</th>
-</tr></thead><tbody><tr><td>Machine code</td>
-<td><code>10110000 01100001</code></td>
-<td>Almost nobody</td>
-</tr><tr><td><strong>Assembly language</strong></td>
-<td><code>mov al, 97</code></td>
-<td>Specialists, for very small or very fast code</td>
-</tr><tr><td>
-<strong>High-level language</strong> (C, Java, Python)</td>
-<td><code>print("Hello")</code></td>
-<td>Almost everyone</td>
-</tr></tbody></table><p><strong>Assembly language</strong> is machine code with short names
-instead of numbers. One assembly line is about one machine instruction.
-A program called an <strong>assembler</strong> turns it into machine
-code.</p>
-<p>A <strong>high-level language</strong> reads more like English. One
-line can become many machine instructions. Something must translate it.
-There are two main ways.</p>
+<h3 id="the-big-idea-everyday-tasks-have-inputs-processes-and-outputs">The big idea: everyday tasks have inputs, processes and outputs<a class="anchor" aria-label="anchor" href="#the-big-idea-everyday-tasks-have-inputs-processes-and-outputs"></a></h3>
+<p>You already do this at home and at work. Here are three examples:</p>
+<table class="table"><colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup><thead><tr><th>Everyday task</th>
+<th>Input</th>
+<th>Process</th>
+<th>Output</th>
+</tr></thead><tbody><tr><td>Working out your pay</td>
+<td>Hours worked, hourly rate</td>
+<td>Multiply hours by rate</td>
+<td>Gross pay</td>
+</tr><tr><td>Making a cup of tea</td>
+<td>Water, tea bag, milk</td>
+<td>Heat the water, steep the tea bag</td>
+<td>A cup of tea</td>
+</tr><tr><td>Checking your change at a shop</td>
+<td>Price, money given</td>
+<td>Subtract price from money given</td>
+<td>Change to hand back</td>
+</tr></tbody></table><p>Notice that the process is the step that does the work. The input and
+output are what goes in and comes out.</p>
 </div>
 <div class="section level3">
-<h3 id="compilers-and-interpreters">Compilers and interpreters<a class="anchor" aria-label="anchor" href="#compilers-and-interpreters"></a></h3>
-<p>A <strong>compiler</strong> translates the whole program into machine
-code <em>before</em> it runs. You get a separate file that the computer
-runs directly. C works this way. Compiled programs usually run fast. A
-mistake in the code is often caught before the program starts.</p>
-<p>An <strong>interpreter</strong> reads your program and carries it out
-<em>while it runs</em>, one step at a time. You do not make a separate
-machine-code file first. This makes testing quick, because you change a
-line and run it again.</p>
-<p>Think of a speech in another language. A compiler is like translating
-the whole speech into a written copy first. An interpreter is like a
-person translating live, sentence by sentence.</p>
+<h3 id="how-python-runs-your-file">How Python runs your file<a class="anchor" aria-label="anchor" href="#how-python-runs-your-file"></a></h3>
+<p>Python reads your file from top to bottom and carries out each line
+in order. When it reaches <code>input()</code>, it waits for the user to
+type something. When it reaches <code>print()</code>, it shows a result
+on the screen.</p>
 </div>
 <div class="section level3">
-<h3 id="where-python-sits">Where Python sits<a class="anchor" aria-label="anchor" href="#where-python-sits"></a></h3>
-<p>Python is usually called an interpreted language, but the real story
-has two steps:</p>
-<ol style="list-style-type: decimal"><li>Python first <strong>compiles</strong> your code into
-<strong>bytecode</strong>. Bytecode is a simple set of instructions for
-Python itself, not for your computer chip.</li>
-<li>The <strong>Python virtual machine</strong> (PVM), which is part of
-the interpreter, then runs the bytecode one instruction at a time.</li>
-</ol><p>Java is similar. It compiles to bytecode, and the Java Virtual
-Machine runs it. Python does the compile step for you, automatically,
-each time you run a file. That is why T#67 says the answer is
-“both”.</p>
-<p>You can see Python’s bytecode with the built-in <code>dis</code>
-module (short for “disassemble”). Save this as a file and run it.</p>
+<h3 id="worked-example">Worked example<a class="anchor" aria-label="anchor" href="#worked-example"></a></h3>
+<p>Here is the pay example as a program. Copy it into PyCharm and run
+it.</p>
 <blockquote>
-<p><strong>Just copy and run this.</strong> You have not learned
-<code>def</code> or <code>import</code> yet. You will learn
-<code>def</code> (making your own functions) in Week 3 and
-<code>import</code> (using other code) in Week 6. For now, only look at
-the output.</p>
+<p><strong>Just copy and run this.</strong> You have not used every part
+of this yet. <code>input()</code> asks the user for text, and
+<code>float()</code> turns that text into a number. You will use both in
+the Build task.</p>
 </blockquote>
 <div class="codewrapper sourceCode" id="cb52">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" tabindex="-1" aria-label="code-block-52-1"></a><span class="im">import</span> dis</span>
-<span id="cb52-2"><a href="#cb52-2" tabindex="-1" aria-label="code-block-52-2"></a></span>
-<span id="cb52-3"><a href="#cb52-3" tabindex="-1" aria-label="code-block-52-3"></a><span class="kw">def</span> add(a, b):</span>
-<span id="cb52-4"><a href="#cb52-4" tabindex="-1" aria-label="code-block-52-4"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
-<span id="cb52-5"><a href="#cb52-5" tabindex="-1" aria-label="code-block-52-5"></a></span>
-<span id="cb52-6"><a href="#cb52-6" tabindex="-1" aria-label="code-block-52-6"></a>dis.dis(add)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" tabindex="-1" aria-label="code-block-52-1"></a>hours <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Hours worked: "</span>))   <span class="co"># input</span></span>
+<span id="cb52-2"><a href="#cb52-2" tabindex="-1" aria-label="code-block-52-2"></a>rate <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Hourly rate: "</span>))     <span class="co"># input</span></span>
+<span id="cb52-3"><a href="#cb52-3" tabindex="-1" aria-label="code-block-52-3"></a>pay <span class="op">=</span> hours <span class="op">*</span> rate                       <span class="co"># process</span></span>
+<span id="cb52-4"><a href="#cb52-4" tabindex="-1" aria-label="code-block-52-4"></a><span class="bu">print</span>(<span class="st">"Gross pay:"</span>, pay)                 <span class="co"># output</span></span></code></pre>
 </div>
-<p>The exact lines depend on your Python version. You will see names
-such as <code>LOAD_FAST</code> (fetch a value) and
-<code>BINARY_OP</code> (do the maths) and <code>RETURN_VALUE</code>.
-Those are bytecode instructions. You wrote one short line. Python turned
-it into several steps.</p>
-<p>Here is a second small check. Python’s <code>compile()</code>
-function does the compile step by hand. Again, just copy and run it.
-<code>compile()</code> and <code>exec()</code> are not part of this
-week’s lessons.</p>
-<div class="codewrapper sourceCode" id="cb53">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" tabindex="-1" aria-label="code-block-53-1"></a>code <span class="op">=</span> <span class="bu">compile</span>(<span class="st">"print('Hello, World!')"</span>, <span class="st">"&lt;example&gt;"</span>, <span class="st">"exec"</span>)</span>
-<span id="cb53-2"><a href="#cb53-2" tabindex="-1" aria-label="code-block-53-2"></a><span class="bu">print</span>(<span class="bu">type</span>(code))</span>
-<span id="cb53-3"><a href="#cb53-3" tabindex="-1" aria-label="code-block-53-3"></a><span class="bu">exec</span>(code)</span></code></pre>
-</div>
-<p><code>compile()</code> returns a <strong>code object</strong> (the
-bytecode and its details). <code>exec()</code> then runs it. This is
-what Python does for every file you run.</p>
-</div>
-<div class="section level3">
-<h3 id="hello-world-in-four-languages">Hello World in four languages<a class="anchor" aria-label="anchor" href="#hello-world-in-four-languages"></a></h3>
-<p>The same job, printing one line, looks very different in each
-language.</p>
-<p><strong>C</strong> (compiled to machine code, then run):</p>
-<div class="codewrapper sourceCode" id="cb54">
-<h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb54-1"><a href="#cb54-1" tabindex="-1" aria-label="code-block-54-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
-<span id="cb54-2"><a href="#cb54-2" tabindex="-1" aria-label="code-block-54-2"></a></span>
-<span id="cb54-3"><a href="#cb54-3" tabindex="-1" aria-label="code-block-54-3"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb54-4"><a href="#cb54-4" tabindex="-1" aria-label="code-block-54-4"></a>    printf<span class="op">(</span><span class="st">"Hello, World!</span><span class="sc">\n</span><span class="st">"</span><span class="op">);</span></span>
-<span id="cb54-5"><a href="#cb54-5" tabindex="-1" aria-label="code-block-54-5"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb54-6"><a href="#cb54-6" tabindex="-1" aria-label="code-block-54-6"></a><span class="op">}</span></span></code></pre>
-</div>
-<p><strong>Java</strong> (compiled to bytecode, run by the Java Virtual
-Machine):</p>
-<div class="codewrapper sourceCode" id="cb55">
-<h3 class="code-label">JAVA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode java" tabindex="0"><code class="sourceCode java"><span id="cb55-1"><a href="#cb55-1" tabindex="-1" aria-label="code-block-55-1"></a><span class="kw">public</span> <span class="kw">class</span> Hello <span class="op">{</span></span>
-<span id="cb55-2"><a href="#cb55-2" tabindex="-1" aria-label="code-block-55-2"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb55-3"><a href="#cb55-3" tabindex="-1" aria-label="code-block-55-3"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Hello, World!"</span><span class="op">);</span></span>
-<span id="cb55-4"><a href="#cb55-4" tabindex="-1" aria-label="code-block-55-4"></a>    <span class="op">}</span></span>
-<span id="cb55-5"><a href="#cb55-5" tabindex="-1" aria-label="code-block-55-5"></a><span class="op">}</span></span></code></pre>
-</div>
-<p><strong>Assembly</strong> (x86-64 for Linux, NASM assembler). You do
-not need to understand it. Notice how many instructions it takes:</p>
-<div class="codewrapper sourceCode" id="cb56">
-<h3 class="code-label">NASM<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode nasm" tabindex="0"><code class="sourceCode nasm"><span id="cb56-1"><a href="#cb56-1" tabindex="-1" aria-label="code-block-56-1"></a><span class="kw">section</span> <span class="fu">.data</span></span>
-<span id="cb56-2"><a href="#cb56-2" tabindex="-1" aria-label="code-block-56-2"></a>    msg <span class="dt">db</span> <span class="st">"Hello, World!"</span><span class="op">,</span> <span class="dv">10</span></span>
-<span id="cb56-3"><a href="#cb56-3" tabindex="-1" aria-label="code-block-56-3"></a>    len <span class="dt">equ</span> <span class="op">$</span> <span class="op">-</span> msg</span>
-<span id="cb56-4"><a href="#cb56-4" tabindex="-1" aria-label="code-block-56-4"></a></span>
-<span id="cb56-5"><a href="#cb56-5" tabindex="-1" aria-label="code-block-56-5"></a><span class="kw">section</span> <span class="fu">.text</span></span>
-<span id="cb56-6"><a href="#cb56-6" tabindex="-1" aria-label="code-block-56-6"></a>    <span class="kw">global</span> _start</span>
-<span id="cb56-7"><a href="#cb56-7" tabindex="-1" aria-label="code-block-56-7"></a></span>
-<span id="cb56-8"><a href="#cb56-8" tabindex="-1" aria-label="code-block-56-8"></a><span class="fu">_start:</span></span>
-<span id="cb56-9"><a href="#cb56-9" tabindex="-1" aria-label="code-block-56-9"></a>    <span class="kw">mov</span> <span class="kw">rax</span><span class="op">,</span> <span class="dv">1</span>        <span class="co">; system call number for "write"</span></span>
-<span id="cb56-10"><a href="#cb56-10" tabindex="-1" aria-label="code-block-56-10"></a>    <span class="kw">mov</span> <span class="kw">rdi</span><span class="op">,</span> <span class="dv">1</span>        <span class="co">; 1 means "standard output" (the screen)</span></span>
-<span id="cb56-11"><a href="#cb56-11" tabindex="-1" aria-label="code-block-56-11"></a>    <span class="kw">mov</span> <span class="kw">rsi</span><span class="op">,</span> msg      <span class="co">; the address of the text</span></span>
-<span id="cb56-12"><a href="#cb56-12" tabindex="-1" aria-label="code-block-56-12"></a>    <span class="kw">mov</span> <span class="kw">rdx</span><span class="op">,</span> len      <span class="co">; how many characters to write</span></span>
-<span id="cb56-13"><a href="#cb56-13" tabindex="-1" aria-label="code-block-56-13"></a>    <span class="kw">syscall</span>           <span class="co">; ask the operating system to do it</span></span>
-<span id="cb56-14"><a href="#cb56-14" tabindex="-1" aria-label="code-block-56-14"></a>    <span class="kw">mov</span> <span class="kw">rax</span><span class="op">,</span> <span class="dv">60</span>       <span class="co">; system call number for "exit"</span></span>
-<span id="cb56-15"><a href="#cb56-15" tabindex="-1" aria-label="code-block-56-15"></a>    <span class="kw">xor</span> <span class="kw">rdi</span><span class="op">,</span> <span class="kw">rdi</span>      <span class="co">; exit code 0</span></span>
-<span id="cb56-16"><a href="#cb56-16" tabindex="-1" aria-label="code-block-56-16"></a>    <span class="kw">syscall</span></span></code></pre>
-</div>
-<p><strong>Python</strong> (compiled to bytecode, run by the
-interpreter):</p>
-<div class="codewrapper sourceCode" id="cb57">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" tabindex="-1" aria-label="code-block-57-1"></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code></pre>
-</div>
-<p>One line. No <code>main</code>, no semicolons, no types, no set-up.
-That is why Python suits beginners. The trade-off is speed: Python is
-usually slower than C, because of the extra interpreting step.</p>
-</div>
-<div class="section level3">
-<h3 id="video">Video<a class="anchor" aria-label="anchor" href="#video"></a></h3>
-<p>You have already watched this in the Watch block. Rewatch it only if
-the ideas above feel new.</p>
-<ul><li>
-<strong>T#67</strong> Is Python Compiled or Interpreted? (6:48): <a href="https://www.youtube.com/watch?v=0BhSWyDEDC4&amp;list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3" class="external-link uri">https://www.youtube.com/watch?v=0BhSWyDEDC4&amp;list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3</a>
-</li>
+<p>Run it twice, with different numbers. Each time, notice:</p>
+<ul><li>which lines take in information (input),</li>
+<li>which line does the work (process),</li>
+<li>which line shows the result (output).</li>
 </ul></div>
 <div class="section level3">
 <h3 id="activity-10-minutes">Activity (10 minutes)<a class="anchor" aria-label="anchor" href="#activity-10-minutes"></a></h3>
-<ol style="list-style-type: decimal"><li>Run the three Python code blocks above in PyCharm. Use a new file
-for each.</li>
-<li>Fill in this table in your own notes. Count lines of code for “Hello
-World” (blank lines do not count) and say how each language is run.</li>
-</ol><table class="table"><thead><tr><th>Language</th>
-<th>Lines</th>
-<th>Compiled, interpreted or both?</th>
-</tr></thead><tbody><tr><td>C</td>
-<td></td>
-<td></td>
-</tr><tr><td>Java</td>
-<td></td>
-<td></td>
-</tr><tr><td>Assembly</td>
-<td></td>
-<td></td>
-</tr><tr><td>Python</td>
-<td></td>
-<td></td>
-</tr></tbody></table><ol start="3" style="list-style-type: decimal"><li>In two or three sentences, answer: <em>why would someone still
-choose C or assembly when Python is so short?</em>
-</li>
-</ol><p>Keep your answers. You will use them in the practice task.</p>
-<div class="section level4">
+<ol style="list-style-type: decimal"><li>Write the input, process and output for <strong>two</strong>
+everyday tasks from your own life or work. Use a table like the one
+above, on paper or in a text file.</li>
+<li>Change the process line in the worked example so the pay has 10% tax
+taken off. Hint: <code>pay = hours * rate * 0.9</code> takes off 10%.
+Run the program again to check.</li>
+<li>In two or three sentences, answer: <em>what would happen if the user
+typed “ten” instead of 10?</em> You will learn how to deal with this in
+Week 4.</li>
+</ol><div class="section level4">
 <h4 id="model-answer">Model answer<a class="anchor" aria-label="anchor" href="#model-answer"></a></h4>
-<table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr><th>Language</th>
-<th>Lines</th>
-<th>Compiled, interpreted or both?</th>
-</tr></thead><tbody><tr><td>C</td>
-<td>5</td>
-<td>Compiled to machine code</td>
-</tr><tr><td>Java</td>
-<td>5</td>
-<td>Compiled to bytecode, then run by the JVM</td>
-</tr><tr><td>Assembly</td>
-<td>14 (with the data and text sections)</td>
-<td>Assembled to machine code</td>
-</tr><tr><td>Python</td>
-<td>1</td>
-<td>Both: compiled to bytecode, then interpreted</td>
-</tr></tbody></table><p>Exact counts change a little with how you write each program. A fair
-answer is: C and assembly give you close control of the hardware and run
-very fast, and their programs are small and need no interpreter. That
-matters for operating systems, device software and games. Python trades
-that speed for being quick to write and easy to read.</p>
-</div>
+<ol style="list-style-type: decimal"><li>Answers will vary. A good answer names the inputs, one clear
+process, and one clear output.</li>
+<li>The result is 90% of the gross pay. For example, 38 hours at $30 per
+hour is $1,140 before tax, and $1,026 after the 10% reduction.</li>
+<li>The program stops with an error, because <code>float("ten")</code>
+cannot turn the word into a number. Good programs check input before
+using it.</li>
+</ol></div>
 </div>
 <div class="section level3">
 <h3 id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a></h3>
 <ul><li>Driscoll, M. (2017) <em>Python 101</em>. Available at: <a href="https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/" class="external-link uri">https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/</a>
 (Introduction).</li>
 <li>Romano, F. (2018) <em>Learn Python Programming</em>, 2nd edn.
-Birmingham: Packt. Chapter 1, on how Python code is run.</li>
-<li>Python Software Foundation (2024) <em>dis: Disassembler for Python
-bytecode</em>. Available at: <a href="https://docs.python.org/3/library/dis.html" class="external-link uri">https://docs.python.org/3/library/dis.html</a> (Accessed: 2
-November 2026).</li>
+Birmingham: Packt. Chapter 1.</li>
 </ul></div>
 </section><section><h2 class="section-heading" id="week-1-practice">Practice task: Unit Converter<a class="anchor" aria-label="anchor" href="#week-1-practice"></a></h2>
 <hr class="half-width"><div id="files-for-this-task" class="callout">
@@ -2351,13 +2235,13 @@ in PyCharm.</p>
 </ul></div>
 </div>
 </div>
-<p><strong>Time:</strong> about 2 hours. This is practice only. It is
-not marked.</p>
+<p><strong>Time:</strong> about 2 hours. This is your portfolio item for
+Week 1. Your tutor marks it at the end of the week.</p>
 <div class="section level3">
 <h3 id="goal">Goal<a class="anchor" aria-label="anchor" href="#goal"></a></h3>
 <p>Write a small script that asks for a distance and a temperature,
-converts them and prints the answers. Then write five sentences
-comparing Python’s “Hello World” with another language.</p>
+converts them and prints the answers. Then write five sentences about
+what your program does.</p>
 <p>You only need what you learned this week: variables,
 <code>input()</code>, <code>float()</code>, arithmetic operators and
 <code>print()</code>.</p>
@@ -2405,20 +2289,19 @@ lb). Keep the same style.</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="part-2-compare-hello-world-about-45-min">Part 2: compare Hello World (about 45 min)<a class="anchor" aria-label="anchor" href="#part-2-compare-hello-world-about-45-min"></a></h3>
-<p>Create a plain text file called <code>comparison.txt</code> (in
+<h3 id="part-2-reflection-about-30-min">Part 2: reflection (about 30 min)<a class="anchor" aria-label="anchor" href="#part-2-reflection-about-30-min"></a></h3>
+<p>Create a plain text file called <code>reflection.txt</code> (in
 PyCharm: <strong>New &gt; File</strong>). Write <strong>exactly five
-sentences</strong> comparing Python’s Hello World with one other
-language: C, Java or assembly from the <a href="#week-1-bridge">Bridge</a>. You can use your notes from the Bridge
-activity.</p>
-<p>Think about:</p>
-<ul><li>How many lines does each version need?</li>
-<li>Which one is easier for a beginner to read, and why?</li>
-<li>What does the other language make you write that Python does
-not?</li>
-<li>Is each one compiled, interpreted or both?</li>
-<li>What is one good reason to choose the other language anyway?</li>
-</ul></div>
+sentences</strong> about your program:</p>
+<ol style="list-style-type: decimal"><li>What the program asks the user for.</li>
+<li>What it calculates.</li>
+<li>What it prints.</li>
+<li>What happens if the user types a word, such as <code>ten</code>,
+instead of a number. Try it to check.</li>
+<li>One change you would make to make the program easier to use.</li>
+</ol><p>Use the <a href="#week-1-bridge">Concepts Bridge</a> to help you
+describe the input, process and output.</p>
+</div>
 <div class="section level3">
 <h3 id="check-your-work">Check your work<a class="anchor" aria-label="anchor" href="#check-your-work"></a></h3>
 <ul class="task-list"><li><label><input type="checkbox"><code>starter.py</code> runs with no
@@ -2432,8 +2315,8 @@ Celsius.</label></li>
 <li><label><input type="checkbox">You used only variables,
 <code>input()</code>, <code>float()</code>, <code>round()</code>,
 arithmetic and <code>print()</code>.</label></li>
-<li><label><input type="checkbox"><code>comparison.txt</code> has five
-sentences, and they name the other language.</label></li>
+<li><label><input type="checkbox"><code>reflection.txt</code> has five
+sentences, covering all five points above.</label></li>
 </ul></div>
 <div class="section level3">
 <h3 id="run-the-automatic-checks-optional">Run the automatic checks (optional)<a class="anchor" aria-label="anchor" href="#run-the-automatic-checks-optional"></a></h3>
@@ -2472,10 +2355,11 @@ remainder.</li>
 <li>Comparison operators give True or False.</li>
 <li>and, or and not combine conditions.</li>
 <li>== checks equal values; is checks the same object.</li>
-<li>Computers only run machine code.</li>
-<li>Compilers translate a whole program first; interpreters run it step
-by step.</li>
-<li>Python compiles to bytecode, then the interpreter runs it.</li>
+<li>Every program takes in information, works on it and gives a
+result.</li>
+<li>input() waits for the user; print() shows the result.</li>
+<li>Python reads a file from top to bottom and carries out each
+line.</li>
 <li>Small programs are built from variables, input, operators and
 print.</li>
 </ul></div>
@@ -2498,7 +2382,7 @@ any links that you are not going to use.
           Home
         </a>
         <a class="chapter-link float-end" href="../instructor/week-2.html" rel="next">
-          Next: Week 2: Input, strings and data...
+          Next: Week 2: Input and data structures...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -2510,11 +2394,11 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/ADCI-Perth/intro-to-programming-workbench/edit/main/episodes/week-1.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/edit/main/episodes/week-1.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/ADCI-Perth/intro-to-programming-workbench/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/ADCI-Perth/intro-to-programming-workbench/" class="external-link">Source</a></p>
+        | <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
         | <a href="mailto:FIXME-course-contact@adci.edu.au">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
@@ -2536,18 +2420,18 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-1.html",
+  "@id": "https://ADCI-Perth.github.io/intro-to-programming-part-1-workbench/instructor/week-1.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
-  "description": "A six-week beginner Python micro-credential from ADCI, designed to support credit towards an introductory programming unit.",
+  "description": "Part 1 of a two-part beginner Python micro-credential from ADCI (six weeks, at most 6 hours a week), designed to support credit towards an introductory programming unit.",
   "keywords": "python, programming, beginner, micro-credential, ADCI",
   "name": "Week 1: Getting started: how programs run, values and operators",
   "creativeWorkStatus": "active",
-  "url": "https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-1.html",
-  "identifier": "https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/week-1.html",
+  "url": "https://ADCI-Perth.github.io/intro-to-programming-part-1-workbench/instructor/week-1.html",
+  "identifier": "https://ADCI-Perth.github.io/intro-to-programming-part-1-workbench/instructor/week-1.html",
   "dateCreated": "2026-11-03",
-  "dateModified": "2026-11-03",
-  "datePublished": "2026-11-03"
+  "dateModified": "2026-11-09",
+  "datePublished": "2026-11-09"
 }
 
   </script><script>

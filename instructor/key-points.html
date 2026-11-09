@@ -133,12 +133,6 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 <hr>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
-<li><a class="dropdown-item" href="5-3-date-time.html">5.3 Date and Time (optional)</a></li>
-<li><a class="dropdown-item" href="5-4-regular-expressions.html">5.4 Regular Expressions (optional)</a></li>
-<li><a class="dropdown-item" href="6-3-web-scraping.html">6.3 Web Scraping (optional)</a></li>
-<li><a class="dropdown-item" href="6-4-virtual-environments.html">6.4 Virtual Environments (optional)</a></li>
-<li><a class="dropdown-item" href="6-5-statistics-numpy.html">6.5 Statistics and NumPy (optional)</a></li>
-<li><a class="dropdown-item" href="6-6-pandas.html">6.6 Pandas (optional)</a></li>
           </ul>
 </li>
       </ul>
@@ -263,7 +257,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="week-2.html">2. Week 2: Input, strings and data structures</a>
+        <a href="week-2.html">2. Week 2: Input and data structures</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -299,7 +293,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="week-5.html">5. Week 5: Object-oriented programming and files</a>
+        <a href="week-5.html">5. Week 5: Object-oriented programming</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -311,7 +305,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="week-6.html">6. Week 6: Modules, libraries and choosing a paradigm</a>
+        <a href="week-6.html">6. Week 6: Modules and choosing a paradigm</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -365,12 +359,6 @@
                     <ul>
 <hr>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
-<li><a class="dropdown-item" href="5-3-date-time.html">5.3 Date and Time (optional)</a></li>
-<li><a class="dropdown-item" href="5-4-regular-expressions.html">5.4 Regular Expressions (optional)</a></li>
-<li><a class="dropdown-item" href="6-3-web-scraping.html">6.3 Web Scraping (optional)</a></li>
-<li><a class="dropdown-item" href="6-4-virtual-environments.html">6.4 Virtual Environments (optional)</a></li>
-<li><a class="dropdown-item" href="6-5-statistics-numpy.html">6.5 Statistics and NumPy (optional)</a></li>
-<li><a class="dropdown-item" href="6-6-pandas.html">6.6 Pandas (optional)</a></li>
                     </ul>
 </div>
                 </div>
@@ -419,21 +407,18 @@ remainder.</li>
 <li>Comparison operators give True or False.</li>
 <li>and, or and not combine conditions.</li>
 <li>== checks equal values; is checks the same object.</li>
-<li>Computers only run machine code.</li>
-<li>Compilers translate a whole program first; interpreters run it step
-by step.</li>
-<li>Python compiles to bytecode, then the interpreter runs it.</li>
+<li>Every program takes in information, works on it and gives a
+result.</li>
+<li>input() waits for the user; print() shows the result.</li>
+<li>Python reads a file from top to bottom and carries out each
+line.</li>
 <li>Small programs are built from variables, input, operators and
 print.</li>
-</ul></section><section id="week-2"><h2 class="section-heading"><a href="week-2.html">Week 2: Input, strings and data structures</a></h2>
+</ul></section><section id="week-2"><h2 class="section-heading"><a href="week-2.html">Week 2: Input and data structures</a></h2>
 <hr class="half-width">
 <ul>
 <li>Each week has four blocks: Watch, Read &amp; practise, Concepts
 Bridge and Build.</li>
-<li>Strings are sequences of characters, counted from index 0.</li>
-<li>f-strings are the clearest way to put values into text.</li>
-<li>String methods return a new string; the original does not
-change.</li>
 <li>A list is an ordered, changeable collection.</li>
 <li>Methods like append(), insert(), remove() and pop() change the list
 itself.</li>
@@ -477,21 +462,18 @@ Bridge and Build.</li>
 list.</li>
 <li>A lambda is a small function written in one expression.</li>
 <li>Functions are values: you can pass them around.</li>
-<li>map() changes every item, filter() keeps some items, reduce()
-combines items into one value.</li>
+<li>map() changes every item; filter() keeps the items that pass a
+test.</li>
 <li>The last line of a traceback names the error type.</li>
 <li>Read error messages carefully: Python often suggests the fix.</li>
 <li>try runs risky code; except handles the error.</li>
 <li>Catch the specific error you expect, not every error.</li>
-<li><ul>
-<li>unpacks lists and ** unpacks dictionaries.</li>
-</ul></li>
 <li>A pure function has no side effects.</li>
 <li>Recursion solves a problem by calling the function on a smaller
 problem.</li>
 <li>Logic programming states facts and rules, then asks questions.</li>
 <li>The same problem can be solved in more than one style.</li>
-</ul></section><section id="week-5"><h2 class="section-heading"><a href="week-5.html">Week 5: Object-oriented programming and files</a></h2>
+</ul></section><section id="week-5"><h2 class="section-heading"><a href="week-5.html">Week 5: Object-oriented programming</a></h2>
 <hr class="half-width">
 <ul>
 <li>Each week has four blocks: Watch, Read &amp; practise, Concepts
@@ -500,15 +482,11 @@ Bridge and Build.</li>
 <li>self refers to the current object.</li>
 <li>A child class inherits from its parent and can override its
 methods.</li>
-<li>Use with open(…) so the file closes itself.</li>
-<li>Mode “w” overwrites, “a” appends, “r” reads.</li>
-<li>json.dump() and json.load() save and load Python data.</li>
 <li>Every value in Python is an object with a type and methods.</li>
-<li>Floats are approximations; use Decimal when exact values
-matter.</li>
+<li>Dunder methods such as <strong>len</strong> and <strong>add</strong>
+let Python call your objects with len() and +.</li>
 <li>Classes keep data and behaviour together.</li>
-<li>JSON files let a program remember data between runs.</li>
-</ul></section><section id="week-6"><h2 class="section-heading"><a href="week-6.html">Week 6: Modules, libraries and choosing a paradigm</a></h2>
+</ul></section><section id="week-6"><h2 class="section-heading"><a href="week-6.html">Week 6: Modules and choosing a paradigm</a></h2>
 <hr class="half-width">
 <ul>
 <li>Each week has four blocks: Watch, Read &amp; practise, Concepts
@@ -516,12 +494,6 @@ Bridge and Build.</li>
 <li>A module is a .py file you can import.</li>
 <li>from module import name imports just what you need.</li>
 <li>Python ships with many useful built-in modules.</li>
-<li>Use python -m pip so packages install for the Python you run.</li>
-<li>pip freeze lists installed packages for a requirements.txt
-file.</li>
-<li>A folder with an <strong>init</strong>.py file is a package.</li>
-<li>Type hints document intent and let tools find mistakes.</li>
-<li>Pin versions and check package names before installing.</li>
 <li>No paradigm is best everywhere: judge each problem against the same
 criteria.</li>
 <li>Splitting code into modules keeps programs manageable.</li>
@@ -539,11 +511,11 @@ criteria.</li>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/ADCI-Perth/intro-to-programming-workbench/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/ADCI-Perth/intro-to-programming-workbench/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/ADCI-Perth/intro-to-programming-workbench/" class="external-link">Source</a></p>
+        | <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
         | <a href="mailto:FIXME-course-contact@adci.edu.au">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
@@ -566,18 +538,18 @@ criteria.</li>
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/key-points.html",
+  "@id": "https://ADCI-Perth.github.io/intro-to-programming-part-1-workbench/instructor/key-points.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
-  "description": "A six-week beginner Python micro-credential from ADCI, designed to support credit towards an introductory programming unit.",
+  "description": "Part 1 of a two-part beginner Python micro-credential from ADCI (six weeks, at most 6 hours a week), designed to support credit towards an introductory programming unit.",
   "keywords": "python, programming, beginner, micro-credential, ADCI",
   "name": "Key Points",
   "creativeWorkStatus": "active",
-  "url": "https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/key-points.html",
-  "identifier": "https://ADCI-Perth.github.io/intro-to-programming-workbench/instructor/key-points.html",
+  "url": "https://ADCI-Perth.github.io/intro-to-programming-part-1-workbench/instructor/key-points.html",
+  "identifier": "https://ADCI-Perth.github.io/intro-to-programming-part-1-workbench/instructor/key-points.html",
   "dateCreated": "2026-11-03",
-  "dateModified": "2026-11-03",
-  "datePublished": "2026-11-03"
+  "dateModified": "2026-11-09",
+  "datePublished": "2026-11-09"
 }
 
   </script><script>
