@@ -663,7 +663,7 @@ Tests for `Dog` are skipped until you write it. Further stretch (optional): add 
 
 ### Part 2: Library mini project, part 1 (about 90 minutes)
 
-Go to [mini_project/README.md](#week-5-mini-project). You will build a library loan manager with a `Book` class and a `Library` class. It works in memory for now: the books are kept while the program runs. Saving to a file comes in Part 2, Week 8.
+Go to [mini_project/README.md](#week-5-mini-project). You will build a library loan manager with a `Book` class and a `Library` class. It works in memory for now: the books are kept while the program runs. Saving to a file comes in Part 2 Week 2.
 
 ---
 
@@ -688,7 +688,7 @@ If `pytest` is missing, run `python -m pip install pytest` in the Terminal tab.
 
 #### What you are building
 
-A small library system. It keeps track of books, and lets you lend and return them. This week it works in memory, so the books are kept while the program runs. Week 6 adds a menu, and Week 8 adds saving to a file.
+A small library system. It keeps track of books, and lets you lend and return them. This week it works in memory, so the books are kept while the program runs. Week 6 adds a menu, and Part 2 Week 2 adds saving to a file.
 
 You will use ideas from this week: classes, a dictionary of objects, and try/except (Week 4).
 
@@ -750,7 +750,7 @@ Leave the line `if __name__ == "__main__":` as it is and put your test code insi
   ```
   Python stops the method at that line, and the error message appears unless some other code catches it with `try/except`. The tests check that the right error is raised.
 
-- Keep the attribute names `title`, `author`, `isbn` and `on_loan` exactly as written. Week 6 and Week 8 depend on these names.
+- Keep the attribute names `title`, `author`, `isbn` and `on_loan` exactly as written. Week 6 and Part 2 Week 2 depend on these names.
 - Write `__str__` first and test it, then move on.
 - `"on loan" if book.on_loan else "available"` is a handy one-line way to choose between two words.
 

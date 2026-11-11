@@ -1,6 +1,6 @@
 """Text menu for the library-loan manager (Week 6 model solution).
 
-Books are kept in memory only. Saving to a file comes in Week 8.
+Books are kept in memory only. Saving to a file comes in Part 2 Week 2.
 """
 
 from library import Book, Library

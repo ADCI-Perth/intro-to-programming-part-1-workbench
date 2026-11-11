@@ -108,7 +108,7 @@ Only if you have time and are curious.
 
 ### What comes next
 
-Part 2 starts in Week 7 with text and encoding. It covers files, data, libraries (pip, virtual environments, NumPy, Pandas and Matplotlib) and security basics. Saving the library to a file is added in Week 8.
+Part 2 starts with its own Week 1, on text and encoding. It covers files, data, libraries (pip, virtual environments, NumPy, Pandas and Matplotlib) and security basics. Saving the library to a file is added in Part 2 Week 2.
 
 ## 6.1 Modules {#section-6-1}
 
@@ -497,7 +497,7 @@ Your Week 5 `Book` and `Library` classes:
 
 If your Week 5 mini project is not finished, finish it first, or look at `solution/library.py` after a real attempt.
 
-The library works in memory in this week: books are kept while the program runs. Saving to a file comes in Week 8.
+The library works in memory in this week: books are kept while the program runs. Saving to a file comes in Part 2 Week 2.
 
 ### Steps
 

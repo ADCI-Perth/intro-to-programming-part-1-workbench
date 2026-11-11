@@ -40,7 +40,7 @@ Your portfolio for each week is submitted at the end of the week and marked by y
 | 5 | Object-oriented programming | [Week 5](episodes/week-5.md) |
 | 6 | Modules and choosing a paradigm | [Week 6](episodes/week-6.md) |
 
-Part 2 (text, files and logs, data and security, NumPy, pandas and Matplotlib) is a separate course, and it is not on this site.
+Part 2 (text, files and logs, data and security, NumPy, pandas and Matplotlib) is a separate course with its own site: [Intro to Programming, Part 2](https://adci-perth.github.io/intro-to-programming-part-2-workbench/). Its weeks are numbered 1 to 6, and Part 2 Week 1 comes after Week 6 of this course.
 
 :::::::::::::::::::::::::::::::::::::::::: prereq
 
