@@ -144,6 +144,17 @@ Nothing here is required. Try these if you want more.
 
 Find the Telusko videos by number in the [playlist](https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3).
 
+**More videos: Data with Baraa, Python Ultimate Course**
+
+These lessons are from a different presenter. They are longer than the core videos, so treat them as extra explanation when you want more detail. Find them in the [playlist](https://www.youtube.com/playlist?list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn).
+
+- [Data with Baraa] [What is Python (Visually Explained)](https://www.youtube.com/watch?v=GRNI9T9R8gQ&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (10:47)
+- [Data with Baraa] [Python Variables: Visually Explained](https://www.youtube.com/watch?v=YHgkADDCWJg&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (13:39)
+- [Data with Baraa] [Python Data Types: Visually Explained](https://www.youtube.com/watch?v=0uY2qNAsAWs&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (30:23)
+- [Data with Baraa] [Python Comparison Operators (Visually Explained)](https://www.youtube.com/watch?v=OZ7AinsDYVo&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (7:08)
+- [Data with Baraa] [Python Logical Operators (Visually Explained)](https://www.youtube.com/watch?v=yFaYylK1yCE&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (17:55)
+- [Data with Baraa] [Python Membership & Identity Operators (Visually Explained)](https://www.youtube.com/watch?v=qtTs03rI7W0&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (12:32)
+
 **Reading**
 
 - Section 1.1, 1.2 and 1.3: the Level 2 and Level 3 exercises.

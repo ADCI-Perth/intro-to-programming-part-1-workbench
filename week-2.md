@@ -121,6 +121,22 @@ Not required. Do these only if you have time left over.
 
 - **T#26** Arrays and **T#27** Array values from user, in the [Telusko playlist](https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3)
 
+**More videos: Data with Baraa, Python Ultimate Course**
+
+These lessons are from a different presenter. They are longer than the core videos, so treat them as extra explanation when you want more detail. Find them in the [playlist](https://www.youtube.com/playlist?list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn).
+
+- [Data with Baraa] [Python Input Function: Visually Explained](https://www.youtube.com/watch?v=we54H-T1AL0&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (9:16)
+- [Data with Baraa] [Introduction to Data Structures in Python (Visually Explained)](https://www.youtube.com/watch?v=SVjXp22ddFQ&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (10:11)
+- [Data with Baraa] [How to Create a List in Python (Visually Explained)](https://www.youtube.com/watch?v=LWeS6R9IPf4&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (12:06)
+- [Data with Baraa] [How to Access Lists in Python (Indexing & Slicing Explained)](https://www.youtube.com/watch?v=oPZ5xoKZ6Og&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (16:51)
+- [Data with Baraa] [How to Add, Remove, and Update Lists in Python (Visually Explained)](https://www.youtube.com/watch?v=qtANRuRxiEo&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (23:18)
+- [Data with Baraa] [How to Order Lists in Python (Visually Explained)](https://www.youtube.com/watch?v=BUsmwsk8Des&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (10:06)
+- [Data with Baraa] [How to Copy Python Lists Safely (Visually Explained)](https://www.youtube.com/watch?v=zBEwm_IBVxI&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (17:04)
+- [Data with Baraa] [Python Tuples (Visually Explained)](https://www.youtube.com/watch?v=TTkifjHCPWo&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (8:15)
+- [Data with Baraa] [Python Sets (Visually Explained)](https://www.youtube.com/watch?v=D5R9Iq3KaPI&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (18:29)
+- [Data with Baraa] [Python Dictionaries (Visually Explained)](https://www.youtube.com/watch?v=rpsYzPv1HiQ&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (27:24)
+- [Data with Baraa] [Python Data Structures: When to Use List, Tuple, Set, Dict](https://www.youtube.com/watch?v=h-zcj4DmqHk&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (3:54)
+
 **Reading**
 
 - Driscoll, M. (2017) *Python 101*, Chapters 2 and 3. Available at: https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/ (Accessed: 2 November 2026).

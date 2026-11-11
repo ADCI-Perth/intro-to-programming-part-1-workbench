@@ -131,6 +131,25 @@ Only if you have time. Nothing here is needed to finish the week.
 
 Find these in the [playlist](https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3).
 
+**More videos: Data with Baraa, Python Ultimate Course**
+
+These lessons are from a different presenter. They are longer than the core videos, so treat them as extra explanation when you want more detail. Find them in the [playlist](https://www.youtube.com/playlist?list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn).
+
+- [Data with Baraa] [Python If Elif Else Statements (Visually Explained)](https://www.youtube.com/watch?v=7s-zyoaaBOY&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (51:47)
+- [Data with Baraa] [Python If-Else One Line and Match-Case (Visually Explained)](https://www.youtube.com/watch?v=wP18POH-uM0&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (14:11)
+- [Data with Baraa] [Python For Loops (Visually Explained)](https://www.youtube.com/watch?v=HWaQttu8_O0&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (23:53)
+- [Data with Baraa] [Python Break vs Continue vs Pass (Visually Explained)](https://www.youtube.com/watch?v=fx8MJxW8wb4&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (20:44)
+- [Data with Baraa] [Python For-Else Loop (Visually Explained)](https://www.youtube.com/watch?v=KlVXZu8V1VM&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (17:09)
+- [Data with Baraa] [Python Nested Loops are Easy](https://www.youtube.com/watch?v=ck1AzCDs0ss&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (16:43)
+- [Data with Baraa] [Python While Loops (Visually Explained)](https://www.youtube.com/watch?v=gD8ePxAhjUM&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (28:36)
+- [Data with Baraa] [Python Functions Made Simple (Visual Explanation)](https://www.youtube.com/watch?v=FSYoWPXfJxc&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (18:12)
+- [Data with Baraa] [Python Parameters vs Arguments (Explained Visually)](https://www.youtube.com/watch?v=ysoVpKxefzM&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (10:50)
+- [Data with Baraa] [Python Parameters vs Global vs Local Variables (Visual Explanation)](https://www.youtube.com/watch?v=3TxcPKu9ec4&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (10:47)
+- [Data with Baraa] [Python Positional vs Keyword Arguments Explained](https://www.youtube.com/watch?v=fuqCGh06hRw&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (12:15)
+- [Data with Baraa] [Python *Args and **Kwargs Finally Make Sense](https://www.youtube.com/watch?v=A9j2V2SPq3g&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (8:12)
+- [Data with Baraa] [Python Return Vs Print() (Visual Explanation)](https://www.youtube.com/watch?v=DZ2yBGzvlXk&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (11:49)
+- [Data with Baraa] [8 Python Function Habits That Make Your Code Clean and Professional](https://www.youtube.com/watch?v=QipWozUPnOU&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (14:51)
+
 **Reading**
 
 - Driscoll, M. (2017) *Python 101*, Chapters 4 to 6 and 10. Available at: https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/

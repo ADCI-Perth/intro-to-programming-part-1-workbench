@@ -158,6 +158,14 @@ Only do these if you have time left after the core work.
 - T#61 Iterators (Telusko)
 - T#62 Generators (Telusko)
 
+**More videos: Data with Baraa, Python Ultimate Course**
+
+These lessons are from a different presenter. They are longer than the core videos, so treat them as extra explanation when you want more detail. Find them in the [playlist](https://www.youtube.com/playlist?list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn).
+
+- [Data with Baraa] [Python Lambda Functions (Visually Explained)](https://www.youtube.com/watch?v=LmTOAMpNYFA&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (15:51)
+- [Data with Baraa] [Python List Comprehension (Visually Explained)](https://www.youtube.com/watch?v=6bHDQtVfsCM&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (9:44)
+- [Data with Baraa] [Python Iterator vs Iterable (Visually Explained)](https://www.youtube.com/watch?v=hgQD2znCc_I&list=PLNcg_FV9n7qZGfFl2ANI_zISzNp257Lwn) (23:27)
+
 **Lesson sections**
 - Section 4.2: Python closures and decorators.
 - Section 4.4: packing and unpacking, spreading, enumerate and zip.
