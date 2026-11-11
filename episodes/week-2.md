@@ -87,7 +87,7 @@ Read each lesson and run the examples in PyCharm. Then do the exercises. In PyCh
 Notes:
 
 - The exercise times assume about 3 minutes per exercise. The other exercises are Optional (see the end of this page).
-- The practice task uses two string methods, `.strip()` and `.title()`, to tidy what the user types. They are explained in the practice task, along with `", ".join(...)` and f-strings (text in `f"..."`, with values inside `{}`). Strings are covered properly in Week 7.
+- The practice task uses two string methods, `.strip()` and `.title()`, to tidy what the user types. They are explained in the practice task, along with `", ".join(...)` and f-strings (text in `f"..."`, with values inside `{}`). Strings are covered properly in Part 2 Week 1.
 - Section 2.2 mentions a long list of countries in `data/countries.py`. You only need it for Level 2, which is Optional. The file is in `assets/data/` at the top of this repository ([countries.py](data/countries.py)).
 - The lessons link to `data/` and `files/` folders. In this course these are `assets/data/` and `assets/files/`.
 - Stuck? Join the optional one-hour online drop-in session. If you go, count it inside your Read & practise time.
