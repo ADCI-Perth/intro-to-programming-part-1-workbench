@@ -84,6 +84,9 @@ SECTIONS = {
 # Lesson sections that now belong to Part 2 (not in this site): 2.1 strings, 5.2 files, 6.2 pip, 5.3, 5.4, 6.3 to 6.6.
 OPTIONAL = {}
 
+# Data files (in assets/data) that the Part 1 sections use. Only these go on the site and into the course zip.
+DATA_FILES = ['countries.py', 'countries-data.py']
+
 BRIDGES = {
     1: dict(title='Input, Process, Output', q=['How does a program take in information, work on it and give a result?'],
             o=['Describe a task as input, process and output.', 'Write a short program that follows those three steps.'],

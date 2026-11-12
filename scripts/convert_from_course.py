@@ -5,11 +5,12 @@ Usage: python scripts/convert_from_course.py SOURCE_REPO LESSON_REPO"""
 import os, posixpath, re, shutil, sys, zipfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from wb_meta import WEEKS, TIME, SECTIONS, OPTIONAL, BRIDGES, PRACTICE, PRACTICE_Q
+from wb_meta import WEEKS, TIME, SECTIONS, OPTIONAL, BRIDGES, PRACTICE, PRACTICE_Q, DATA_FILES
 
 SRC, DST = sys.argv[1], sys.argv[2]
 W = os.path.join(SRC, 'weeks')
 EP = os.path.join(DST, 'episodes')
+ZIP_ROOT = 'IntroToProgramming'
 
 # ---------------------------------------------------------------- names
 def week_file(w): return f'week-{w}.md'
@@ -31,6 +32,43 @@ for w, m in PRACTICE.items():
         TARGET[f'weeks/week-{w}/practice/{f}'] = ('episodes', f'files/week-{w}/{f}', '')
 
 # ---------------------------------------------------------------- text helpers
+SKIP_DIRS = ('__pycache__', '.pytest_cache')
+
+
+def dir_links(src_dir, dest):
+    """Links to every file under a source code folder. Web hosts do not list folders, so a link to a folder would be a dead link."""
+    out = []
+    for dirpath, dirnames, filenames in os.walk(os.path.join(SRC, src_dir)):
+        dirnames[:] = sorted(d for d in dirnames if d not in SKIP_DIRS)
+        for f in sorted(filenames):
+            if not f.endswith('.pyc'):
+                rel = os.path.relpath(os.path.join(dirpath, f), os.path.join(SRC, src_dir)).replace(os.sep, '/')
+                out.append(f'[{rel}]({dest}/{rel})')
+    return ', '.join(out)
+
+
+def nice_label(label, target):
+    """Replace a label that is a repository path (such as bridge.md) with words a learner understands."""
+    if not re.fullmatch(r'[\w./-]+\.md', label):
+        return label
+    if target.endswith('/bridge.md'):
+        return 'the Concepts Bridge'
+    if target.endswith('/practice/README.md'):
+        return 'the practice task'
+    if target.endswith('/mini_project/README.md'):
+        return 'the mini project instructions'
+    return label
+
+
+def zip_add(z, full, arcname):
+    """Add a file with a fixed date, so the zip only changes when its contents change."""
+    info = zipfile.ZipInfo(arcname, date_time=(2026, 1, 1, 0, 0, 0))
+    info.compress_type = zipfile.ZIP_DEFLATED
+    info.external_attr = 0o644 << 16
+    with open(full, 'rb') as f:
+        z.writestr(info, f.read())
+
+
 FENCE = {'py': 'python', 'python': 'python', 'pycon': 'python', 'text': 'output',
          'sh': 'bash', 'shell': 'bash', 'bash': 'bash'}
 
@@ -49,6 +87,7 @@ def links(t, src_rel, here, page):
             return m.group(0)
         path, _, frag = url.partition('#')
         target = posixpath.normpath(posixpath.join(base, path))
+        label = nice_label(label, target)
         if target.startswith('assets/data/'):
             return f'[{label}](data/{target[len("assets/data/"):]})'
         if target.startswith('assets/files/'):
@@ -56,8 +95,10 @@ def links(t, src_rel, here, page):
         if target in ('assets/data', 'assets/data/', 'assets/files', 'assets/files/'):
             return f'[{label}](data/course-data.zip)'   # web hosts do not list folders
         code = re.match(r'weeks/week-\d/lessons/(\d\.\d)_code(/.*)?$', target)
+        if code and not (code.group(2) or '/').strip('/'):
+            return dir_links(target, f'files/code/{code.group(1)}')
         if code:
-            return f'[{label}](files/code/{code.group(1)}{code.group(2) or "/"})'
+            return f'[{label}](files/code/{code.group(1)}{code.group(2)})'
         if target in TARGET:
             folder, name, anchor = TARGET[target]
             if name.startswith('files/'):
@@ -75,8 +116,13 @@ def links(t, src_rel, here, page):
 
 
 def placeholders(t):
+    """Screenshot placeholders carry notes for the course team. Learners only see that a screenshot is still to come."""
+    def note(m):
+        return '> 📷 *Screenshot to be added: ' + m.group(1).strip().rstrip('.') + '.*'
+    t = re.sub(r'^(?:>\s*)?📷 \*{0,2}Image placeholder:\*{0,2}\s*(?:`?assets/images/[^\s`]+`?\s+—\s+)?([^\n]*?)[ \t]*\n(?:>\s*Add your screenshot as[^\n]*\n?)?',
+               lambda m: note(m) + '\n', t, flags=re.M)
     t = re.sub(r'`assets/images/week-\d/([\w.-]+\.png)`', r'`episodes/fig/\1`', t)
-    return re.sub(r'\(\.\./\.\./\.\./assets/images/week-\d/([\w.-]+\.png)\)', r'(fig/\1)', t)
+    return re.sub(r'\((?:\.\./)+assets/images/week-\d/([\w.-]+\.png)\)', r'(fig/\1)', t)
 
 
 def drop_nav(t):
@@ -191,9 +237,13 @@ def part(title, anchor, body):
 
 
 # ---------------------------------------------------------------- build
+os.makedirs(EP, exist_ok=True)
 for f in os.listdir(EP):          # remove episodes from earlier conversions
     if f.endswith('.md'):
         os.remove(os.path.join(EP, f))
+for sub in ('files', 'data'):     # remove generated files, so renamed or deleted ones do not linger
+    shutil.rmtree(os.path.join(EP, sub), ignore_errors=True)
+    os.makedirs(os.path.join(EP, sub), exist_ok=True)
 
 order = []
 for w, theme in WEEKS.items():
@@ -226,7 +276,9 @@ for w, theme in WEEKS.items():
     t = clean(strip_title(read(rel)), rel, 'episodes', page)
     files = '\n'.join(f'- [{posixpath.basename(f)}](files/week-{w}/{f})' for f in pm['files'])
     t = (':::::::::::::::::::::::::::::::::::::::: callout\n\n## Files for this task\n\n'
-         'Download these files into a folder for this task and open the folder in PyCharm.\n\n'
+         'The easiest way to get every file is the [course zip file](data/course-data.zip) from the Setup page. '
+         'Unzip it and open the folder in PyCharm. The test commands on this page are run from the top of that folder, '
+         'so keep the folder layout. You can also download single files here:\n\n'
          f'{files}\n\n:::::::::::::::::::::::::::::::::::::::::::::::::::\n\n') + t
     t = demote(t)
     if 'extra_readme' in pm:
@@ -271,21 +323,37 @@ for s, m in OPTIONAL.items():
 for w in WEEKS:
     lessons = os.path.join(W, f'week-{w}', 'lessons')
     for d in os.listdir(lessons):
-        if d.endswith('_code'):
+        if d.endswith('_code') and d[:-5] in SECTIONS:   # only sections that are in this site
             shutil.copytree(os.path.join(lessons, d), os.path.join(EP, 'files', 'code', d[:-5]),
-                            ignore=shutil.ignore_patterns('__pycache__'), dirs_exist_ok=True)
+                            ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '.pytest_cache'), dirs_exist_ok=True)
 
-# data and example files
-for sub in ('data', 'files'):
-    src = os.path.join(SRC, 'assets', sub)
-    for f in os.listdir(src):
-        shutil.copyfile(os.path.join(src, f), os.path.join(EP, sub, f))
+# data files: only the ones the Part 1 sections use (DATA_FILES in wb_meta.py)
+for f in DATA_FILES:
+    shutil.copyfile(os.path.join(SRC, 'assets', 'data', f), os.path.join(EP, 'data', f))
 
-# one zip with the data/ and files/ folders, for learners to download in one go
+# screenshots and chart images: assets/images/week-N/*.png -> episodes/fig/
+images = os.path.join(SRC, 'assets', 'images')
+if os.path.isdir(images):
+    for dirpath, dirnames, filenames in os.walk(images):
+        for f in sorted(filenames):
+            if f.lower().endswith(('.png', '.jpg', '.jpeg', '.svg')):
+                os.makedirs(os.path.join(EP, 'fig'), exist_ok=True)
+                shutil.copyfile(os.path.join(dirpath, f), os.path.join(EP, 'fig', f))
+
+# one zip that keeps the course folder layout (assets/data and weeks/week-N/...), so the test commands work as written
 with zipfile.ZipFile(os.path.join(EP, 'data', 'course-data.zip'), 'w', zipfile.ZIP_DEFLATED) as z:
-    for sub in ('data', 'files'):
-        for f in sorted(os.listdir(os.path.join(SRC, 'assets', sub))):
-            z.write(os.path.join(SRC, 'assets', sub, f), f'IntroToProgramming/{sub}/{f}')
+    for f in sorted(DATA_FILES):
+        zip_add(z, os.path.join(SRC, 'assets', 'data', f), f'{ZIP_ROOT}/assets/data/{f}')
+    for w in WEEKS:
+        base = os.path.join(W, f'week-{w}')
+        for dirpath, dirnames, filenames in os.walk(base):
+            dirnames[:] = sorted(d for d in dirnames if d not in SKIP_DIRS
+                                 and not (d.endswith('_code') and d[:-5] not in SECTIONS))
+            for f in sorted(filenames):
+                if f.endswith(('.py', '.txt')):
+                    full = os.path.join(dirpath, f)
+                    rel = os.path.relpath(full, SRC).replace(os.sep, '/')
+                    zip_add(z, full, f'{ZIP_ROOT}/{rel}')
 
 print(len(order), 'week episodes,', len(learner_pages), 'optional learner pages')
 print('episodes:', ' '.join(order))

@@ -578,7 +578,7 @@ print(mine + yours)         # works because of __add__ and __str__
 
 ### Files for this task
 
-Download these files into a folder for this task and open the folder in PyCharm.
+The easiest way to get every file is the [course zip file](data/course-data.zip) from the Setup page. Unzip it and open the folder in PyCharm. The test commands on this page are run from the top of that folder, so keep the folder layout. You can also download single files here:
 
 - [animal_starter.py](files/week-5/animal_starter.py)
 - [animal_solution.py](files/week-5/animal_solution.py)
@@ -663,7 +663,7 @@ Tests for `Dog` are skipped until you write it. Further stretch (optional): add 
 
 ### Part 2: Library mini project, part 1 (about 90 minutes)
 
-Go to [mini_project/README.md](#week-5-mini-project). You will build a library loan manager with a `Book` class and a `Library` class. It works in memory for now: the books are kept while the program runs. Saving to a file comes in Part 2 Week 2.
+Go to [the mini project instructions](#week-5-mini-project). You will build a library loan manager with a `Book` class and a `Library` class. It works in memory for now: the books are kept while the program runs. Saving to a file comes in Part 2 Week 2.
 
 ---
 
@@ -672,7 +672,7 @@ Go to [mini_project/README.md](#week-5-mini-project). You will build a library l
 Tests are small programs that check your code. We use **pytest**.
 
 1. Open `test_animal.py`. Near the top, change `MODULE_NAME = "animal_solution"` to `MODULE_NAME = "animal_starter"`. Now the tests check your code.
-2. In PyCharm, right-click `test_animal.py` and choose **Run 'pytest in test_animal.py'**. Or, in the Terminal tab, from the repository root:
+2. In PyCharm, right-click `test_animal.py` and choose **Run 'pytest in test_animal.py'**. Or, in the Terminal tab, from the top of the course folder:
    ```
    python -m pytest weeks/week-5/practice/test_animal.py
    ```
@@ -757,7 +757,7 @@ Leave the line `if __name__ == "__main__":` as it is and put your test code insi
 #### Running the tests
 
 1. Open `test_library.py`. Change `MODULE_NAME = "library"` to `MODULE_NAME = "library_starter"` so the tests check your code.
-2. Right-click the file in PyCharm and choose **Run 'pytest in test_library.py'**, or run this in the Terminal from the repository root:
+2. Right-click the file in PyCharm and choose **Run 'pytest in test_library.py'**, or run this in the Terminal from the top of the course folder:
    ```
    python -m pytest weeks/week-5/practice/mini_project
    ```

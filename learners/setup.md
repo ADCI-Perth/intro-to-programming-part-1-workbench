@@ -47,17 +47,19 @@ Video help: Telusko T#2 [Python Installation, PyCharm](https://www.youtube.com/w
 
 :::::::::::::::::::::::::
 
-## Create your course folder
+## Get the course files
 
-1. Create a folder called `IntroToProgramming` in your Documents folder.
-2. In PyCharm choose **File > Open** and open that folder.
-3. Create one `.py` file per section, for example `section_1_2.py`, and click the green arrow to run it.
+Download the [course zip file](data/course-data.zip) and unzip it into your Documents folder. It gives you an `IntroToProgramming` folder with:
 
-## Data Sets
+- a `weeks` folder with the lesson code for each section, and each week's practice task (starter file, model solution and tests);
+- an `assets` folder with a `data` folder. It holds the two country lists that some optional exercises use (`countries.py` and `countries-data.py`).
 
-Some lessons open data files such as `data/countries.py` or `files/example.txt`. Download the [course data zip file](data/course-data.zip) and unzip it into your Documents folder. It gives you an `IntroToProgramming` folder with:
+Open the `IntroToProgramming` folder in PyCharm (**File > Open**). **Keep the folder layout.** The test commands in the practice tasks are run from the top of this folder, so they will not work if you move the files.
 
-- a `data` folder: countries lists, speeches, a weight and height CSV and more;
-- a `files` folder: small text, CSV, JSON and XML files for Section 5.2.
+## Your own files
 
-Each week's practice task lists its own starter files to download.
+1. Keep your own work inside the `IntroToProgramming` folder.
+2. Create one `.py` file per section, for example `section_1_2.py`, and click the green arrow to run it.
+3. Each week's practice task tells you which starter file to work in.
+
+When a lesson mentions a file such as `data/countries.py`, you will find it in `assets/data/`.

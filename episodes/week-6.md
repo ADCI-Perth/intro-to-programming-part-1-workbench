@@ -66,7 +66,7 @@ Open the lesson, read it, type out the examples and run them. Do not just copy a
 
 #### Section 6.1: Modules (about 1 h)
 
-Lesson: [Section 6.1: Modules](#section-6-1). Code: [lessons/6.1_code/](files/code/6.1/).
+Lesson: [Section 6.1: Modules](#section-6-1). Code: [main.py](files/code/6.1/main.py), [mymodule.py](files/code/6.1/mymodule.py).
 
 - Read: What is a Module, Creating a Module, Importing a Module, the two "Import Functions" sections, and the built-in modules **Math** and **Random**.
 - Skim: OS, Sys, Statistics and String modules. Just know they exist.
@@ -76,11 +76,11 @@ Lesson: [Section 6.1: Modules](#section-6-1). Code: [lessons/6.1_code/](files/co
 
 ### Concepts Bridge (30 min)
 
-Go to [bridge.md](#week-6-bridge). It gives you a criteria table for choosing a paradigm (LO 4), and two short activities.
+Go to [the Concepts Bridge](#week-6-bridge). It gives you a criteria table for choosing a paradigm (LO 4), and two short activities.
 
 ### Build (3 h)
 
-Go to [practice/README.md](#week-6-practice). You finish the Week 5 mini project (a library-loan manager). You add search, a text menu program, and a short note on paradigms. This is your portfolio item for Week 6.
+Go to [the practice task](#week-6-practice). You finish the Week 5 mini project (a library-loan manager). You add search, a text menu program, and a short note on paradigms. This is your portfolio item for Week 6.
 
 ### Quiz (15 min)
 
@@ -468,7 +468,7 @@ def double_all(numbers):
 
 ### Files for this task
 
-Download these files into a folder for this task and open the folder in PyCharm.
+The easiest way to get every file is the [course zip file](data/course-data.zip) from the Setup page. Unzip it and open the folder in PyCharm. The test commands on this page are run from the top of that folder, so keep the folder layout. You can also download single files here:
 
 - [library.py](files/week-6/solution/library.py)
 - [main.py](files/week-6/solution/main.py)
@@ -616,7 +616,7 @@ Goodbye. Books are not saved yet.
 
 ### Run the tests
 
-From the top folder of the course repository, test your own folder by setting `MINI_PROJECT_DIR` to it. Your folder must contain `library.py` and `main.py`.
+From the top of the course folder, test your own folder by setting `MINI_PROJECT_DIR` to it. Your folder must contain `library.py` and `main.py`.
 
 PowerShell:
 
