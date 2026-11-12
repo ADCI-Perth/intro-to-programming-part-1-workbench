@@ -86,13 +86,13 @@ Read each lesson, type the examples into PyCharm and run them. Then do the exerc
 
 Each time includes reading the lesson plus about 3 minutes for each assigned exercise. Total: 35 + 35 + 45 = 115 minutes (1 h 55 m).
 
-**Where is the data?** Some lessons open files such as `data/...` or `files/...`. These live in `assets/data/` and `assets/files/` at the root of this repository. You will not need them this week.
+**Where is the data?** Some lessons open files such as `data/...` or `files/...`. These live in `assets/data/` and `assets/files/` at the top of the course folder. You will not need them this week.
 
 | Order | Lesson | Time | Read | Exercises |
 |---|---|---|---|---|
 | 1 | [Section 1.1: Introduction](#section-1-1) | about 35 min | All of it. | Level 1 |
 | 2 | [Section 1.2: Variables and built-in functions](#section-1-2) | about 35 min | All of it. | Level 1, exercises 1 to 7. |
-| 3 | [Section 1.3: Operators](#section-1-3) | about 45 min | All of it. | The Section 1.3 exercises (the page has one list, not levels). Do exercises 1 to 8. Exercises 9 to 11 are optional. |
+| 3 | [Section 1.3: Operators](#section-1-3) | about 45 min | All of it. | The Section 1.3 exercises (the page has one list, not levels). Do exercises 1 to 7 and exercise 17. The others are optional. |
 
 #### Set up PyCharm
 
@@ -109,7 +109,7 @@ If a lesson asks you to make a folder such as `section_1_2`, make it inside your
 
 ### Concepts Bridge (0.5 h)
 
-Open [bridge.md](#week-1-bridge). It shows how every program takes in information, works on it and gives a result. You practise this with everyday tasks before you write code. You will use the same steps in Week 3.
+Open [the Concepts Bridge](#week-1-bridge). It shows how every program takes in information, works on it and gives a result. You practise this with everyday tasks before you write code. You will use the same steps in Week 3.
 
 ### Build (2 h)
 
@@ -157,7 +157,8 @@ These lessons are from a different presenter. They are longer than the core vide
 
 **Reading**
 
-- Section 1.1, 1.2 and 1.3: the Level 2 and Level 3 exercises.
+- Section 1.1 and 1.2: the Level 2 and Level 3 exercises.
+- Section 1.3: exercises 8 to 16 and 18 to 23. Exercises 8 to 11 use school algebra (slope and intercepts), so skip them if that is not for you.
 - Section 1.2, Level 1, exercises 8 to 13. These are six one-line variable declarations (age, year, true/false values and several variables on one line). Do them if you want extra practice.
 - Driscoll, M. (2017) *Python 101*, chapters 1 and 3. Available at: https://web.archive.org/web/20260309033724/https://python101.pythonlibrary.org/
 - Romano, F. (2018) *Learn Python Programming*, 2nd edn, chapter 1. Birmingham: Packt.
@@ -186,13 +187,11 @@ Python is used by various industries and companies (including Google). It has be
 To run a python script you need to install python. Let's [download](https://www.python.org/) python.
 If your are a windows user, click the button encircled in red.
 
-> 📷 **Image placeholder:** python.org download page with the Windows download button highlighted  
-> Add your screenshot as `episodes/fig/1.1-install-windows.png` and replace this note with `![python.org download page with the Windows download button highlighted](fig/1.1-install-windows.png)`.
+![python.org download page with the Windows download button highlighted](fig/1.1-install-windows.png)
 
 If you are a macOS user, click the button encircled in red.
 
-> 📷 **Image placeholder:** python.org download page with the macOS download button highlighted  
-> Add your screenshot as `episodes/fig/1.1-install-macos.png` and replace this note with `![python.org download page with the macOS download button highlighted](fig/1.1-install-macos.png)`.
+![python.org download page with the macOS download button highlighted](fig/1.1-install-macos.png)
 
 To check if python is installed write the following command on your device terminal.
 
@@ -206,7 +205,7 @@ You should see something like this (any version 3.12 or newer is fine):
 Python 3.12.10
 ```
 
-As you can see from the terminal, I am using _Python 3.7.5_ version at the moment. Your version of Python might be different from mine by but it should be 3.6 or above. If you manage to see the python version, well done. Python has been installed on your machine. Continue to the next section.
+Your version number may be different from the one shown here. Any version from 3.12 onwards is fine for this course. If you manage to see the python version, well done. Python has been installed on your machine. Continue to the next section.
 
 #### Python Shell
 
@@ -347,33 +346,27 @@ If you prefer a video, watch [T#16 Working with PyCharm: Run, Debug, Trace](http
 
 Download PyCharm from the [JetBrains website](https://www.jetbrains.com/pycharm/download/). There is one download, and the free core features are enough for this course.
 
-> 📷 **Image placeholder:** PyCharm download page  
-> Add your screenshot as `episodes/fig/1.1-pycharm-download.png` and replace this note with `![PyCharm download page](fig/1.1-pycharm-download.png)`.
+![PyCharm download page](fig/1.1-pycharm-download.png)
 
 ##### How to use PyCharm
 
 Open PyCharm. When you open it you will see the main window. Try to interact with the labelled icons.
 
-> 📷 **Image placeholder:** PyCharm window with the main areas labelled (project files, editor, Run button, terminal)  
-> Add your screenshot as `episodes/fig/1.1-pycharm-ui.png` and replace this note with `![PyCharm window with the main areas labelled (project files, editor, Run button, terminal)](fig/1.1-pycharm-ui.png)`.
+![PyCharm window with the main areas labelled (project files, editor, Run button, terminal)](fig/1.1-pycharm-ui.png)
 
 Create a folder named IntroToProgramming on your desktop. Then open it in PyCharm using **File > Open**.
 
-> 📷 **Image placeholder:** opening a project folder in PyCharm (File > Open)  
-> Add your screenshot as `episodes/fig/1.1-pycharm-open-project.png` and replace this note with `![opening a project folder in PyCharm (File > Open)](fig/1.1-pycharm-open-project.png)`.
+![opening a project folder in PyCharm (File > Open)](fig/1.1-pycharm-open-project.png)
 
-> 📷 **Image placeholder:** the project folder open in PyCharm  
-> Add your screenshot as `episodes/fig/1.1-pycharm-project-open.png` and replace this note with `![the project folder open in PyCharm](fig/1.1-pycharm-project-open.png)`.
+![the project folder open in PyCharm](fig/1.1-pycharm-project-open.png)
 
 After the project opens, you will see shortcuts for creating files and folders inside the IntroToProgramming folder. The screenshot below shows the first file, `helloworld.py`. You can do the same.
 
-> 📷 **Image placeholder:** a new file helloworld.py created in the PyCharm project  
-> Add your screenshot as `episodes/fig/1.1-pycharm-helloworld.png` and replace this note with `![a new file helloworld.py created in the PyCharm project](fig/1.1-pycharm-helloworld.png)`.
+![a new file helloworld.py created in the PyCharm project](fig/1.1-pycharm-helloworld.png)
 
 When you finish for the day, close the project. This is how you do it.
 
-> 📷 **Image placeholder:** closing a project in PyCharm (File > Close Project)  
-> Add your screenshot as `episodes/fig/1.1-pycharm-close-project.png` and replace this note with `![closing a project in PyCharm (File > Close Project)](fig/1.1-pycharm-close-project.png)`.
+![closing a project in PyCharm (File > Close Project)](fig/1.1-pycharm-close-project.png)
 
 You have now finished setting up the development environment. Let us start coding.
 
@@ -462,7 +455,7 @@ False  # Is the light on? If it is off, then the value is False
 
 ##### List
 
-Python list is an ordered collection which allows to store different data type items. A list is similar to an array in JavaScript.
+Python list is an ordered collection which allows to store different data type items.
 
 **Example:**
 
@@ -475,7 +468,7 @@ Python list is an ordered collection which allows to store different data type i
 
 ##### Dictionary
 
-A Python dictionary object is an unordered collection of data in a key value pair format.
+A Python dictionary is a collection of data stored as key and value pairs. You look up a value by its key.
 
 **Example:**
 
@@ -575,8 +568,7 @@ print(type((9.8, 3.14, 2.7)))    # Tuple
 
 To run the python file check the image below. You can run the Python file by clicking the green Run button in PyCharm, or by typing _python helloworld.py_ in the terminal .
 
-> 📷 **Image placeholder:** helloworld.py running in PyCharm (green Run button) with the output in the Run window  
-> Add your screenshot as `episodes/fig/1.1-pycharm-run.png` and replace this note with `![helloworld.py running in PyCharm (green Run button) with the output in the Run window](fig/1.1-pycharm-run.png)`.
+![helloworld.py running in PyCharm (green Run button) with the output in the Run window](fig/1.1-pycharm-run.png)
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -1357,7 +1349,7 @@ Run it twice, with different numbers. Each time, notice:
 
 ### Files for this task
 
-Download these files into a folder for this task and open the folder in PyCharm.
+The easiest way to get every file is the [course zip file](data/course-data.zip) from the Setup page. Unzip it and open the folder in PyCharm. The test commands on this page are run from the top of that folder, so keep the folder layout. You can also download single files here:
 
 - [starter.py](files/week-1/starter.py)
 - [solution.py](files/week-1/solution.py)

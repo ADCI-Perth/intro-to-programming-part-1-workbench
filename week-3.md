@@ -1505,7 +1505,7 @@ Four swaps in total. The second pass starts with `end` equal to 2 and `i` equal 
 
 ### Files for this task
 
-Download these files into a folder for this task and open the folder in PyCharm.
+The easiest way to get every file is the [course zip file](data/course-data.zip) from the Setup page. Unzip it and open the folder in PyCharm. The test commands on this page are run from the top of that folder, so keep the folder layout. You can also download single files here:
 
 - [starter.py](files/week-3/starter.py)
 - [solution.py](files/week-3/solution.py)

@@ -88,9 +88,9 @@ Notes:
 
 - The exercise times assume about 3 minutes per exercise. The other exercises are Optional (see the end of this page).
 - The practice task uses two string methods, `.strip()` and `.title()`, to tidy what the user types. They are explained in the practice task, along with `", ".join(...)` and f-strings (text in `f"..."`, with values inside `{}`). Strings are covered properly in Part 2 Week 1.
-- Section 2.2 mentions a long list of countries in `data/countries.py`. You only need it for Level 2, which is Optional. The file is in `assets/data/` at the top of this repository ([countries.py](data/countries.py)).
+- Section 2.2 mentions a long list of countries in `data/countries.py`. You only need it for Level 2, which is Optional. The file is in `assets/data/` at the top of the course folder ([countries.py](data/countries.py)).
 - The lessons link to `data/` and `files/` folders. In this course these are `assets/data/` and `assets/files/`.
-- Stuck? Join the optional one-hour online drop-in session. If you go, count it inside your Read & practise time.
+- Stuck? If your teacher runs an optional one-hour online drop-in or Q&A, it counts inside your Read & practise time.
 
 ### Concepts Bridge (30 min)
 
@@ -1799,7 +1799,7 @@ Driscoll, M. (2017) *Python 101*. Available at: https://web.archive.org/web/2026
 
 ### Files for this task
 
-Download these files into a folder for this task and open the folder in PyCharm.
+The easiest way to get every file is the [course zip file](data/course-data.zip) from the Setup page. Unzip it and open the folder in PyCharm. The test commands on this page are run from the top of that folder, so keep the folder layout. You can also download single files here:
 
 - [starter.py](files/week-2/starter.py)
 - [solution.py](files/week-2/solution.py)
@@ -1893,7 +1893,7 @@ Use the [Concepts Bridge](#week-2-bridge) to help you choose your words.
 
 The test file runs your program, types answers into it and checks what it prints. It tests `solution.py` by default. To test your own file, set `PHONEBOOK_FILE`.
 
-From the repository root, in the PyCharm terminal (PowerShell):
+From the top of the course folder, in the PyCharm terminal (PowerShell):
 
 ```powershell
 $env:PHONEBOOK_FILE = "starter.py"
