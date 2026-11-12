@@ -388,7 +388,7 @@
         
 <section id="aio-week-1"><p>Content from <a href="week-1.html">Week 1: Getting started: how programs run, values and operators</a></p>
 <hr>
-<p>Last updated on 2026-11-11 |
+<p>Last updated on 2026-11-12 |
 
         <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/edit/main/episodes/week-1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -606,8 +606,8 @@ and Level 3 unless you have time left over.</p>
 assigned exercise. Total: 35 + 35 + 45 = 115 minutes (1 h 55 m).</p>
 <p><strong>Where is the data?</strong> Some lessons open files such as
 <code>data/...</code> or <code>files/...</code>. These live in
-<code>assets/data/</code> and <code>assets/files/</code> at the root of
-this repository. You will not need them this week.</p>
+<code>assets/data/</code> and <code>assets/files/</code> at the top of
+the course folder. You will not need them this week.</p>
 <table class="table">
 <colgroup>
 <col width="20%">
@@ -645,7 +645,7 @@ functions</a></td>
 <td>about 45 min</td>
 <td>All of it.</td>
 <td>The Section 1.3 exercises (the page has one list, not levels). Do
-exercises 1 to 8. Exercises 9 to 11 are optional.</td>
+exercises 1 to 7 and exercise 17. The others are optional.</td>
 </tr>
 </tbody>
 </table>
@@ -675,8 +675,8 @@ Directory</strong>.</p>
 <div class="section level3">
 <h3 id="concepts-bridge-0-5-h">Concepts Bridge (0.5 h)<a class="anchor" aria-label="anchor" href="#concepts-bridge-0-5-h"></a>
 </h3>
-<p>Open <a href="#week-1-bridge">bridge.md</a>. It shows how every
-program takes in information, works on it and gives a result. You
+<p>Open <a href="#week-1-bridge">the Concepts Bridge</a>. It shows how
+every program takes in information, works on it and gives a result. You
 practise this with everyday tasks before you write code. You will use
 the same steps in Week 3.</p>
 </div>
@@ -745,7 +745,10 @@ Membership &amp; Identity Operators (Visually Explained)</a>
 </ul>
 <p><strong>Reading</strong></p>
 <ul>
-<li>Section 1.1, 1.2 and 1.3: the Level 2 and Level 3 exercises.</li>
+<li>Section 1.1 and 1.2: the Level 2 and Level 3 exercises.</li>
+<li>Section 1.3: exercises 8 to 16 and 18 to 23. Exercises 8 to 11 use
+school algebra (slope and intercepts), so skip them if that is not for
+you.</li>
 <li>Section 1.2, Level 1, exercises 8 to 13. These are six one-line
 variable declarations (age, year, true/false values and several
 variables on one line). Do them if you want extra practice.</li>
@@ -804,22 +807,12 @@ you are killing it before it eats you.</p>
 </h4>
 <p>To run a python script you need to install python. Let’s <a href="https://www.python.org/" class="external-link">download</a> python. If your are a
 windows user, click the button encircled in red.</p>
-<blockquote>
-<p>📷 <strong>Image placeholder:</strong> python.org download page with
-the Windows download button highlighted<br>
-Add your screenshot as <code>episodes/fig/1.1-install-windows.png</code>
-and replace this note with
-<code>![python.org download page with the Windows download button highlighted](fig/1.1-install-windows.png)</code>.</p>
-</blockquote>
-<p>If you are a macOS user, click the button encircled in red.</p>
-<blockquote>
-<p>📷 <strong>Image placeholder:</strong> python.org download page with
-the macOS download button highlighted<br>
-Add your screenshot as <code>episodes/fig/1.1-install-macos.png</code>
-and replace this note with
-<code>![python.org download page with the macOS download button highlighted](fig/1.1-install-macos.png)</code>.</p>
-</blockquote>
-<p>To check if python is installed write the following command on your
+<figure><img src="fig/1.1-install-windows.png" alt="python.org download page with the Windows download button highlighted" class="figure mx-auto d-block"><div class="figcaption">python.org download page with the Windows
+download button highlighted</div>
+</figure><p>If you are a macOS user, click the button encircled in red.</p>
+<figure><img src="fig/1.1-install-macos.png" alt="python.org download page with the macOS download button highlighted" class="figure mx-auto d-block"><div class="figcaption">python.org download page with the macOS download
+button highlighted</div>
+</figure><p>To check if python is installed write the following command on your
 device terminal.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -833,11 +826,10 @@ fine):</p>
 </h3>
 <pre class="output" tabindex="0"><code>Python 3.12.10</code></pre>
 </div>
-<p>As you can see from the terminal, I am using <em>Python 3.7.5</em>
-version at the moment. Your version of Python might be different from
-mine by but it should be 3.6 or above. If you manage to see the python
-version, well done. Python has been installed on your machine. Continue
-to the next section.</p>
+<p>Your version number may be different from the one shown here. Any
+version from 3.12 onwards is fine for this course. If you manage to see
+the python version, well done. Python has been installed on your
+machine. Continue to the next section.</p>
 </div>
 <div class="section level4">
 <h4 id="python-shell">Python Shell<a class="anchor" aria-label="anchor" href="#python-shell"></a>
@@ -1020,66 +1012,30 @@ PyCharm.</p>
 <p>Download PyCharm from the <a href="https://www.jetbrains.com/pycharm/download/" class="external-link">JetBrains
 website</a>. There is one download, and the free core features are
 enough for this course.</p>
-<blockquote>
-<p>📷 <strong>Image placeholder:</strong> PyCharm download page<br>
-Add your screenshot as
-<code>episodes/fig/1.1-pycharm-download.png</code> and replace this note
-with
-<code>![PyCharm download page](fig/1.1-pycharm-download.png)</code>.</p>
-</blockquote>
-<div class="section level5">
+<figure><img src="fig/1.1-pycharm-download.png" alt="PyCharm download page" class="figure mx-auto d-block"><div class="figcaption">PyCharm download page</div>
+</figure><div class="section level5">
 <h5 id="how-to-use-pycharm">How to use PyCharm<a class="anchor" aria-label="anchor" href="#how-to-use-pycharm"></a>
 </h5>
 <p>Open PyCharm. When you open it you will see the main window. Try to
 interact with the labelled icons.</p>
-<blockquote>
-<p>📷 <strong>Image placeholder:</strong> PyCharm window with the main
-areas labelled (project files, editor, Run button, terminal)<br>
-Add your screenshot as <code>episodes/fig/1.1-pycharm-ui.png</code> and
-replace this note with
-<code>![PyCharm window with the main areas labelled (project files, editor, Run button, terminal)](fig/1.1-pycharm-ui.png)</code>.</p>
-</blockquote>
-<p>Create a folder named IntroToProgramming on your desktop. Then open
+<figure><img src="fig/1.1-pycharm-ui.png" alt="PyCharm window with the main areas labelled (project files, editor, Run button, terminal)" class="figure mx-auto d-block"><div class="figcaption">PyCharm window with the main areas labelled
+(project files, editor, Run button, terminal)</div>
+</figure><p>Create a folder named IntroToProgramming on your desktop. Then open
 it in PyCharm using <strong>File &gt; Open</strong>.</p>
-<blockquote>
-<p>📷 <strong>Image placeholder:</strong> opening a project folder in
-PyCharm (File &gt; Open)<br>
-Add your screenshot as
-<code>episodes/fig/1.1-pycharm-open-project.png</code> and replace this
-note with
-<code>![opening a project folder in PyCharm (File &gt; Open)](fig/1.1-pycharm-open-project.png)</code>.</p>
-</blockquote>
-<blockquote>
-<p>📷 <strong>Image placeholder:</strong> the project folder open in
-PyCharm<br>
-Add your screenshot as
-<code>episodes/fig/1.1-pycharm-project-open.png</code> and replace this
-note with
-<code>![the project folder open in PyCharm](fig/1.1-pycharm-project-open.png)</code>.</p>
-</blockquote>
-<p>After the project opens, you will see shortcuts for creating files
+<figure><img src="fig/1.1-pycharm-open-project.png" alt="opening a project folder in PyCharm (File &gt; Open)" class="figure mx-auto d-block"><div class="figcaption">opening a project folder in PyCharm (File &gt;
+Open)</div>
+</figure><figure><img src="fig/1.1-pycharm-project-open.png" alt="the project folder open in PyCharm" class="figure mx-auto d-block"><div class="figcaption">the project folder open in PyCharm</div>
+</figure><p>After the project opens, you will see shortcuts for creating files
 and folders inside the IntroToProgramming folder. The screenshot below
 shows the first file, <code>helloworld.py</code>. You can do the
 same.</p>
-<blockquote>
-<p>📷 <strong>Image placeholder:</strong> a new file helloworld.py
-created in the PyCharm project<br>
-Add your screenshot as
-<code>episodes/fig/1.1-pycharm-helloworld.png</code> and replace this
-note with
-<code>![a new file helloworld.py created in the PyCharm project](fig/1.1-pycharm-helloworld.png)</code>.</p>
-</blockquote>
-<p>When you finish for the day, close the project. This is how you do
+<figure><img src="fig/1.1-pycharm-helloworld.png" alt="a new file helloworld.py created in the PyCharm project" class="figure mx-auto d-block"><div class="figcaption">a new file helloworld.py created in the PyCharm
+project</div>
+</figure><p>When you finish for the day, close the project. This is how you do
 it.</p>
-<blockquote>
-<p>📷 <strong>Image placeholder:</strong> closing a project in PyCharm
-(File &gt; Close Project)<br>
-Add your screenshot as
-<code>episodes/fig/1.1-pycharm-close-project.png</code> and replace this
-note with
-<code>![closing a project in PyCharm (File &gt; Close Project)](fig/1.1-pycharm-close-project.png)</code>.</p>
-</blockquote>
-<p>You have now finished setting up the development environment. Let us
+<figure><img src="fig/1.1-pycharm-close-project.png" alt="closing a project in PyCharm (File &gt; Close Project)" class="figure mx-auto d-block"><div class="figcaption">closing a project in PyCharm (File &gt; Close
+Project)</div>
+</figure><p>You have now finished setting up the development environment. Let us
 start coding.</p>
 </div>
 </div>
@@ -1193,7 +1149,7 @@ be always uppercase.</p>
 <h5 id="list">List<a class="anchor" aria-label="anchor" href="#list"></a>
 </h5>
 <p>Python list is an ordered collection which allows to store different
-data type items. A list is similar to an array in JavaScript.</p>
+data type items.</p>
 <p><strong>Example:</strong></p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1207,8 +1163,8 @@ data type items. A list is similar to an array in JavaScript.</p>
 <div class="section level5">
 <h5 id="dictionary">Dictionary<a class="anchor" aria-label="anchor" href="#dictionary"></a>
 </h5>
-<p>A Python dictionary object is an unordered collection of data in a
-key value pair format.</p>
+<p>A Python dictionary is a collection of data stored as key and value
+pairs. You look up a value by its key.</p>
 <p><strong>Example:</strong></p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1326,14 +1282,9 @@ function takes one or more arguments as follows <em>print(‘arument1’,
 <p>To run the python file check the image below. You can run the Python
 file by clicking the green Run button in PyCharm, or by typing
 <em>python helloworld.py</em> in the terminal .</p>
-<blockquote>
-<p>📷 <strong>Image placeholder:</strong> helloworld.py running in
-PyCharm (green Run button) with the output in the Run window<br>
-Add your screenshot as <code>episodes/fig/1.1-pycharm-run.png</code> and
-replace this note with
-<code>![helloworld.py running in PyCharm (green Run button) with the output in the Run window](fig/1.1-pycharm-run.png)</code>.</p>
-</blockquote>
-<div id="exercises-level-1" class="callout challenge">
+<figure><img src="fig/1.1-pycharm-run.png" alt="helloworld.py running in PyCharm (green Run button) with the output in the Run window" class="figure mx-auto d-block"><div class="figcaption">helloworld.py running in PyCharm (green Run
+button) with the output in the Run window</div>
+</figure><div id="exercises-level-1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -2610,8 +2561,10 @@ Birmingham: Packt. Chapter 1.</li>
 <div id="files-for-this-task" class="callout-inner">
 <h3 class="callout-title">Files for this task</h3>
 <div class="callout-content">
-<p>Download these files into a folder for this task and open the folder
-in PyCharm.</p>
+<p>The easiest way to get every file is the <a href="data/course-data.zip">course zip file</a> from the Setup page.
+Unzip it and open the folder in PyCharm. The test commands on this page
+are run from the top of that folder, so keep the folder layout. You can
+also download single files here:</p>
 <ul>
 <li><a href="files/week-1/starter.py">starter.py</a></li>
 <li><a href="files/week-1/solution.py">solution.py</a></li>
@@ -2774,7 +2727,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-week-2"><p>Content from <a href="week-2.html">Week 2: Input and data structures</a></p>
 <hr>
-<p>Last updated on 2026-11-11 |
+<p>Last updated on 2026-11-12 |
 
         <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/edit/main/episodes/week-2.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3019,13 +2972,13 @@ f-strings (text in <code>f"..."</code>, with values inside
 <code>{}</code>). Strings are covered properly in Part 2 Week 1.</li>
 <li>Section 2.2 mentions a long list of countries in
 <code>data/countries.py</code>. You only need it for Level 2, which is
-Optional. The file is in <code>assets/data/</code> at the top of this
-repository (<a href="data/countries.py">countries.py</a>).</li>
+Optional. The file is in <code>assets/data/</code> at the top of the
+course folder (<a href="data/countries.py">countries.py</a>).</li>
 <li>The lessons link to <code>data/</code> and <code>files/</code>
 folders. In this course these are <code>assets/data/</code> and
 <code>assets/files/</code>.</li>
-<li>Stuck? Join the optional one-hour online drop-in session. If you go,
-count it inside your Read &amp; practise time.</li>
+<li>Stuck? If your teacher runs an optional one-hour online drop-in or
+Q&amp;A, it counts inside your Read &amp; practise time.</li>
 </ul>
 </div>
 <div class="section level3">
@@ -5271,8 +5224,10 @@ to find a student number. That is slower and the code is longer.</p>
 <div id="files-for-this-task" class="callout-inner">
 <h3 class="callout-title">Files for this task</h3>
 <div class="callout-content">
-<p>Download these files into a folder for this task and open the folder
-in PyCharm.</p>
+<p>The easiest way to get every file is the <a href="data/course-data.zip">course zip file</a> from the Setup page.
+Unzip it and open the folder in PyCharm. The test commands on this page
+are run from the top of that folder, so keep the folder layout. You can
+also download single files here:</p>
 <ul>
 <li><a href="files/week-2/starter.py">starter.py</a></li>
 <li><a href="files/week-2/solution.py">solution.py</a></li>
@@ -5444,7 +5399,8 @@ choose your words.</p>
 <p>The test file runs your program, types answers into it and checks
 what it prints. It tests <code>solution.py</code> by default. To test
 your own file, set <code>PHONEBOOK_FILE</code>.</p>
-<p>From the repository root, in the PyCharm terminal (PowerShell):</p>
+<p>From the top of the course folder, in the PyCharm terminal
+(PowerShell):</p>
 <div class="codewrapper sourceCode" id="cb128">
 <h3 class="code-label">POWERSHELL<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -5503,7 +5459,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-week-3"><p>Content from <a href="week-3.html">Week 3: Control flow and functions</a></p>
 <hr>
-<p>Last updated on 2026-11-11 |
+<p>Last updated on 2026-11-12 |
 
         <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/edit/main/episodes/week-3.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -7565,7 +7521,7 @@ is slow on long lists.</p>
   Model answer
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Check your work after you have tried the template yourself.</p>
 <div class="codewrapper sourceCode" id="cb91">
@@ -7623,8 +7579,10 @@ Birmingham: Packt Publishing.</li>
 <div id="files-for-this-task" class="callout-inner">
 <h3 class="callout-title">Files for this task</h3>
 <div class="callout-content">
-<p>Download these files into a folder for this task and open the folder
-in PyCharm.</p>
+<p>The easiest way to get every file is the <a href="data/course-data.zip">course zip file</a> from the Setup page.
+Unzip it and open the folder in PyCharm. The test commands on this page
+are run from the top of that folder, so keep the folder layout. You can
+also download single files here:</p>
 <ul>
 <li><a href="files/week-3/starter.py">starter.py</a></li>
 <li><a href="files/week-3/solution.py">solution.py</a></li>
@@ -7864,7 +7822,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-week-4"><p>Content from <a href="week-4.html">Week 4: Recursion, functional programming and errors</a></p>
 <hr>
-<p>Last updated on 2026-11-11 |
+<p>Last updated on 2026-11-12 |
 
         <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/edit/main/episodes/week-4.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -9776,8 +9734,10 @@ November 2026).</li>
 <div id="files-for-this-task" class="callout-inner">
 <h3 class="callout-title">Files for this task</h3>
 <div class="callout-content">
-<p>Download these files into a folder for this task and open the folder
-in PyCharm.</p>
+<p>The easiest way to get every file is the <a href="data/course-data.zip">course zip file</a> from the Setup page.
+Unzip it and open the folder in PyCharm. The test commands on this page
+are run from the top of that folder, so keep the folder layout. You can
+also download single files here:</p>
 <ul>
 <li><a href="files/week-4/starter.py">starter.py</a></li>
 <li><a href="files/week-4/solution.py">solution.py</a></li>
@@ -9991,7 +9951,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-week-5"><p>Content from <a href="week-5.html">Week 5: Object-oriented programming</a></p>
 <hr>
-<p>Last updated on 2026-11-11 |
+<p>Last updated on 2026-11-12 |
 
         <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/edit/main/episodes/week-5.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -10885,8 +10845,10 @@ Available at: <a href="https://web.archive.org/web/20260308142225/https://python
 <div id="files-for-this-task" class="callout-inner">
 <h3 class="callout-title">Files for this task</h3>
 <div class="callout-content">
-<p>Download these files into a folder for this task and open the folder
-in PyCharm.</p>
+<p>The easiest way to get every file is the <a href="data/course-data.zip">course zip file</a> from the Setup page.
+Unzip it and open the folder in PyCharm. The test commands on this page
+are run from the top of that folder, so keep the folder layout. You can
+also download single files here:</p>
 <ul>
 <li><a href="files/week-5/animal_starter.py">animal_starter.py</a></li>
 <li><a href="files/week-5/animal_solution.py">animal_solution.py</a></li>
@@ -11055,11 +11017,11 @@ stretch (optional): add a <code>Cat</code> subclass whose
 <div class="section level3">
 <h3 id="part-2-library-mini-project-part-1-about-90-minutes">Part 2: Library mini project, part 1 (about 90 minutes)<a class="anchor" aria-label="anchor" href="#part-2-library-mini-project-part-1-about-90-minutes"></a>
 </h3>
-<p>Go to <a href="#week-5-mini-project">mini_project/README.md</a>. You
-will build a library loan manager with a <code>Book</code> class and a
-<code>Library</code> class. It works in memory for now: the books are
-kept while the program runs. Saving to a file comes in Part 2 Week
-2.</p>
+<p>Go to <a href="#week-5-mini-project">the mini project
+instructions</a>. You will build a library loan manager with a
+<code>Book</code> class and a <code>Library</code> class. It works in
+memory for now: the books are kept while the program runs. Saving to a
+file comes in Part 2 Week 2.</p>
 <hr>
 </div>
 <div class="section level3">
@@ -11075,7 +11037,7 @@ code.</p></li>
 <li>
 <p>In PyCharm, right-click <code>test_animal.py</code> and choose
 <strong>Run ‘pytest in test_animal.py’</strong>. Or, in the Terminal
-tab, from the repository root:</p>
+tab, from the top of the course folder:</p>
 <pre><code>python -m pytest weeks/week-5/practice/test_animal.py</code></pre>
 </li>
 <li><p>Read any failure message from the top. It names the test and
@@ -11236,8 +11198,8 @@ handy one-line way to choose between two words.</p></li>
 code.</p></li>
 <li>
 <p>Right-click the file in PyCharm and choose <strong>Run ‘pytest in
-test_library.py’</strong>, or run this in the Terminal from the
-repository root:</p>
+test_library.py’</strong>, or run this in the Terminal from the top of
+the course folder:</p>
 <pre><code>python -m pytest weeks/week-5/practice/mini_project</code></pre>
 </li>
 </ol>
@@ -11300,7 +11262,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-week-6"><p>Content from <a href="week-6.html">Week 6: Modules and choosing a paradigm</a></p>
 <hr>
-<p>Last updated on 2026-11-11 |
+<p>Last updated on 2026-11-12 |
 
         <a href="https://github.com/ADCI-Perth/intro-to-programming-part-1-workbench/edit/main/episodes/week-6.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -11470,7 +11432,7 @@ just copy and paste.</p>
 <div class="section level4">
 <h4 id="section-6-1-modules-about-1-h">Section 6.1: Modules (about 1 h)<a class="anchor" aria-label="anchor" href="#section-6-1-modules-about-1-h"></a>
 </h4>
-<p>Lesson: <a href="#section-6-1">Section 6.1: Modules</a>. Code: <a href="files/code/6.1/">lessons/6.1_code/</a>.</p>
+<p>Lesson: <a href="#section-6-1">Section 6.1: Modules</a>. Code: <a href="files/code/6.1/main.py">main.py</a>, <a href="files/code/6.1/mymodule.py">mymodule.py</a>.</p>
 <ul>
 <li>Read: What is a Module, Creating a Module, Importing a Module, the
 two “Import Functions” sections, and the built-in modules
@@ -11488,13 +11450,14 @@ exist.</li>
 <div class="section level3">
 <h3 id="concepts-bridge-30-min">Concepts Bridge (30 min)<a class="anchor" aria-label="anchor" href="#concepts-bridge-30-min"></a>
 </h3>
-<p>Go to <a href="#week-6-bridge">bridge.md</a>. It gives you a criteria
-table for choosing a paradigm (LO 4), and two short activities.</p>
+<p>Go to <a href="#week-6-bridge">the Concepts Bridge</a>. It gives you
+a criteria table for choosing a paradigm (LO 4), and two short
+activities.</p>
 </div>
 <div class="section level3">
 <h3 id="build-3-h">Build (3 h)<a class="anchor" aria-label="anchor" href="#build-3-h"></a>
 </h3>
-<p>Go to <a href="#week-6-practice">practice/README.md</a>. You finish
+<p>Go to <a href="#week-6-practice">the practice task</a>. You finish
 the Week 5 mini project (a library-loan manager). You add search, a text
 menu program, and a short note on paradigms. This is your portfolio item
 for Week 6.</p>
@@ -12097,8 +12060,10 @@ project)<a class="anchor" aria-label="anchor" href="#week-6-practice"></a>
 <div id="files-for-this-task" class="callout-inner">
 <h3 class="callout-title">Files for this task</h3>
 <div class="callout-content">
-<p>Download these files into a folder for this task and open the folder
-in PyCharm.</p>
+<p>The easiest way to get every file is the <a href="data/course-data.zip">course zip file</a> from the Setup page.
+Unzip it and open the folder in PyCharm. The test commands on this page
+are run from the top of that folder, so keep the folder layout. You can
+also download single files here:</p>
 <ul>
 <li><a href="files/week-6/solution/library.py">library.py</a></li>
 <li><a href="files/week-6/solution/main.py">main.py</a></li>
@@ -12312,8 +12277,8 @@ two paradigms.</label></li>
 <div class="section level3">
 <h3 id="run-the-tests">Run the tests<a class="anchor" aria-label="anchor" href="#run-the-tests"></a>
 </h3>
-<p>From the top folder of the course repository, test your own folder by
-setting <code>MINI_PROJECT_DIR</code> to it. Your folder must contain
+<p>From the top of the course folder, test your own folder by setting
+<code>MINI_PROJECT_DIR</code> to it. Your folder must contain
 <code>library.py</code> and <code>main.py</code>.</p>
 <p>PowerShell:</p>
 <pre><code>$env:MINI_PROJECT_DIR = "C:\path\to\mini_project_part2"
@@ -12407,8 +12372,8 @@ any links that you are not going to use.
   "url": "https://ADCI-Perth.github.io/intro-to-programming-part-1-workbench/aio.html",
   "identifier": "https://ADCI-Perth.github.io/intro-to-programming-part-1-workbench/aio.html",
   "dateCreated": "2026-11-03",
-  "dateModified": "2026-11-11",
-  "datePublished": "2026-11-11"
+  "dateModified": "2026-11-12",
+  "datePublished": "2026-11-12"
 }
 
   </script><script>
